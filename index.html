@@ -8,14 +8,11 @@
 <style>
 :root{--sage:#737d5e;--sage-dark:#4e5944;--cream:#fff8ed;--gold:#b9914c;--ink:#4a493f}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,'Times New Roman',serif}
-button,a{font:inherit}.cover{min-height:100svh;display:grid;place-items:center;padding:22px;background:linear-gradient(#fff9efb8,#fff9efcf),url('assets/sobre-floral.png') center/cover no-repeat}
-.cover-card{text-align:center;max-width:520px;width:100%;padding:26px 18px}
-.eyebrow{letter-spacing:.24em;text-transform:uppercase;font:12px Arial,sans-serif;color:var(--sage-dark)}
-.cover h1{font-size:clamp(38px,8vw,66px);font-weight:normal;margin:14px 0 8px;color:var(--sage-dark)}
-.cover p{font-size:18px;line-height:1.6;margin:8px auto 24px;max-width:340px}
-.seal-button{border:0;background:transparent;cursor:pointer;display:inline-grid;place-items:center;transition:transform .25s}
-.seal-button:hover{transform:scale(1.04)}.seal{width:112px;height:112px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 25%,#f8e5ae,#b78b3d 55%,#805c27);box-shadow:0 5px 14px #6c512b55,inset 0 0 0 5px #f4d89b,inset 0 0 0 8px #a57931;color:#fff8e6;font-size:28px;text-shadow:0 1px 2px #65461e}
-.tap{font:12px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;margin-top:15px;color:var(--sage-dark)}
+button,a{font:inherit}.cover{min-height:100svh;display:grid;place-items:center;overflow:hidden;padding:0;background:#f8eedc}
+.cover-card{position:relative;width:min(100vw,100svh);aspect-ratio:1}
+.cover-art{display:block;width:100%;height:100%;object-fit:contain}
+.seal-button{position:absolute;left:52.5%;top:68.8%;width:15%;aspect-ratio:1;padding:0;border:0;border-radius:50%;background:transparent;cursor:pointer}
+.seal-button:focus-visible{outline:3px solid #fff8e6;outline-offset:3px;box-shadow:0 0 0 6px #805c27}
 .invite{display:none;animation:fade .7s ease}.invite.show{display:block}@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .hero{min-height:75vh;display:grid;place-items:center;text-align:center;padding:64px 22px;background:linear-gradient(#fff8edb9,#fff8edc9),url('assets/sobre-floral.png') center/cover}
 .hero h2{font-size:clamp(40px,8vw,76px);font-weight:normal;color:var(--sage-dark);margin:10px 0}.amp{color:var(--gold);font-style:italic}.hero .date{font-size:20px;letter-spacing:.12em}
@@ -37,13 +34,8 @@ footer{text-align:center;padding:45px 20px;background:var(--sage-dark);color:#ff
 <main>
   <section class="cover" id="cover">
     <div class="cover-card">
-      <div class="eyebrow">Una invitación desde el corazón</div>
-      <h1>A <span class="amp">&</span> J</h1>
-      <p>Hay historias que merecen celebrarse para toda la vida.<br>Nos encantaría compartir este día contigo.</p>
-      <button class="seal-button" id="openSeal" aria-label="Abrir invitación">
-        <span class="seal">A<span style="font-size:16px">&</span>J</span>
-      </button>
-      <div class="tap">Toca el sello para abrir</div>
+      <img class="cover-art" src="assets/sobre-floral.png" alt="">
+      <button class="seal-button" id="openSeal" aria-label="Abrir invitación tocando el sello A y J"></button>
     </div>
   </section>
 
