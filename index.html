@@ -52,13 +52,16 @@ section{padding:68px 22px}.wrap{max-width:900px;margin:auto}.section-title{text-
 .days .wedding:after{content:'♥';position:absolute;left:50%;right:auto;top:auto;bottom:4px;transform:translateX(-50%);font-size:10px;color:#fff5e4;text-shadow:0 1px 2px #65461e}
 .time{font-size:30px;margin:24px 0 0;letter-spacing:.04em}
 .pill{display:inline-block;background:var(--sage);color:#fff8e8;text-decoration:none;padding:15px 24px;border-radius:30px;margin:8px 4px;font:600 16px 'Lato',Arial,sans-serif;letter-spacing:.04em}.pill.outline{background:transparent;color:var(--sage-dark);border:1px solid var(--sage)}
-.location-button{position:relative;overflow:hidden;margin-top:20px;padding:16px 30px;border:1px solid #fff0c5;border-radius:999px;background:linear-gradient(135deg,#89936d,#576346);box-shadow:0 8px 18px #3e4a3040,inset 0 1px 0 #ffffff70;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.location-button{position:relative;overflow:hidden;margin-top:20px;padding:16px 30px;border:1px solid #dce7b6;border-radius:999px;background:linear-gradient(180deg,#d4dfae 0%,#9cac78 8%,#75875b 27%,#536943 48%,#7e9060 69%,#4d623d 88%,#d2dfad 100%);color:#fffdf0;text-shadow:0 1px 2px #29371f99;box-shadow:0 9px 18px #34412a59,inset 0 2px 2px #ffffffa3,inset 0 -3px 5px #304125a6;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
 .location-button:before{content:'⌖';margin-right:10px;font-size:19px}
-.location-button:hover,.location-button:focus-visible{transform:translateY(-3px);background:linear-gradient(135deg,#9aa57b,#53613e);box-shadow:0 12px 24px #3e4a3059,inset 0 1px 0 #ffffff90}
+.location-button:hover,.location-button:focus-visible{transform:translateY(-3px);background:linear-gradient(180deg,#e4edc3 0%,#afbf88 9%,#849665 28%,#60784c 50%,#8fa171 71%,#586e45 89%,#e1e9bb 100%);box-shadow:0 13px 24px #34412a70,inset 0 2px 3px #ffffffc2,inset 0 -3px 5px #304125a6}
 .location-button:active{transform:translateY(0)}
 #detalles{position:relative;isolation:isolate;overflow:hidden;background:#fff8ed}
-#detalles:before{content:'';position:absolute;z-index:-1;inset:0;opacity:.56;pointer-events:none;background-image:url('assets/mariposa-dorada.png'),url('assets/mariposa-dorada.png'),url('assets/mariposa-dorada.png');background-repeat:no-repeat;background-size:clamp(80px,12vw,145px),clamp(70px,10vw,120px),clamp(75px,11vw,130px);background-position:4% 8%,96% 48%,8% 94%}
-#detalles .wrap{position:relative}
+#detalles:before{content:'';position:absolute;z-index:0;inset:0;opacity:.56;pointer-events:none;background-image:url('assets/mariposa-dorada.png'),url('assets/mariposa-dorada.png'),url('assets/mariposa-dorada.png');background-repeat:no-repeat;background-size:clamp(80px,12vw,145px),clamp(70px,10vw,120px),clamp(75px,11vw,130px);background-position:4% 8%,96% 48%,8% 94%}
+.location-flower{position:absolute;z-index:1;width:clamp(150px,25vw,290px);aspect-ratio:1;background-image:url('assets/sobre-floral.png');background-size:300% 300%;background-repeat:no-repeat;opacity:.76;mask-image:radial-gradient(ellipse at center,#000 36%,transparent 74%);pointer-events:none}
+.location-flower.top-left{left:-3%;top:-10%;background-position:left top}
+.location-flower.bottom-right{right:-3%;bottom:-12%;background-position:right bottom}
+#detalles .wrap{position:relative;z-index:2}
 #detalles .section-title,#detalles .subtitle{color:#34352f}
 .details{display:grid;grid-template-columns:minmax(0,520px);justify-content:center;gap:18px;margin-top:28px}.detail{background:#fffdf7;border:1px solid #e8ddc6;padding:30px;text-align:center;box-shadow:0 10px 26px #433a2417}.detail h3{font-size:27px;font-weight:normal;color:var(--sage-dark);margin:5px 0 14px}.detail p{font-size:19px;line-height:1.8;margin:0;color:#34352f}
 .timeline{max-width:680px;margin:32px auto 0;border-left:1px solid var(--gold);padding-left:26px}.event{margin:0 0 24px;position:relative;font-size:18px;line-height:1.7}.event:before{content:'♥';position:absolute;left:-35px;top:0;color:var(--gold)}.event strong{color:var(--sage-dark);font-size:20px}
@@ -119,6 +122,8 @@ footer{text-align:center;padding:45px 20px;background:var(--sage-dark);color:#ff
     </section>
 
     <section id="detalles">
+      <span class="location-flower top-left" aria-hidden="true"></span>
+      <span class="location-flower bottom-right" aria-hidden="true"></span>
       <div class="wrap">
         <h2 class="section-title">Celebremos juntos</h2>
         <p class="subtitle">Tu presencia será uno de los regalos más bonitos de este día.</p>
