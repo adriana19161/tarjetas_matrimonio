@@ -76,6 +76,7 @@ section{padding:72px 22px}.wrap{max-width:940px;margin:auto}.section-title{text-
 .music-control-section{text-align:center;padding-top:28px;padding-bottom:28px;background:#f5eedf}
 .music-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-width:250px;padding:18px 32px;border:1px solid #d7bc7b;border-radius:999px;background:linear-gradient(135deg,#fffdf7,#f0e3c4);color:#4e5944;box-shadow:0 8px 20px #58462224,inset 0 1px 0 #fff;cursor:pointer;font:700 19px 'DM Sans',Arial,sans-serif;transition:transform .2s ease,box-shadow .2s ease}
 .music-button:hover,.music-button:focus-visible{transform:translateY(-3px);box-shadow:0 12px 24px #58462238,inset 0 1px 0 #fff}
+.youtube-song-player{position:fixed;left:-220px;top:-220px;width:200px;height:200px;opacity:0;pointer-events:none;overflow:hidden}
 footer{text-align:center;padding:45px 20px;background:var(--sage-dark);color:#fff8e8}footer h2{font-weight:normal;font-size:32px;margin:0 0 10px}
 .small{font:18px 'DM Sans',Arial,sans-serif;line-height:1.7;opacity:1;color:#34352f}
 .opening-effects{position:fixed;z-index:20;inset:0;overflow:hidden;pointer-events:none}
@@ -101,7 +102,6 @@ footer{text-align:center;padding:45px 20px;background:var(--sage-dark);color:#ff
       <div class="wrap">
         <div class="eyebrow">Con amor y gratitud</div>
         <h1 class="couple-names">Adriana Quina <span aria-hidden="true">&amp;</span> Jhon Espinosa</h1>
-        <h2 class="section-title">Nuestra historia, nuestro día</h2>
         <p class="subtitle">Dos corazones, un mismo destino y una promesa de amor eterno. Bienvenidos a celebrar el comienzo de nuestro para siempre y amor eterno.</p>
         <div class="photo-frame">
           <span class="floral-corner top-left" aria-hidden="true"></span>
@@ -164,10 +164,9 @@ footer{text-align:center;padding:45px 20px;background:var(--sage-dark);color:#ff
     </section>
 
     <section class="music-control-section" aria-label="Música de la invitación">
-      <a class="music-button" href="https://open.spotify.com/track/0gjhhuqKxswtR1KzYSpSfd" target="_blank" rel="noopener">
-        <span aria-hidden="true">♫</span><span>Escuchar canción completa</span>
-      </a>
-      <p class="small">La canción completa se abre en Spotify.</p>
+      <button class="music-button" id="musicToggle" type="button" aria-pressed="false">
+        <span aria-hidden="true">♫</span><span id="musicButtonLabel">Escuchar música</span>
+      </button>
     </section>
 
     <footer>
@@ -176,6 +175,7 @@ footer{text-align:center;padding:45px 20px;background:var(--sage-dark);color:#ff
       <div class="small">4 de diciembre de 2026 · Popayán, Cauca</div>
     </footer>
   </div>
+  <div class="youtube-song-player" aria-hidden="true"><div id="youtubeSongPlayer"></div></div>
 </main>
 <script>
 const weddingDate = new Date('2026-12-04T17:00:00-05:00');
@@ -199,6 +199,49 @@ function makeCalendar(){
  for(let d=1;d<=count;d++){let e=document.createElement('span');e.textContent=d;if(d===weddingDay)e.className='wedding';target.appendChild(e);}
 }
 const cover=document.getElementById('cover'), invite=document.getElementById('invite');
+const musicToggle=document.getElementById('musicToggle');
+const musicButtonLabel=document.getElementById('musicButtonLabel');
+let weddingMusicPlayer=null;
+let musicRequested=false;
+function setMusicState(playing,label){
+ musicToggle.setAttribute('aria-pressed',String(playing));
+ musicButtonLabel.textContent=label;
+}
+function playWeddingMusic(){
+ musicRequested=true;
+ if(weddingMusicPlayer){
+  weddingMusicPlayer.playVideo();
+  setMusicState(true,'Iniciando música…');
+ }else{
+  setMusicState(false,'Preparando música…');
+ }
+}
+window.onYouTubeIframeAPIReady=()=>{
+ const playerVars={autoplay:0,controls:0,disablekb:1,playsinline:1,rel:0};
+ if(location.protocol==='http:'||location.protocol==='https:')playerVars.origin=location.origin;
+ weddingMusicPlayer=new YT.Player('youtubeSongPlayer',{
+  width:'200',
+  height:'200',
+  videoId:'NoWqnjmh8KU',
+  playerVars,
+  events:{
+   onReady:(event)=>{if(musicRequested)event.target.playVideo();},
+   onStateChange:(event)=>{
+    if(event.data===YT.PlayerState.PLAYING)setMusicState(true,'Pausar música');
+    if(event.data===YT.PlayerState.PAUSED||event.data===YT.PlayerState.ENDED)setMusicState(false,'Escuchar música');
+   },
+   onError:()=>setMusicState(false,'No se pudo iniciar la música')
+  }
+ });
+};
+musicToggle.addEventListener('click',()=>{
+ if(weddingMusicPlayer&&musicToggle.getAttribute('aria-pressed')==='true'){
+  weddingMusicPlayer.pauseVideo();
+  setMusicState(false,'Escuchar música');
+ }else{
+  playWeddingMusic();
+ }
+});
 function createOpeningEffects(){
  const effects=document.createElement('div');
  effects.className='opening-effects';
@@ -234,7 +277,9 @@ function createOpeningEffects(){
 document.getElementById('openSeal').addEventListener('click',()=>{
  createOpeningEffects();
  cover.style.display='none'; invite.classList.add('show'); window.scrollTo({top:0,behavior:'smooth'});
+ playWeddingMusic();
 });
 makeCalendar();updateCountdown();setInterval(updateCountdown,1000);
 </script>
+<script src="https://www.youtube.com/iframe_api" async></script>
 </body></html>

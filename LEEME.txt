@@ -7,8 +7,8 @@ INVITACIÓN DIGITAL DE BODA A & J
 4. Incluye cuenta regresiva hasta el 4 de diciembre de 2026 a las 5:00 p. m. (hora de Colombia), calendario con corazón, foto, ubicación en Google Maps e itinerario editable.
 
 MÚSICA
-- Abrir el sobre no redirige fuera de la invitación.
-- El botón “Escuchar canción completa” abre la pista oficial en Spotify. La reproducción completa depende de la sesión, el plan y los permisos del navegador o de la aplicación de Spotify.
+- Al abrir el sobre, la invitación intenta reproducir dentro de la página el video oficial completo “Por El Resto De Mi Vida” de Andrés Cepeda mediante el reproductor incrustado de YouTube.
+- El botón permite pausar o reanudar la música sin sacar al visitante de la invitación. Algunos navegadores pueden bloquear la reproducción automática; en ese caso, toca “Escuchar música”.
 
 PERSONALIZACIÓN
 - En index.html reemplaza A & J por los nombres reales si lo deseas.
