@@ -8,8 +8,8 @@ INVITACIÓN DIGITAL DE BODA A & J
 
 MÚSICA
 - La canción se reproduce desde el reproductor oficial de Spotify.
-- Al abrir el sobre, la invitación intenta iniciar la canción; también se puede controlar con el botón “Escuchar canción” / “Detener canción”.
-- El navegador o Spotify pueden requerir que se inicie la reproducción manualmente.
+- Al abrir el sobre, la invitación inicia la canción mediante la API oficial del reproductor de Spotify; también se puede controlar con el botón “Escuchar canción” / “Detener canción”.
+- Si el navegador o Spotify bloquean la reproducción automática, toca “Escuchar canción” para iniciarla. La disponibilidad puede depender de Spotify y del dispositivo.
 
 PERSONALIZACIÓN
 - En index.html reemplaza A & J por los nombres reales si lo deseas.
