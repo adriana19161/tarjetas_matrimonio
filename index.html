@@ -199,7 +199,6 @@ function makeCalendar(){
  for(let d=1;d<=count;d++){let e=document.createElement('span');e.textContent=d;if(d===weddingDay)e.className='wedding';target.appendChild(e);}
 }
 const cover=document.getElementById('cover'), invite=document.getElementById('invite');
-const spotifyTrackUrl='https://open.spotify.com/track/0gjhhuqKxswtR1KzYSpSfd';
 function createOpeningEffects(){
  const effects=document.createElement('div');
  effects.className='opening-effects';
@@ -235,7 +234,6 @@ function createOpeningEffects(){
 document.getElementById('openSeal').addEventListener('click',()=>{
  createOpeningEffects();
  cover.style.display='none'; invite.classList.add('show'); window.scrollTo({top:0,behavior:'smooth'});
- window.open(spotifyTrackUrl,'_blank','noopener');
 });
 makeCalendar();updateCountdown();setInterval(updateCountdown,1000);
 </script>
