@@ -65,6 +65,12 @@ section{padding:68px 22px}.wrap{max-width:900px;margin:auto}.section-title{text-
 #detalles .section-title,#detalles .subtitle{color:#34352f}
 .details{display:grid;grid-template-columns:minmax(0,520px);justify-content:center;gap:18px;margin-top:28px}.detail{background:#fffdf7;border:1px solid #e8ddc6;padding:30px;text-align:center;box-shadow:0 10px 26px #433a2417}.detail h3{font-size:27px;font-weight:normal;color:var(--sage-dark);margin:5px 0 14px}.detail p{font-size:19px;line-height:1.8;margin:0;color:#34352f}
 .timeline{max-width:680px;margin:32px auto 0;border-left:1px solid var(--gold);padding-left:26px}.event{margin:0 0 24px;position:relative;font-size:18px;line-height:1.7}.event:before{content:'♥';position:absolute;left:-35px;top:0;color:var(--gold)}.event strong{color:var(--sage-dark);font-size:20px}
+#itinerario{position:relative;isolation:isolate;overflow:hidden;background:#f5eedf!important}
+#itinerario:before{content:'';position:absolute;z-index:-1;inset:0;background:url('assets/sobre-floral.png') center 48%/cover no-repeat;opacity:.42;mask-image:linear-gradient(90deg,#000 0%,transparent 45%,transparent 55%,#000 100%);pointer-events:none}
+#itinerario .wrap{position:relative}
+#itinerario .section-title,#itinerario .subtitle,#itinerario .event{color:#34352f}
+#itinerario .event strong{color:var(--sage-dark)}
+#itinerario .timeline{background:#fffaf0d9;padding:26px 24px 8px 50px;border:1px solid #e8ddc6;border-radius:14px;box-shadow:0 10px 28px #51452b1c}
 .music-control-section{text-align:center;padding-top:28px;padding-bottom:28px;background:#f5eedf}
 .music-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-width:230px;padding:17px 30px;border:1px solid #d7bc7b;border-radius:999px;background:linear-gradient(135deg,#fffdf7,#f0e3c4);color:#4e5944;box-shadow:0 8px 20px #58462224,inset 0 1px 0 #fff;cursor:pointer;font:600 17px 'Lato',Arial,sans-serif;transition:transform .2s ease,box-shadow .2s ease}
 .music-button:hover,.music-button:focus-visible{transform:translateY(-3px);box-shadow:0 12px 24px #58462238,inset 0 1px 0 #fff}
@@ -137,7 +143,7 @@ footer{text-align:center;padding:45px 20px;background:var(--sage-dark);color:#ff
       </div>
     </section>
 
-    <section style="background:#f5eedf">
+    <section id="itinerario" style="background:#f5eedf">
       <div class="wrap">
         <h2 class="section-title">Itinerario</h2>
         <p class="subtitle">Un día para recordar, lleno de amor, alegría y momentos compartidos.</p>
