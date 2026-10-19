@@ -7,11 +7,11 @@
 <title>Nuestra boda | A & J</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--sage:#737d5e;--sage-dark:#4e5944;--cream:#fff8ed;--gold:#b9914c;--ink:#272a24}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:'Lato',Arial,sans-serif;font-size:20px;font-weight:500}
-h1,h2,h3,footer h2{font-family:'Playfair Display',Georgia,serif;font-weight:600}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',Arial,sans-serif;font-size:21px;font-weight:500}
+h1,h2,h3,footer h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700}
 button,a{font:inherit}.cover{min-height:100svh;display:grid;place-items:center;overflow:hidden;padding:0;background:#f8eedc}
 .cover-card{position:relative;width:min(100vw,100svh);aspect-ratio:1}
 .cover-art{display:block;width:100%;height:100%;object-fit:contain}
@@ -22,8 +22,8 @@ button,a{font:inherit}.cover{min-height:100svh;display:grid;place-items:center;o
 .seal-button:focus-visible{outline:3px solid #fff8e6;outline-offset:3px;box-shadow:0 0 0 6px #805c27}
 @keyframes sealPulse{0%,100%{box-shadow:0 4px 11px #39240899,inset 0 2px 3px #fff1be,0 0 0 0 #efc85f66}50%{box-shadow:0 8px 16px #392408b0,inset 0 2px 3px #fff1be,0 0 0 5px #efc85f35}}
 .invite{display:none;animation:fade .7s ease}.invite.show{display:block}@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-.eyebrow{letter-spacing:.18em;text-transform:uppercase;font:700 14px 'Lato',Arial,sans-serif;color:#435039}
-section{padding:68px 22px}.wrap{max-width:900px;margin:auto}.section-title{text-align:center;color:#3f4b36;font-size:clamp(38px,6vw,52px);font-weight:600;letter-spacing:.015em;margin:0 0 16px}.subtitle{text-align:center;color:#272a24;line-height:1.75;max-width:700px;margin:0 auto 34px;font-size:21px;font-weight:500}
+.eyebrow{letter-spacing:.16em;text-transform:uppercase;font:700 15px 'DM Sans',Arial,sans-serif;color:#435039}
+section{padding:72px 22px}.wrap{max-width:940px;margin:auto}.section-title{text-align:center;color:#3f4b36;font-size:clamp(44px,7vw,60px);font-weight:700;line-height:1.08;letter-spacing:.01em;margin:0 0 18px}.subtitle{text-align:center;color:#272a24;line-height:1.7;max-width:740px;margin:0 auto 36px;font-size:23px;font-weight:500}
 .story-section{min-height:100svh;display:grid;align-items:center;background:#f5eedf}
 .story-section .wrap{width:100%}
 .story-section .eyebrow{text-align:center;margin:0 0 10px;color:var(--gold)}
@@ -42,7 +42,7 @@ section{padding:68px 22px}.wrap{max-width:900px;margin:auto}.section-title{text-
 .countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:680px;margin:34px auto}
 .unit{background:var(--sage);color:#fff8e8;padding:22px 10px;text-align:center;border-radius:8px;box-shadow:0 8px 20px #39432d24}
 .unit strong{display:block;font-size:clamp(34px,6vw,48px);font-weight:normal}
-.unit span{font:700 clamp(12px,1.9vw,15px) 'Lato',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.unit span{font:700 clamp(12px,1.9vw,15px) 'DM Sans',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
 .calendar-card{max-width:560px;margin:34px auto;background:linear-gradient(145deg,#727d5d,#596449);color:#fff8e8;padding:34px 28px 28px;border:1px solid #e9dfc6;outline:6px solid #737d5e24;box-shadow:0 14px 30px #3333;text-align:center;border-radius:190px 190px 12px 12px}
 .calendar-card h3{font-size:clamp(32px,5vw,40px);font-weight:normal;margin:6px 0 24px;letter-spacing:.02em}
 .week,.days{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
@@ -51,7 +51,7 @@ section{padding:68px 22px}.wrap{max-width:900px;margin:auto}.section-title{text-
 .days .wedding{font-weight:bold;color:#fff;background:var(--gold);clip-path:polygon(50% 96%,4% 47%,1% 38%,1% 29%,4% 20%,10% 13%,18% 9%,27% 9%,36% 14%,44% 23%,50% 32%,56% 23%,64% 14%,73% 9%,82% 9%,90% 13%,96% 20%,99% 29%,99% 38%,96% 47%);filter:drop-shadow(0 2px 2px #3a28168c) drop-shadow(0 0 2px #f9f0d9);position:relative;width:46px;height:44px;justify-self:center;align-self:center;padding-bottom:9px}
 .days .wedding:after{content:'♥';position:absolute;left:50%;right:auto;top:auto;bottom:4px;transform:translateX(-50%);font-size:10px;color:#fff5e4;text-shadow:0 1px 2px #65461e}
 .time{font-size:32px;font-weight:600;margin:24px 0 0;letter-spacing:.04em}
-.pill{display:inline-block;background:var(--sage);color:#fff8e8;text-decoration:none;padding:15px 24px;border-radius:30px;margin:8px 4px;font:600 16px 'Lato',Arial,sans-serif;letter-spacing:.04em}.pill.outline{background:transparent;color:var(--sage-dark);border:1px solid var(--sage)}
+.pill{display:inline-block;background:var(--sage);color:#fff8e8;text-decoration:none;padding:15px 24px;border-radius:30px;margin:8px 4px;font:700 18px 'DM Sans',Arial,sans-serif;letter-spacing:.02em}.pill.outline{background:transparent;color:var(--sage-dark);border:1px solid var(--sage)}
 .location-button{position:relative;overflow:hidden;margin-top:20px;padding:16px 30px;border:1px solid #dce7b6;border-radius:999px;background:linear-gradient(180deg,#d4dfae 0%,#9cac78 8%,#75875b 27%,#536943 48%,#7e9060 69%,#4d623d 88%,#d2dfad 100%);color:#fffdf0;text-shadow:0 1px 2px #29371f99;box-shadow:0 9px 18px #34412a59,inset 0 2px 2px #ffffffa3,inset 0 -3px 5px #304125a6;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
 .location-button:before{content:'⌖';margin-right:10px;font-size:19px}
 .location-button:hover,.location-button:focus-visible{transform:translateY(-3px);background:linear-gradient(180deg,#e4edc3 0%,#afbf88 9%,#849665 28%,#60784c 50%,#8fa171 71%,#586e45 89%,#e1e9bb 100%);box-shadow:0 13px 24px #34412a70,inset 0 2px 3px #ffffffc2,inset 0 -3px 5px #304125a6}
@@ -72,20 +72,20 @@ section{padding:68px 22px}.wrap{max-width:900px;margin:auto}.section-title{text-
 #itinerario .event strong{color:var(--sage-dark)}
 #itinerario .timeline{background:#fffaf0ed;padding:28px 26px 8px 50px;border:1px solid #d8c9a9;border-radius:14px;box-shadow:0 10px 28px #51452b26}
 .music-control-section{text-align:center;padding-top:28px;padding-bottom:28px;background:#f5eedf}
-.music-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-width:230px;padding:17px 30px;border:1px solid #d7bc7b;border-radius:999px;background:linear-gradient(135deg,#fffdf7,#f0e3c4);color:#4e5944;box-shadow:0 8px 20px #58462224,inset 0 1px 0 #fff;cursor:pointer;font:600 17px 'Lato',Arial,sans-serif;transition:transform .2s ease,box-shadow .2s ease}
+.music-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-width:250px;padding:18px 32px;border:1px solid #d7bc7b;border-radius:999px;background:linear-gradient(135deg,#fffdf7,#f0e3c4);color:#4e5944;box-shadow:0 8px 20px #58462224,inset 0 1px 0 #fff;cursor:pointer;font:700 19px 'DM Sans',Arial,sans-serif;transition:transform .2s ease,box-shadow .2s ease}
 .music-button:hover,.music-button:focus-visible{transform:translateY(-3px);box-shadow:0 12px 24px #58462238,inset 0 1px 0 #fff}
 .music-button[aria-pressed="true"]{background:linear-gradient(135deg,#737d5e,#4e5944);color:#fff8e8;border-color:#d4b66b}
 .spotify-player{position:fixed;z-index:-1;left:-10000px;top:0;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none}
 .spotify-player iframe{display:block;width:456px;height:152px;border:0}
 footer{text-align:center;padding:45px 20px;background:var(--sage-dark);color:#fff8e8}footer h2{font-weight:normal;font-size:32px;margin:0 0 10px}
-.small{font:16px 'Lato',Arial,sans-serif;line-height:1.7;opacity:1;color:#34352f}
+.small{font:18px 'DM Sans',Arial,sans-serif;line-height:1.7;opacity:1;color:#34352f}
 .opening-effects{position:fixed;z-index:20;inset:0;overflow:hidden;pointer-events:none}
-.opening-sparkle{position:absolute;left:var(--x);top:var(--y);color:#d9ad48;font-size:var(--size);line-height:1;text-shadow:0 0 8px #fff5c7,0 0 18px #e4bd62;animation:sparkleRise var(--duration) ease-out var(--delay) both}
-.opening-butterfly{position:absolute;left:var(--x);top:var(--y);width:clamp(64px,10vw,128px);filter:drop-shadow(0 4px 8px #674c1833);animation:butterflyRelease var(--duration) ease-out var(--delay) both}
+.opening-sparkle{position:absolute;left:var(--x);top:var(--y);color:#b47b12;font-size:var(--size);line-height:1;text-shadow:0 0 8px #fff5c7,0 0 18px #e4bd62,0 2px 3px #5d401b99;animation:sparkleRise var(--duration) ease-out var(--delay) both}
+.opening-butterfly{position:absolute;left:var(--x);top:var(--y);width:clamp(76px,12vw,150px);filter:drop-shadow(0 4px 9px #33250a77) saturate(1.35);animation:butterflyRelease var(--duration) ease-out var(--delay) both}
 @keyframes sparkleRise{0%{opacity:0;transform:translate3d(0,24px,0) scale(.2) rotate(0)}18%{opacity:1}75%{opacity:.9}100%{opacity:0;transform:translate3d(var(--drift),-72vh,0) scale(1.15) rotate(120deg)}}
 @keyframes butterflyRelease{0%{opacity:0;transform:translate3d(0,45px,0) rotate(-14deg) scale(.6)}15%{opacity:.95}100%{opacity:0;transform:translate3d(var(--drift),-65vh,0) rotate(24deg) scale(1.05)}}
-@media(max-width:600px){section{padding:54px 18px}.details{grid-template-columns:1fr}.countdown{gap:7px}.unit{padding:16px 3px;border-radius:6px}.unit span{letter-spacing:.07em}.calendar-card{padding:28px 12px 24px;border-radius:150px 150px 10px 10px}.week,.days{gap:4px}.week span{font-size:14px}.days span{min-height:36px;font-size:16px}.days .wedding{width:42px;height:40px}.time{font-size:28px}.countdown-section:after{opacity:.66;background-size:70px,56px,58px,66px,48px,62px,54px,66px,48px,58px;background-position:0% 6%,100% 9%,4% 27%,96% 31%,0% 51%,100% 55%,3% 75%,97% 78%,16% 96%,84% 96%}.event{font-size:18px}#itinerario .timeline{padding:24px 18px 6px 42px}}
-@media(prefers-reduced-motion:reduce){.seal-button,.location-button,.music-button{transition:none}.seal-button:before{animation:none}.countdown-section:after{animation:none}.opening-effects{display:none}}
+@media(max-width:600px){body{font-size:19px}section{padding:58px 18px}.section-title{font-size:clamp(40px,11vw,50px)}.subtitle{font-size:20px;line-height:1.65}.details{grid-template-columns:1fr}.countdown{gap:7px}.unit{padding:16px 3px;border-radius:6px}.unit span{letter-spacing:.07em}.calendar-card{padding:28px 12px 24px;border-radius:150px 150px 10px 10px}.week,.days{gap:4px}.week span{font-size:14px}.days span{min-height:36px;font-size:16px}.days .wedding{width:42px;height:40px}.time{font-size:28px}.countdown-section:after{opacity:.66;background-size:70px,56px,58px,66px,48px,62px,54px,66px,48px,58px;background-position:0% 6%,100% 9%,4% 27%,96% 31%,0% 51%,100% 55%,3% 75%,97% 78%,16% 96%,84% 96%}.event{font-size:18px}#itinerario .timeline{padding:24px 18px 6px 42px}}
+@media(prefers-reduced-motion:reduce){.seal-button,.location-button,.music-button{transition:none}.seal-button:before{animation:none}.countdown-section:after{animation:none}.opening-sparkle,.opening-butterfly{animation:none;opacity:.9}}
 </style>
 </head>
 <body>
@@ -204,12 +204,11 @@ const musicButtonLabel=document.getElementById('musicButtonLabel');
 const spotifyPlayer=document.getElementById('spotifyPlayer');
 const spotifyTrack='https://open.spotify.com/embed/track/0gjhhuqKxswtR1KzYSpSfd?utm_source=generator&autoplay=1';
 function createOpeningEffects(){
- if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
  const effects=document.createElement('div');
  effects.className='opening-effects';
  effects.setAttribute('aria-hidden','true');
  const sparkleMarks=['✦','✧','✦','·'];
- for(let i=0;i<36;i++){
+ for(let i=0;i<48;i++){
   const sparkle=document.createElement('span');
   sparkle.className='opening-sparkle';
   sparkle.textContent=sparkleMarks[i%sparkleMarks.length];
@@ -221,20 +220,20 @@ function createOpeningEffects(){
   sparkle.style.setProperty('--drift',`${Math.random()*100-50}px`);
   effects.appendChild(sparkle);
  }
- for(let i=0;i<5;i++){
+ for(let i=0;i<8;i++){
   const butterfly=document.createElement('img');
   butterfly.className='opening-butterfly';
   butterfly.src='assets/mariposa-dorada.png';
   butterfly.alt='';
-  butterfly.style.setProperty('--x',`${10+i*18+Math.random()*8}%`);
-  butterfly.style.setProperty('--y',`${64+Math.random()*30}%`);
+  butterfly.style.setProperty('--x',`${5+i*12+Math.random()*8}%`);
+  butterfly.style.setProperty('--y',`${55+Math.random()*38}%`);
   butterfly.style.setProperty('--duration',`${2.8+Math.random()*1.1}s`);
   butterfly.style.setProperty('--delay',`${Math.random()*.5}s`);
   butterfly.style.setProperty('--drift',`${Math.random()*130-65}px`);
   effects.appendChild(butterfly);
  }
  document.body.appendChild(effects);
- window.setTimeout(()=>effects.remove(),4300);
+ window.setTimeout(()=>effects.remove(),5200);
 }
 function startMusic(){
  if(spotifyPlayer.querySelector('iframe'))return;
