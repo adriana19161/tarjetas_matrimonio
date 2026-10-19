@@ -7,10 +7,9 @@ INVITACIÓN DIGITAL DE BODA A & J
 4. Incluye cuenta regresiva hasta el 4 de diciembre de 2026 a las 5:00 p. m. (hora de Colombia), calendario con corazón, foto, ubicación en Google Maps e itinerario editable.
 
 MÚSICA
-- Por derechos de autor no se incluye la grabación de la canción.
-- Para reproducir la canción dentro de la invitación, coloca un archivo de audio que tengas derecho a usar en assets/cancion.mp3.
-- La página intenta reproducirlo después de tocar el sello. Algunos navegadores pueden exigir otro toque en “Reproducir música”.
-- El enlace “Escuchar canción” permite buscar la canción en YouTube.
+- La canción se reproduce desde el reproductor oficial de Spotify.
+- Al abrir el sobre, la invitación intenta iniciar la canción; también se puede controlar con el botón “Escuchar canción” / “Detener canción”.
+- El navegador o Spotify pueden requerir que se inicie la reproducción manualmente.
 
 PERSONALIZACIÓN
 - En index.html reemplaza A & J por los nombres reales si lo deseas.
