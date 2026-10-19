@@ -1,0 +1,21 @@
+INVITACIÓN DIGITAL DE BODA A & J
+=================================
+
+1. Descomprime invitacion_boda_AJ.zip.
+2. Abre index.html en un navegador para probar la invitación.
+3. La portada del sobre/sello se abre al tocar el sello.
+4. Incluye cuenta regresiva hasta el 4 de diciembre de 2026 a las 5:00 p. m. (hora de Colombia), calendario con corazón, foto, ubicación en Google Maps e itinerario editable.
+
+MÚSICA
+- Por derechos de autor no se incluye la grabación de la canción.
+- Para reproducir la canción dentro de la invitación, coloca un archivo de audio que tengas derecho a usar en assets/cancion.mp3.
+- La página intenta reproducirlo después de tocar el sello. Algunos navegadores pueden exigir otro toque en “Reproducir música”.
+- El enlace “Escuchar canción” permite buscar la canción en YouTube.
+
+PERSONALIZACIÓN
+- En index.html reemplaza A & J por los nombres reales si lo deseas.
+- El itinerario es una propuesta inicial; ajusta las horas a la programación confirmada.
+- El enlace del mapa busca “Ecohotel El Paraíso Real, Popayán, Cauca”; verifica el pin exacto con el lugar antes de compartir.
+
+PUBLICAR EN INTERNET
+Para que otras personas la abran desde sus teléfonos, sube la carpeta completa a un servicio de alojamiento estático como GitHub Pages, Netlify o similar. No subas solamente index.html: también necesitas la carpeta assets.

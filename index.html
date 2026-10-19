@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#747d5f">
+<title>Nuestra boda | A & J</title>
+<style>
+:root{--sage:#737d5e;--sage-dark:#4e5944;--cream:#fff8ed;--gold:#b9914c;--ink:#4a493f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,'Times New Roman',serif}
+button,a{font:inherit}.cover{min-height:100svh;display:grid;place-items:center;padding:22px;background:linear-gradient(#fff9efb8,#fff9efcf),url('assets/sobre-floral.png') center/cover no-repeat}
+.cover-card{text-align:center;max-width:520px;width:100%;padding:26px 18px}
+.eyebrow{letter-spacing:.24em;text-transform:uppercase;font:12px Arial,sans-serif;color:var(--sage-dark)}
+.cover h1{font-size:clamp(38px,8vw,66px);font-weight:normal;margin:14px 0 8px;color:var(--sage-dark)}
+.cover p{font-size:18px;line-height:1.6;margin:8px auto 24px;max-width:340px}
+.seal-button{border:0;background:transparent;cursor:pointer;display:inline-grid;place-items:center;transition:transform .25s}
+.seal-button:hover{transform:scale(1.04)}.seal{width:112px;height:112px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 25%,#f8e5ae,#b78b3d 55%,#805c27);box-shadow:0 5px 14px #6c512b55,inset 0 0 0 5px #f4d89b,inset 0 0 0 8px #a57931;color:#fff8e6;font-size:28px;text-shadow:0 1px 2px #65461e}
+.tap{font:12px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;margin-top:15px;color:var(--sage-dark)}
+.invite{display:none;animation:fade .7s ease}.invite.show{display:block}@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.hero{min-height:75vh;display:grid;place-items:center;text-align:center;padding:64px 22px;background:linear-gradient(#fff8edb9,#fff8edc9),url('assets/sobre-floral.png') center/cover}
+.hero h2{font-size:clamp(40px,8vw,76px);font-weight:normal;color:var(--sage-dark);margin:10px 0}.amp{color:var(--gold);font-style:italic}.hero .date{font-size:20px;letter-spacing:.12em}
+section{padding:54px 20px}.wrap{max-width:900px;margin:auto}.section-title{text-align:center;color:var(--sage-dark);font-size:clamp(27px,5vw,40px);font-weight:normal;margin:0 0 12px}.subtitle{text-align:center;line-height:1.7;max-width:620px;margin:0 auto 28px}
+.photo{display:block;width:min(100%,520px);max-height:620px;object-fit:cover;margin:24px auto;border-radius:180px 180px 12px 12px;box-shadow:0 10px 30px #655a3a24}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:620px;margin:28px auto}.unit{background:var(--sage);color:#fff8e8;padding:18px 8px;text-align:center;border-radius:4px}.unit strong{display:block;font-size:clamp(27px,6vw,42px);font-weight:normal}.unit span{font:11px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.calendar-card{max-width:520px;margin:28px auto;background:var(--sage);color:#fff8e8;padding:28px 20px 22px;border:1px solid #e9dfc6;outline:5px solid #737d5e22;box-shadow:0 8px 18px #3332;text-align:center;border-radius:180px 180px 4px 4px}
+.calendar-card h3{font-size:28px;font-weight:normal;margin:6px 0 22px}.week,.days{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}.week span{font-size:12px;font-style:italic;opacity:.85;padding:6px 0}.days span{min-height:34px;display:grid;place-items:center;font-size:14px;position:relative}.days .wedding{font-weight:bold;color:#fff;background:#b7c09f;border-radius:50%;outline:2px solid #f9f0d9;position:relative}.days .wedding:after{content:'♥';position:absolute;right:-4px;top:-8px;font-size:17px;color:#fff5e4;text-shadow:0 1px 3px #38412e}
+.time{font-size:25px;margin:22px 0 0}.pill{display:inline-block;background:var(--sage);color:#fff8e8;text-decoration:none;padding:13px 22px;border-radius:30px;margin:8px 4px;font:13px Arial,sans-serif;letter-spacing:.04em}.pill.outline{background:transparent;color:var(--sage-dark);border:1px solid var(--sage)}
+.details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:24px}.detail{background:#fffdf7;border:1px solid #e8ddc6;padding:25px;text-align:center}.detail h3{font-size:23px;font-weight:normal;color:var(--sage-dark);margin:5px 0 12px}.detail p{line-height:1.7;margin:0}
+.timeline{max-width:620px;margin:28px auto 0;border-left:1px solid var(--gold);padding-left:24px}.event{margin:0 0 22px;position:relative}.event:before{content:'♥';position:absolute;left:-33px;top:0;color:var(--gold)}.event strong{color:var(--sage-dark);font-size:18px}
+.music-box{text-align:center;background:#f4ead6;padding:26px;border-radius:8px;max-width:650px;margin:24px auto}.music-box p{line-height:1.7}.music-note{font-size:32px;color:var(--gold)}
+footer{text-align:center;padding:45px 20px;background:var(--sage-dark);color:#fff8e8}footer h2{font-weight:normal;font-size:32px;margin:0 0 10px}
+.small{font:12px Arial,sans-serif;line-height:1.6;opacity:.82}
+@media(max-width:600px){.details{grid-template-columns:1fr}.countdown{gap:6px}.unit{padding:14px 3px}.calendar-card{padding:24px 12px 20px}.days span{min-height:30px;font-size:13px}}
+</style>
+</head>
+<body>
+<main>
+  <section class="cover" id="cover">
+    <div class="cover-card">
+      <div class="eyebrow">Una invitación desde el corazón</div>
+      <h1>A <span class="amp">&</span> J</h1>
+      <p>Hay historias que merecen celebrarse para toda la vida.<br>Nos encantaría compartir este día contigo.</p>
+      <button class="seal-button" id="openSeal" aria-label="Abrir invitación">
+        <span class="seal">A<span style="font-size:16px">&</span>J</span>
+      </button>
+      <div class="tap">Toca el sello para abrir</div>
+    </div>
+  </section>
+
+  <div class="invite" id="invite">
+    <header class="hero">
+      <div>
+        <div class="eyebrow">¡Nos casamos!</div>
+        <h2>A <span class="amp">&</span> J</h2>
+        <div class="date">VIERNES · 4 DE DICIEMBRE DE 2026</div>
+        <p style="font-size:19px;line-height:1.7">Con la bendición de Dios y el amor de nuestras familias,<br>queremos invitarte a celebrar nuestra unión.</p>
+        <a class="pill" href="#detalles">Acompáñanos</a>
+      </div>
+    </header>
+
+    <section>
+      <div class="wrap">
+        <h2 class="section-title">La cuenta regresiva</h2>
+        <p class="subtitle">Cada segundo nos acerca al comienzo de nuestra historia para siempre.</p>
+        <div class="countdown" aria-label="Cuenta regresiva">
+          <div class="unit"><strong id="days">--</strong><span>Días</span></div>
+          <div class="unit"><strong id="hours">--</strong><span>Horas</span></div>
+          <div class="unit"><strong id="minutes">--</strong><span>Minutos</span></div>
+          <div class="unit"><strong id="seconds">--</strong><span>Segundos</span></div>
+        </div>
+        <div class="calendar-card">
+          <h3>Diciembre 2026</h3>
+          <div class="week"><span>Dom</span><span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span></div>
+          <div class="days" id="calendarDays"></div>
+          <div class="time">5:00 PM</div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:#f5eedf">
+      <div class="wrap">
+        <h2 class="section-title">Nuestra historia, nuestro día</h2>
+        <p class="subtitle">Un día especial, rodeados de las personas que hacen parte de nuestra historia.</p>
+        <img class="photo" src="assets/pareja.jpg" alt="Fotografía de la pareja">
+      </div>
+    </section>
+
+    <section id="detalles">
+      <div class="wrap">
+        <h2 class="section-title">Celebremos juntos</h2>
+        <p class="subtitle">Tu presencia será uno de los regalos más bonitos de este día.</p>
+        <div class="details">
+          <div class="detail">
+            <div class="music-note">⌖</div>
+            <h3>El lugar</h3>
+            <p><strong>Ecohotel El Paraíso Real</strong><br>Popayán, Cauca</p>
+            <a class="pill" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Ecohotel+El+Paraiso+Real+Popayan+Cauca">Ver ubicación</a>
+          </div>
+          <div class="detail">
+            <div class="music-note">♡</div>
+            <h3>La hora</h3>
+            <p><strong>5:00 de la tarde</strong><br>Viernes, 4 de diciembre de 2026</p>
+            <a class="pill outline" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda%20A%20%26%20J&dates=20261204T220000Z/20261205T020000Z&details=Celebraci%C3%B3n%20de%20boda&location=Ecohotel%20El%20Para%C3%ADso%20Real%2C%20Popay%C3%A1n%2C%20Cauca" target="_blank" rel="noopener">Guardar fecha</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:#f5eedf">
+      <div class="wrap">
+        <h2 class="section-title">Itinerario</h2>
+        <p class="subtitle">Un día para recordar, lleno de amor, alegría y momentos compartidos.</p>
+        <div class="timeline">
+          <div class="event"><strong>5:00 p. m. · Llegada de invitados</strong><br>Recibimiento y bienvenida.</div>
+          <div class="event"><strong>5:30 p. m. · Ceremonia</strong><br>El comienzo de nuestro para siempre.</div>
+          <div class="event"><strong>6:15 p. m. · Fotografías y brindis</strong><br>Compartamos abrazos y buenos deseos.</div>
+          <div class="event"><strong>7:00 p. m. · Cena y celebración</strong><br>Una noche para disfrutar juntos.</div>
+          <div class="event"><strong>8:00 p. m. · Música y baile</strong><br>¡A celebrar el amor!</div>
+        </div>
+        <p class="small" style="text-align:center;margin-top:22px">*El itinerario es una propuesta inicial y puede ajustarse a la programación definitiva.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2 class="section-title">Una canción para siempre</h2>
+        <div class="music-box">
+          <div class="music-note">♫</div>
+          <p><strong>“Por el resto de mi vida”</strong><br>La música puede empezar cuando abras la invitación, pero algunos navegadores requieren que la persona toque el botón de reproducción.</p>
+          <a class="pill" href="https://www.youtube.com/results?search_query=Por+el+resto+de+mi+vida+cancion" target="_blank" rel="noopener">Escuchar canción</a>
+          <p class="small">Para que la canción suene dentro de la invitación, añade un archivo de audio autorizado llamado <code>cancion.mp3</code> a la carpeta <code>assets</code>. Después, activa la línea indicada en el archivo <code>index.html</code>.</p>
+          <audio id="weddingSong" loop preload="none"><source src="assets/cancion.mp3" type="audio/mpeg"></audio>
+          <button class="pill outline" id="musicToggle" type="button">Reproducir música</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <h2>Con amor, A & J</h2>
+      <p>“Y ahora permanecen la fe, la esperanza y el amor; pero el mayor de ellos es el amor.”</p>
+      <div class="small">4 de diciembre de 2026 · Popayán, Cauca</div>
+    </footer>
+  </div>
+</main>
+<script>
+const weddingDate = new Date('2026-12-04T17:00:00-05:00');
+function updateCountdown(){
+  let diff = weddingDate.getTime() - Date.now();
+  if(diff <= 0){ document.querySelector('.countdown').innerHTML='<p style="grid-column:1/-1;text-align:center">¡Hoy celebramos el amor! ♡</p>'; return; }
+  const d=Math.floor(diff/86400000); diff%=86400000;
+  const h=Math.floor(diff/3600000); diff%=3600000;
+  const m=Math.floor(diff/60000); const s=Math.floor((diff%60000)/1000);
+  document.getElementById('days').textContent=d;
+  document.getElementById('hours').textContent=String(h).padStart(2,'0');
+  document.getElementById('minutes').textContent=String(m).padStart(2,'0');
+  document.getElementById('seconds').textContent=String(s).padStart(2,'0');
+}
+function makeCalendar(){
+ const target=document.getElementById('calendarDays');
+ const year=2026, month=11, weddingDay=4;
+ const offset=new Date(year,month,1).getDay();
+ const count=new Date(year,month+1,0).getDate();
+ for(let i=0;i<offset;i++){let e=document.createElement('span');e.innerHTML='&nbsp;';target.appendChild(e);}
+ for(let d=1;d<=count;d++){let e=document.createElement('span');e.textContent=d;if(d===weddingDay)e.className='wedding';target.appendChild(e);}
+}
+const cover=document.getElementById('cover'), invite=document.getElementById('invite');
+const song=document.getElementById('weddingSong'), musicToggle=document.getElementById('musicToggle');
+document.getElementById('openSeal').addEventListener('click',()=>{
+ cover.style.display='none'; invite.classList.add('show'); window.scrollTo({top:0,behavior:'smooth'});
+ // Intenta reproducir música tras el toque del usuario. Funcionará si assets/cancion.mp3 está presente.
+ song.play().then(()=>musicToggle.textContent='Pausar música').catch(()=>{});
+});
+musicToggle.addEventListener('click',async()=>{
+ if(song.paused){try{await song.play();musicToggle.textContent='Pausar música';}catch(e){alert('Añade tu archivo autorizado assets/cancion.mp3 para activar la música.');}}
+ else{song.pause();musicToggle.textContent='Reproducir música';}
+});
+makeCalendar();updateCountdown();setInterval(updateCountdown,1000);
+</script>
+</body></html>
