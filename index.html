@@ -35,13 +35,12 @@ section{padding:72px 22px}.wrap{max-width:940px;margin:auto}.section-title{text-
 .countdown-section:before{content:none}
 .countdown-card{position:relative;isolation:isolate;overflow:hidden;width:100%;max-width:420px;aspect-ratio:373/663;background:#f6efdd url('assets/cuenta-regresiva-marco.png') center/100% 100% no-repeat;border-radius:14px;box-shadow:0 15px 35px #0000001f}
 .countdown-card .wrap{position:absolute;inset:0;width:auto;max-width:none;margin:0;padding:0}
-.countdown-card .section-title{position:absolute;top:20.5%;left:18%;width:64%;margin:0;padding:2px 0 4px;border-radius:50%;background:radial-gradient(ellipse,#f6efdd 0%,#f6efdd 48%,rgba(246,239,221,.88) 66%,transparent 100%);color:#a17e39;font:600 clamp(19px,5.2vw,23px)/.95 'Cormorant Garamond',Georgia,serif;letter-spacing:0;text-transform:none}
-.countdown-card .subtitle{position:absolute;top:29%;left:22%;width:56%;max-width:none;margin:0;padding:2px 0 4px;border-radius:50%;background:radial-gradient(ellipse,#f6efdd 0%,#f6efdd 52%,rgba(246,239,221,.88) 72%,transparent 100%);color:#786743;font:400 clamp(9px,2.7vw,11px)/1.25 'Montserrat',Arial,sans-serif}
+.countdown-card .section-title.sr-only,.countdown-card .subtitle.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
 .countdown{position:absolute;top:36.5%;left:15%;display:flex;justify-content:center;gap:5px;width:70%;max-width:none;margin:0}
-.countdown .unit{width:auto;flex:1 1 0;min-width:0;background:#f7efd9;color:#a38143;padding:7px 0;text-align:center;border:1px solid rgba(184,151,88,.45);border-radius:9px;box-shadow:0 3px 8px #0000000a}
+.countdown .unit{width:auto;flex:1 1 0;min-width:0;background:#f7efd9;color:#a38143;padding:14px 0 13px;text-align:center;border:1px solid rgba(184,151,88,.45);border-radius:9px;box-shadow:0 3px 8px #0000000a}
 .countdown .unit strong{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(21px,6vw,27px);font-weight:600;line-height:1.05}
 .countdown .unit span{display:block;margin-top:3px;color:#947844;font:400 clamp(7px,2vw,9px) 'Montserrat',Arial,sans-serif;letter-spacing:.03em;text-transform:uppercase}
-.calendar-card{position:absolute;top:48.5%;left:17%;width:66%;height:36%;max-width:none;margin:0;background:#b4c58f;color:#5c4a28;padding:17px 12px 10px;border:0;box-shadow:none;text-align:center;border-radius:125px 125px 18px 18px}
+.calendar-card{position:absolute;top:48.5%;left:19%;width:62%;height:36%;max-width:none;margin:0;background:#b6c48c;color:#5c4a28;padding:17px 12px 10px;border:0;box-shadow:none;text-align:center;border-radius:125px 125px 18px 18px}
 .calendar-card:before{display:none}
 .calendar-card h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(15px,4.2vw,19px);font-weight:600;color:#6e582f;margin:0 0 8px;letter-spacing:0}
 .week,.days{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
@@ -115,8 +114,8 @@ footer .small{margin-top:8px;color:#fff8e8;font:600 22px/1.5 'DM Sans',Arial,san
     <section class="countdown-section">
       <div class="countdown-card">
         <div class="wrap">
-          <h2 class="section-title">La cuenta<br>regresiva</h2>
-          <p class="subtitle">Cada segundo nos acerca al comienzo de nuestra historia por toda la eternidad.</p>
+          <h2 class="section-title sr-only">La cuenta regresiva</h2>
+          <p class="subtitle sr-only">Cada segundo nos acerca al comienzo de nuestra historia por toda la eternidad.</p>
           <div class="countdown" aria-label="Cuenta regresiva">
             <div class="unit"><strong id="days">--</strong><span>Días</span></div>
             <div class="unit"><strong id="hours">--</strong><span>Horas</span></div>
