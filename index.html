@@ -80,12 +80,13 @@ footer{text-align:center;padding:45px 20px;background:var(--sage-dark);color:#ff
 footer .small{margin-top:8px;color:#fff8e8;font:600 22px/1.5 'DM Sans',Arial,sans-serif;letter-spacing:.025em;text-shadow:0 1px 2px #0005}
 @media(max-width:600px){footer .small{font-size:clamp(20px,5.5vw,24px)}}
 .opening-effects{position:fixed;z-index:20;inset:0;overflow:hidden;pointer-events:none}
-.opening-smoke{position:absolute;left:var(--x);top:var(--y);width:var(--size);aspect-ratio:1.5;border-radius:50%;background:radial-gradient(ellipse at center,#a7758580 0%,#d0a6ad70 34%,#edc9c866 55%,transparent 74%);filter:blur(12px);animation:smokeRise var(--duration) ease-out var(--delay) both;will-change:transform,opacity}
+.effect-filters{position:absolute;width:0;height:0;overflow:hidden}
+.opening-smoke{position:absolute;left:var(--x);top:var(--y);width:var(--size);height:var(--height);background:radial-gradient(ellipse at 50% 86%,#827675b8 0%,#b8a7a39c 18%,transparent 46%),radial-gradient(ellipse at 33% 64%,#928482ad 0%,#c2afab9c 21%,transparent 48%),radial-gradient(ellipse at 68% 47%,#887976a8 0%,#b9a29fa1 20%,transparent 47%),radial-gradient(ellipse at 44% 27%,#a3918ea6 0%,#c4b0aa9c 19%,transparent 45%);filter:url(#smokeTexture) blur(3px);mix-blend-mode:normal;animation:smokeRise var(--duration) ease-out var(--delay) both;will-change:transform,opacity}
 .opening-heart{position:absolute;left:var(--x);top:var(--y);color:var(--heart-color);font:700 var(--size)/1 Arial,sans-serif;text-shadow:0 2px 8px #fff,0 0 14px #ce9ca966;animation:heartRise var(--duration) ease-out var(--delay) both;will-change:transform,opacity}
 .opening-sparkle{position:absolute;left:var(--x);top:var(--y);color:#b47b12;font-size:var(--size);line-height:1;text-shadow:0 0 8px #fff5c7,0 0 18px #e4bd62,0 2px 3px #5d401b99;animation:sparkleRise var(--duration) ease-out var(--delay) both}
 .butterfly-flight{position:absolute;left:var(--x);top:var(--y);width:var(--size);filter:drop-shadow(0 3px 7px #33250a55) saturate(1.12);animation:butterflyFlight var(--duration) cubic-bezier(.35,.02,.55,1) var(--delay) both;will-change:transform,opacity}
 .opening-butterfly{display:block;width:100%;height:auto;transform-origin:50% 50%;animation:butterflyWings .48s ease-in-out infinite alternate}
-@keyframes smokeRise{0%{opacity:0;transform:translate3d(0,18px,0) scale(.45)}16%{opacity:.78}58%{opacity:.68}100%{opacity:0;transform:translate3d(var(--drift),-36vh,0) scale(1.8)}}
+@keyframes smokeRise{0%{opacity:0;transform:translate3d(0,20px,0) scale(.62) rotate(-8deg)}14%{opacity:.72}48%{opacity:.58}100%{opacity:0;transform:translate3d(var(--drift),-48vh,0) scale(1.32) rotate(10deg)}}
 @keyframes heartRise{0%{opacity:0;transform:translate3d(0,18px,0) scale(.55) rotate(-12deg)}14%{opacity:.95}72%{opacity:.85}100%{opacity:0;transform:translate3d(var(--drift),-62vh,0) scale(1.12) rotate(16deg)}}
 @keyframes sparkleRise{0%{opacity:0;transform:translate3d(0,24px,0) scale(.2) rotate(0)}18%{opacity:1}75%{opacity:.9}100%{opacity:0;transform:translate3d(var(--drift),-72vh,0) scale(1.15) rotate(120deg)}}
 @keyframes butterflyFlight{0%{opacity:0;transform:translate3d(0,16px,0) rotate(-8deg) scale(.76)}12%{opacity:.96}30%{transform:translate3d(var(--drift-one),-13vh,0) rotate(7deg) scale(.92)}55%{transform:translate3d(var(--drift-two),-30vh,0) rotate(-5deg) scale(1)}78%{transform:translate3d(var(--drift-three),-49vh,0) rotate(8deg) scale(1.04)}100%{opacity:0;transform:translate3d(var(--drift-four),-67vh,0) rotate(-4deg) scale(1.08)}}
@@ -261,15 +262,21 @@ function createOpeningEffects(){
  const effects=document.createElement('div');
  effects.className='opening-effects';
  effects.setAttribute('aria-hidden','true');
- for(let i=0;i<16;i++){
+ const filters=document.createElementNS('http://www.w3.org/2000/svg','svg');
+ filters.setAttribute('class','effect-filters');
+ filters.setAttribute('aria-hidden','true');
+ filters.innerHTML='<filter id="smokeTexture" x="-30%" y="-20%" width="160%" height="150%"><feTurbulence type="fractalNoise" baseFrequency="0.014 0.026" numOctaves="2" seed="8" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale="38" xChannelSelector="R" yChannelSelector="G"/></filter>';
+ effects.appendChild(filters);
+ for(let i=0;i<8;i++){
   const smoke=document.createElement('span');
   smoke.className='opening-smoke';
-  smoke.style.setProperty('--x',`${Math.random()*90+5}%`);
-  smoke.style.setProperty('--y',`${52+Math.random()*42}%`);
-  smoke.style.setProperty('--size',`${130+Math.random()*120}px`);
-  smoke.style.setProperty('--duration',`${4.2+Math.random()*1.8}s`);
-  smoke.style.setProperty('--delay',`${Math.random()*.55}s`);
-  smoke.style.setProperty('--drift',`${Math.random()*90-45}px`);
+  smoke.style.setProperty('--x',`${10+Math.random()*75}%`);
+  smoke.style.setProperty('--y',`${56+Math.random()*32}%`);
+  smoke.style.setProperty('--size',`${120+Math.random()*120}px`);
+  smoke.style.setProperty('--height',`${250+Math.random()*180}px`);
+  smoke.style.setProperty('--duration',`${5+Math.random()*1.6}s`);
+  smoke.style.setProperty('--delay',`${Math.random()*.35}s`);
+  smoke.style.setProperty('--drift',`${Math.random()*110-55}px`);
   effects.appendChild(smoke);
  }
  for(let i=0;i<26;i++){
