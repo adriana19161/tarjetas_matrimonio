@@ -80,12 +80,12 @@ footer{text-align:center;padding:45px 20px;background:var(--sage-dark);color:#ff
 footer .small{margin-top:8px;color:#fff8e8;font:600 22px/1.5 'DM Sans',Arial,sans-serif;letter-spacing:.025em;text-shadow:0 1px 2px #0005}
 @media(max-width:600px){footer .small{font-size:clamp(20px,5.5vw,24px)}}
 .opening-effects{position:fixed;z-index:20;inset:0;overflow:hidden;pointer-events:none}
-.opening-smoke{position:absolute;left:var(--x);top:var(--y);width:var(--size);aspect-ratio:1.5;border-radius:50%;background:radial-gradient(ellipse at center,#fff9 0%,#eee6d988 34%,#e7d9c866 55%,transparent 74%);filter:blur(14px);animation:smokeRise var(--duration) ease-out var(--delay) both;will-change:transform,opacity}
-.opening-heart{position:absolute;left:var(--x);top:var(--y);color:var(--heart-color);font:400 var(--size)/1 'Cormorant Garamond',Georgia,serif;text-shadow:0 1px 8px #fff9;animation:heartRise var(--duration) ease-out var(--delay) both;will-change:transform,opacity}
+.opening-smoke{position:absolute;left:var(--x);top:var(--y);width:var(--size);aspect-ratio:1.5;border-radius:50%;background:radial-gradient(ellipse at center,#a7758580 0%,#d0a6ad70 34%,#edc9c866 55%,transparent 74%);filter:blur(12px);animation:smokeRise var(--duration) ease-out var(--delay) both;will-change:transform,opacity}
+.opening-heart{position:absolute;left:var(--x);top:var(--y);color:var(--heart-color);font:700 var(--size)/1 Arial,sans-serif;text-shadow:0 2px 8px #fff,0 0 14px #ce9ca966;animation:heartRise var(--duration) ease-out var(--delay) both;will-change:transform,opacity}
 .opening-sparkle{position:absolute;left:var(--x);top:var(--y);color:#b47b12;font-size:var(--size);line-height:1;text-shadow:0 0 8px #fff5c7,0 0 18px #e4bd62,0 2px 3px #5d401b99;animation:sparkleRise var(--duration) ease-out var(--delay) both}
 .butterfly-flight{position:absolute;left:var(--x);top:var(--y);width:var(--size);filter:drop-shadow(0 3px 7px #33250a55) saturate(1.12);animation:butterflyFlight var(--duration) cubic-bezier(.35,.02,.55,1) var(--delay) both;will-change:transform,opacity}
 .opening-butterfly{display:block;width:100%;height:auto;transform-origin:50% 50%;animation:butterflyWings .48s ease-in-out infinite alternate}
-@keyframes smokeRise{0%{opacity:0;transform:translate3d(0,18px,0) scale(.45)}22%{opacity:.42}100%{opacity:0;transform:translate3d(var(--drift),-30vh,0) scale(1.8)}}
+@keyframes smokeRise{0%{opacity:0;transform:translate3d(0,18px,0) scale(.45)}16%{opacity:.78}58%{opacity:.68}100%{opacity:0;transform:translate3d(var(--drift),-36vh,0) scale(1.8)}}
 @keyframes heartRise{0%{opacity:0;transform:translate3d(0,18px,0) scale(.55) rotate(-12deg)}14%{opacity:.95}72%{opacity:.85}100%{opacity:0;transform:translate3d(var(--drift),-62vh,0) scale(1.12) rotate(16deg)}}
 @keyframes sparkleRise{0%{opacity:0;transform:translate3d(0,24px,0) scale(.2) rotate(0)}18%{opacity:1}75%{opacity:.9}100%{opacity:0;transform:translate3d(var(--drift),-72vh,0) scale(1.15) rotate(120deg)}}
 @keyframes butterflyFlight{0%{opacity:0;transform:translate3d(0,16px,0) rotate(-8deg) scale(.76)}12%{opacity:.96}30%{transform:translate3d(var(--drift-one),-13vh,0) rotate(7deg) scale(.92)}55%{transform:translate3d(var(--drift-two),-30vh,0) rotate(-5deg) scale(1)}78%{transform:translate3d(var(--drift-three),-49vh,0) rotate(8deg) scale(1.04)}100%{opacity:0;transform:translate3d(var(--drift-four),-67vh,0) rotate(-4deg) scale(1.08)}}
@@ -258,32 +258,31 @@ musicToggle.addEventListener('click',()=>{
  }
 });
 function createOpeningEffects(){
- if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
  const effects=document.createElement('div');
  effects.className='opening-effects';
  effects.setAttribute('aria-hidden','true');
- for(let i=0;i<12;i++){
+ for(let i=0;i<16;i++){
   const smoke=document.createElement('span');
   smoke.className='opening-smoke';
   smoke.style.setProperty('--x',`${Math.random()*90+5}%`);
-  smoke.style.setProperty('--y',`${58+Math.random()*32}%`);
-  smoke.style.setProperty('--size',`${90+Math.random()*100}px`);
-  smoke.style.setProperty('--duration',`${3.2+Math.random()*1.5}s`);
-  smoke.style.setProperty('--delay',`${Math.random()*.8}s`);
+  smoke.style.setProperty('--y',`${52+Math.random()*42}%`);
+  smoke.style.setProperty('--size',`${130+Math.random()*120}px`);
+  smoke.style.setProperty('--duration',`${4.2+Math.random()*1.8}s`);
+  smoke.style.setProperty('--delay',`${Math.random()*.55}s`);
   smoke.style.setProperty('--drift',`${Math.random()*90-45}px`);
   effects.appendChild(smoke);
  }
- for(let i=0;i<18;i++){
+ for(let i=0;i<26;i++){
   const heart=document.createElement('span');
   heart.className='opening-heart';
-  heart.textContent=i%3===0?'♥':'♡';
+  heart.textContent='♥';
   heart.style.setProperty('--x',`${Math.random()*90+5}%`);
   heart.style.setProperty('--y',`${58+Math.random()*35}%`);
-  heart.style.setProperty('--size',`${20+Math.random()*20}px`);
-  heart.style.setProperty('--duration',`${3.2+Math.random()*1.6}s`);
-  heart.style.setProperty('--delay',`${Math.random()*.9}s`);
+  heart.style.setProperty('--size',`${26+Math.random()*22}px`);
+  heart.style.setProperty('--duration',`${4+Math.random()*2}s`);
+  heart.style.setProperty('--delay',`${Math.random()*.65}s`);
   heart.style.setProperty('--drift',`${Math.random()*120-60}px`);
-  heart.style.setProperty('--heart-color',i%2===0?'#b76a74':'#b9914c');
+  heart.style.setProperty('--heart-color',i%2===0?'#c45168':'#b83e58');
   effects.appendChild(heart);
  }
  const sparkleMarks=['✦','✧','✦','·'];
@@ -319,7 +318,7 @@ function createOpeningEffects(){
   effects.appendChild(flight);
  }
  document.body.appendChild(effects);
- window.setTimeout(()=>effects.remove(),5200);
+ window.setTimeout(()=>effects.remove(),6800);
 }
 document.getElementById('openSeal').addEventListener('click',()=>{
  createOpeningEffects();
