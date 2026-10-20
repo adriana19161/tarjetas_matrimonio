@@ -82,7 +82,9 @@ footer .small{margin-top:8px;color:#fff8e8;font:600 22px/1.5 'DM Sans',Arial,san
 .opening-effects{position:fixed;z-index:20;inset:0;overflow:hidden;pointer-events:none}
 .effect-filters{position:absolute;width:0;height:0;overflow:hidden}
 .opening-smoke{position:absolute;left:var(--x);top:var(--y);width:var(--size);height:var(--height);background:radial-gradient(ellipse at 50% 86%,#827675b8 0%,#b8a7a39c 18%,transparent 46%),radial-gradient(ellipse at 33% 64%,#928482ad 0%,#c2afab9c 21%,transparent 48%),radial-gradient(ellipse at 68% 47%,#887976a8 0%,#b9a29fa1 20%,transparent 47%),radial-gradient(ellipse at 44% 27%,#a3918ea6 0%,#c4b0aa9c 19%,transparent 45%);filter:url(#smokeTexture) blur(3px);mix-blend-mode:normal;animation:smokeRise var(--duration) ease-out var(--delay) both;will-change:transform,opacity}
-.opening-heart{position:absolute;left:var(--x);top:var(--y);color:var(--heart-color);font:700 var(--size)/1 Arial,sans-serif;text-shadow:0 2px 8px #fff,0 0 14px #ce9ca966;animation:heartRise var(--duration) ease-out var(--delay) both;will-change:transform,opacity}
+.opening-heart{position:absolute;left:var(--x);top:var(--y);width:var(--size);height:var(--size);filter:drop-shadow(0 3px 5px #6e35404d);animation:heartRise var(--duration) ease-out var(--delay) both;will-change:transform,opacity}
+.opening-heart svg{display:block;width:100%;height:100%;overflow:visible}
+.opening-heart .heart-highlight{fill:none;stroke:#fff8e6;stroke-linecap:round;stroke-width:2;opacity:.72}
 .opening-sparkle{position:absolute;left:var(--x);top:var(--y);color:#b47b12;font-size:var(--size);line-height:1;text-shadow:0 0 8px #fff5c7,0 0 18px #e4bd62,0 2px 3px #5d401b99;animation:sparkleRise var(--duration) ease-out var(--delay) both}
 @keyframes smokeRise{0%{opacity:0;transform:translate3d(0,20px,0) scale(.62) rotate(-8deg)}14%{opacity:.72}48%{opacity:.58}100%{opacity:0;transform:translate3d(var(--drift),-48vh,0) scale(1.32) rotate(10deg)}}
 @keyframes heartRise{0%{opacity:0;transform:translate3d(0,18px,0) scale(.55) rotate(-12deg)}14%{opacity:.95}72%{opacity:.85}100%{opacity:0;transform:translate3d(var(--drift),-62vh,0) scale(1.12) rotate(16deg)}}
@@ -205,6 +207,7 @@ const musicButtonLabel=document.getElementById('musicButtonLabel');
 let weddingMusicPlayer=null;
 let youtubeApiReady=false;
 let musicRequested=false;
+let openingEffectSequence=0;
 function setMusicState(playing,label){
  musicToggle.setAttribute('aria-pressed',String(playing));
  musicButtonLabel.textContent=label;
@@ -278,16 +281,46 @@ function createOpeningEffects(){
  for(let i=0;i<26;i++){
   const heart=document.createElement('span');
   heart.className='opening-heart';
-  heart.textContent='♥';
+  const heartSvg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+  heartSvg.setAttribute('viewBox','0 0 68 64');
+  heartSvg.setAttribute('aria-hidden','true');
+  const gradientId=`opening-heart-gradient-${openingEffectSequence}-${i}`;
+  const defs=document.createElementNS('http://www.w3.org/2000/svg','defs');
+  const gradient=document.createElementNS('http://www.w3.org/2000/svg','linearGradient');
+  gradient.setAttribute('id',gradientId);
+  gradient.setAttribute('x1','0');
+  gradient.setAttribute('y1','0');
+  gradient.setAttribute('x2','1');
+  gradient.setAttribute('y2','1');
+  const colors=i%3===0?['#f6dca0','#d6a34e','#a76b32']:['#ffd4da','#e7748a','#b83e58'];
+  colors.forEach((color,index)=>{
+   const stop=document.createElementNS('http://www.w3.org/2000/svg','stop');
+   stop.setAttribute('offset',`${index*50}%`);
+   stop.setAttribute('stop-color',color);
+   gradient.appendChild(stop);
+  });
+  defs.appendChild(gradient);
+  heartSvg.appendChild(defs);
+  const heartShape=document.createElementNS('http://www.w3.org/2000/svg','path');
+  heartShape.setAttribute('d','M34 59C29 54 7 38 7 22C7 12 14 6 23 6C28 6 32 9 35 15C38 9 42 6 47 6C56 6 63 12 63 22C63 38 39 54 34 59Z');
+  heartShape.setAttribute('fill',`url(#${gradientId})`);
+  heartShape.setAttribute('stroke','#fff1d0');
+  heartShape.setAttribute('stroke-width','1');
+  heartSvg.appendChild(heartShape);
+  const highlight=document.createElementNS('http://www.w3.org/2000/svg','path');
+  highlight.classList.add('heart-highlight');
+  highlight.setAttribute('d','M15 22C15 15 20 11 26 11');
+  heartSvg.appendChild(highlight);
+  heart.appendChild(heartSvg);
   heart.style.setProperty('--x',`${Math.random()*90+5}%`);
   heart.style.setProperty('--y',`${58+Math.random()*35}%`);
-  heart.style.setProperty('--size',`${26+Math.random()*22}px`);
+  heart.style.setProperty('--size',`${30+Math.random()*24}px`);
   heart.style.setProperty('--duration',`${4+Math.random()*2}s`);
   heart.style.setProperty('--delay',`${Math.random()*.65}s`);
   heart.style.setProperty('--drift',`${Math.random()*120-60}px`);
-  heart.style.setProperty('--heart-color',i%2===0?'#c45168':'#b83e58');
   effects.appendChild(heart);
  }
+ openingEffectSequence++;
  const sparkleMarks=['✦','✧','✦','·'];
  for(let i=0;i<48;i++){
   const sparkle=document.createElement('span');
