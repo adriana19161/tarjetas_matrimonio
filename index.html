@@ -25,10 +25,11 @@ button,a{font:inherit}.cover{min-height:100svh;display:grid;place-items:center;o
 .invite{display:none;animation:fade .7s ease}.invite.show{display:block}@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .eyebrow{letter-spacing:.16em;text-transform:uppercase;font:700 15px 'DM Sans',Arial,sans-serif;color:#435039}
 section{padding:72px 22px}.wrap{max-width:940px;margin:auto}.section-title{text-align:center;color:#3f4b36;font-size:clamp(44px,7vw,60px);font-weight:700;line-height:1.08;letter-spacing:.01em;margin:0 0 18px}.subtitle{text-align:center;color:#272a24;line-height:1.7;max-width:740px;margin:0 auto 36px;font-size:23px;font-weight:500}
-.story-section{min-height:100svh;display:grid;align-items:center;background:var(--cream)}
+.story-section{min-height:100svh;display:grid;align-items:center;background:#fff}
 .story-section .wrap{width:100%}
-.story-section .eyebrow{text-align:center;margin:0 0 10px;color:var(--gold);font-size:clamp(25px,4vw,36px);letter-spacing:.12em}
+.story-section .eyebrow{width:max-content;max-width:100%;margin:0 auto 10px;background:linear-gradient(180deg,#fdfdfd 0%,#c6c8cc 28%,#8c8f95 50%,#e7e8ea 68%,#a5a7ac 100%);background-clip:text;-webkit-background-clip:text;color:#a5a7ac;-webkit-text-fill-color:transparent;font:400 clamp(40px,8vw,62px)/1.05 'Great Vibes','Brush Script MT',cursive;letter-spacing:0;text-shadow:0 1px 0 #ffffffa8,0 2px 5px #44444424}
 .couple-names{margin:0 auto 18px;text-align:center;color:#98712c;font-family:'Great Vibes','Brush Script MT',cursive;font-size:clamp(48px,9vw,82px);font-weight:400;line-height:1.15;text-shadow:0 1px 0 #fff8e6,0 3px 12px #6f54252b}
+.couple-names .name-ampersand{display:inline-block;margin:0 .08em;color:#8b6b3e;font-family:'Cormorant Garamond',Georgia,serif;font-size:.82em;font-style:italic;font-weight:700;line-height:.8;text-shadow:0 1px 0 #fff,0 2px 3px #5d45252e}
 .photo-frame{width:min(100%,590px);margin:38px auto 20px}
 .photo{display:block;width:100%;height:auto;margin:0;object-fit:contain}
 .countdown-section{position:relative;isolation:isolate;display:flex;justify-content:center;align-items:center;overflow:hidden;padding:30px 12px;background:#f4eee8}
@@ -61,12 +62,13 @@ section{padding:72px 22px}.wrap{max-width:940px;margin:auto}.section-title{text-
 .venue-map-button:focus-visible{outline:3px solid #b9914c;outline-offset:3px}
 .venue-map-icon{font-size:1.1em}
 .timeline{max-width:680px;margin:32px auto 0;border-left:2px solid #b9914c;padding-left:26px}.event{margin:0 0 24px;position:relative;font-size:20px;font-weight:500;line-height:1.75;color:#272a24}.event:before{content:'♥';position:absolute;left:-36px;top:0;color:#9a762f;font-size:20px}.event strong{color:#3f4b36;font-size:22px;font-weight:700}
-#itinerario{position:relative;isolation:isolate;overflow:hidden;background:var(--cream)!important}
-#itinerario:before{content:'';position:absolute;z-index:-1;inset:0;background:url('assets/sobre-floral.png') center 48%/cover no-repeat;opacity:.42;mask-image:linear-gradient(90deg,#000 0%,transparent 45%,transparent 55%,#000 100%);pointer-events:none}
+#itinerario{position:relative;isolation:isolate;overflow:hidden;background:#fff!important}
+#itinerario:before{content:'';position:absolute;z-index:-1;inset:0;background:url('assets/sobre-floral.png') center 48%/cover no-repeat;opacity:.14;mask-image:linear-gradient(90deg,#000 0%,transparent 45%,transparent 55%,#000 100%);pointer-events:none}
 #itinerario .wrap{position:relative}
 #itinerario .section-title,#itinerario .subtitle,#itinerario .event{color:#34352f}
+#itinerario .section-title{font:400 clamp(46px,8vw,64px)/1.05 'Great Vibes','Brush Script MT',cursive;color:#8a6849}
 #itinerario .event strong{color:var(--sage-dark)}
-#itinerario .timeline{background:#eee0c4;padding:28px 26px 8px 50px;border:1px solid #d8c9a9;border-radius:14px;box-shadow:0 10px 28px #51452b26}
+#itinerario .timeline{background:#fff;padding:28px 26px 8px 50px;border:1px solid #e4ded3;border-radius:14px;box-shadow:0 10px 28px #51452b12}
 .music-control-section{text-align:center;padding-top:28px;padding-bottom:28px;background:var(--cream)}
 .music-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-width:250px;padding:18px 32px;border:1px solid #d7bc7b;border-radius:999px;background:linear-gradient(135deg,#f2e7d2,#e5d1aa);color:#4e5944;box-shadow:0 8px 20px #58462224,inset 0 1px 0 #fff1db;cursor:pointer;font:700 19px 'DM Sans',Arial,sans-serif;transition:transform .2s ease,box-shadow .2s ease}
 .music-button:hover,.music-button:focus-visible{transform:translateY(-3px);box-shadow:0 12px 24px #58462238,inset 0 1px 0 #fff}
@@ -107,7 +109,7 @@ footer .small{margin-top:8px;color:#fff8e8;font:600 22px/1.5 'DM Sans',Arial,san
     <section class="story-section">
       <div class="wrap">
         <div class="eyebrow">Nuestra boda</div>
-        <h1 class="couple-names">Adriana Quina <span aria-hidden="true">&amp;</span> Jhon Espinosa</h1>
+        <h1 class="couple-names">Adriana Quina <span class="name-ampersand" aria-label="y">&amp;</span> Jhon Espinosa</h1>
         <p class="subtitle">Dos corazones, un mismo destino y una promesa de amor eterno. Bienvenidos a celebrar el comienzo de nuestro para siempre y amor eterno.</p>
         <div class="photo-frame">
           <img class="photo" src="assets/portada-primer-bloque.png" alt="Fotografía de Adriana y Jhon enmarcada con flores y el texto Nuestra Boda">
@@ -151,7 +153,7 @@ footer .small{margin-top:8px;color:#fff8e8;font:600 22px/1.5 'DM Sans',Arial,san
       </div>
     </section>
 
-    <section id="itinerario" style="background:#f5eedf">
+    <section id="itinerario" style="background:#fff">
       <div class="wrap">
         <h2 class="section-title">Itinerario</h2>
         <p class="subtitle">Un día para recordar, lleno de amor, alegría y momentos compartidos.</p>
