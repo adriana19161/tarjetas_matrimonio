@@ -30,16 +30,16 @@ section{padding:72px 22px}.wrap{max-width:940px;margin:auto}.section-title{text-
 .couple-names .name-ampersand{display:inline-block;margin:0 .08em;color:#8b6b3e;font-family:'Cormorant Garamond',Georgia,serif;font-size:.82em;font-style:italic;font-weight:700;line-height:.8;text-shadow:0 1px 0 #fff,0 2px 3px #5d45252e}
 .photo-frame{width:min(100%,590px);margin:38px auto 20px}
 .photo{display:block;width:100%;height:auto;margin:0;object-fit:contain}
-.countdown-section{min-height:100svh;display:grid;place-items:center;padding:0 18px;background:#eee5d7}
-.countdown-card{width:min(100%,370px);min-height:100svh;padding:0;background:#f5edda url('assets/cuenta-regresiva-marco.png') center/100% 100% no-repeat;text-align:center}
-.countdown-card .wrap{width:72%;max-width:275px;padding-top:clamp(100px,15svh,145px)}
+.countdown-section{min-height:590px;display:grid;place-items:stretch center;padding:0;background:#f4eee3 url('assets/cuenta-regresiva-marco.png') center/cover no-repeat}
+.countdown-card{width:clamp(320px,22vw,370px);min-height:590px;padding:0;background:#f5edda;box-shadow:0 0 28px #55472d26;text-align:center}
+.countdown-card .wrap{width:90%;max-width:340px;padding-top:28px}
 .countdown-card .section-title{margin:0 0 8px;color:#92733c;font:600 clamp(28px,7vw,36px)/1.05 'Cormorant Garamond',Georgia,serif;letter-spacing:0}
 .countdown-card .subtitle{max-width:300px;margin:0 auto 16px;color:#786743;font:400 clamp(13px,3.5vw,15px)/1.25 'Montserrat',Arial,sans-serif}
 .countdown{display:flex;justify-content:center;gap:6px;width:100%;margin:0 auto 18px}
-.countdown .unit{flex:1 1 0;min-width:0;padding:10px 2px 8px;background:#f8f1df;color:#a38143;border:1px solid #b8975870;border-radius:9px;box-shadow:0 3px 8px #0000000a}
+.countdown .unit{flex:1 1 0;min-width:0;padding:12px 3px 10px;background:#f8f1df;color:#a38143;border:1px solid #b8975870;border-radius:9px;box-shadow:0 3px 8px #0000000a}
 .countdown .unit strong{display:block;font:600 clamp(25px,7vw,32px)/1.05 'Cormorant Garamond',Georgia,serif}
 .countdown .unit span{display:block;margin-top:3px;color:#806a45;font:500 clamp(8px,2.5vw,10px) 'Montserrat',Arial,sans-serif;letter-spacing:.02em;text-transform:uppercase}
-.calendar-card{width:100%;max-width:320px;margin:0 auto;padding:16px 18px 14px;background:#eadbb8;color:#806641;border:0;text-align:center;border-radius:48% 48% 12px 12px / 17% 17% 12px 12px}
+.calendar-card{width:100%;max-width:none;margin:0 auto;padding:16px 18px 14px;background:#eadbb8;color:#806641;border:0;text-align:center;border-radius:45% 45% 3px 3px / 6% 6% 3px 3px}
 .calendar-card h3{margin:0 0 8px;color:#806641;font:600 clamp(20px,5vw,25px) 'Cormorant Garamond',Georgia,serif;letter-spacing:0}
 .week,.days{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
 .week span{padding:0 0 5px;color:#806641;font:italic 600 clamp(10px,2.7vw,12px) 'Cormorant Garamond',Georgia,serif}
@@ -90,7 +90,7 @@ footer .small{margin-top:8px;color:#715b43;font:italic 600 24px/1.5 'Cormorant G
 .opening-effects{position:fixed;z-index:20;inset:0;overflow:hidden;pointer-events:none}
 .opening-sparkle{position:absolute;left:var(--x);top:var(--y);color:#b47b12;font-size:var(--size);line-height:1;text-shadow:0 0 8px #fff5c7,0 0 18px #e4bd62,0 2px 3px #5d401b99;animation:sparkleRise var(--duration) ease-out var(--delay) both}
 @keyframes sparkleRise{0%{opacity:0;transform:translate3d(0,24px,0) scale(.2) rotate(0)}18%{opacity:1}75%{opacity:.9}100%{opacity:0;transform:translate3d(var(--drift),-72vh,0) scale(1.15) rotate(120deg)}}
-@media(max-width:600px){body{font-size:19px}section{padding:58px 18px}#detalles{padding:0}.section-title{font-size:clamp(40px,11vw,50px)}.subtitle{font-size:20px;line-height:1.65}.event{font-size:18px}#itinerario .timeline{padding:24px 18px 6px 42px}.countdown-section{padding:0 10px}.countdown-card{width:min(100%,370px)}.calendar-card{padding:15px 12px 12px}}
+@media(max-width:600px){.countdown-section{min-height:100svh;background-size:auto 100%;background-position:center}.countdown-card{width:min(88vw,370px);min-height:100svh}.countdown-card .wrap{padding-top:clamp(24px,5svh,42px)}body{font-size:19px}section{padding:58px 18px}#detalles{padding:0}.section-title{font-size:clamp(40px,11vw,50px)}.subtitle{font-size:20px;line-height:1.65}.event{font-size:18px}#itinerario .timeline{padding:24px 18px 6px 42px}.countdown-section{padding:0 10px}.countdown-card{width:min(100%,370px)}.countdown-card .wrap{width:90%}.calendar-card{padding:15px 12px 12px}}
 @media(max-width:700px){.parents-grid{grid-template-columns:1fr;gap:14px}.parent-card{padding:24px 18px}.parents-intro,.envelopes-copy{margin-bottom:22px}.envelopes-card{padding:28px 20px}}
 @media(prefers-reduced-motion:reduce){.seal-button,.venue-map-button,.music-button{transition:none}.seal-button:before{animation:none}.opening-sparkle{animation:none;opacity:.9}}
 </style>
@@ -177,7 +177,7 @@ footer .small{margin-top:8px;color:#715b43;font:italic 600 24px/1.5 'Cormorant G
           </article>
           <article class="parent-card">
             <h3>Padres del novio</h3>
-            <p>Emerson Espinosa Herrán<br>Ligia García Nieto</p>
+            <p>Emerson Espinosa<br>Ligia García</p>
           </article>
         </div>
       </div>
