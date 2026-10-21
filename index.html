@@ -51,18 +51,15 @@ section{padding:72px 22px}.wrap{max-width:940px;margin:auto}.section-title{text-
 .days .wedding:after{content:none}
 .time{font:600 clamp(15px,4.5vw,18px) 'Montserrat',Arial,sans-serif;color:#526675;margin:4px 0 0;letter-spacing:.04em}
 .pill{display:inline-block;background:var(--sage);color:#fff8e8;text-decoration:none;padding:15px 24px;border-radius:30px;margin:8px 4px;font:700 18px 'DM Sans',Arial,sans-serif;letter-spacing:.02em}.pill.outline{background:transparent;color:var(--sage-dark);border:1px solid var(--sage)}
-.location-button{position:relative;overflow:hidden;margin-top:20px;padding:16px 30px;border:1px solid #dce7b6;border-radius:999px;background:linear-gradient(180deg,#d4dfae 0%,#9cac78 8%,#75875b 27%,#536943 48%,#7e9060 69%,#4d623d 88%,#d2dfad 100%);color:#fffdf0;text-shadow:0 1px 2px #29371f99;box-shadow:0 9px 18px #34412a59,inset 0 2px 2px #ffffffa3,inset 0 -3px 5px #304125a6;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
-.location-button:before{content:'⌖';margin-right:10px;font-size:19px}
-.location-button:hover,.location-button:focus-visible{transform:translateY(-3px);background:linear-gradient(180deg,#e4edc3 0%,#afbf88 9%,#849665 28%,#60784c 50%,#8fa171 71%,#586e45 89%,#e1e9bb 100%);box-shadow:0 13px 24px #34412a70,inset 0 2px 3px #ffffffc2,inset 0 -3px 5px #304125a6}
-.location-button:active{transform:translateY(0)}
-#detalles{position:relative;isolation:isolate;overflow:hidden;background:var(--cream)}
-#detalles:before{content:'';position:absolute;z-index:0;inset:0;opacity:.56;pointer-events:none;background-image:url('assets/mariposa-dorada.png'),url('assets/mariposa-dorada.png'),url('assets/mariposa-dorada.png');background-repeat:no-repeat;background-size:clamp(80px,12vw,145px),clamp(70px,10vw,120px),clamp(75px,11vw,130px);background-position:4% 8%,96% 48%,8% 94%}
-.location-flower{position:absolute;z-index:1;width:clamp(150px,25vw,290px);aspect-ratio:1;background-image:url('assets/sobre-floral.png');background-size:300% 300%;background-repeat:no-repeat;opacity:.76;mask-image:radial-gradient(ellipse at center,#000 36%,transparent 74%);pointer-events:none}
-.location-flower.top-left{left:-3%;top:-10%;background-position:left top}
-.location-flower.bottom-right{right:-3%;bottom:-12%;background-position:right bottom}
-#detalles .wrap{position:relative;z-index:2}
-#detalles .section-title,#detalles .subtitle{color:#34352f}
-.details{display:grid;grid-template-columns:minmax(0,520px);justify-content:center;gap:18px;margin-top:28px}.detail{background:#ead9b8;border:2px solid #d8b45d;padding:30px;text-align:center;box-shadow:0 10px 26px #433a2417,inset 0 0 0 2px #fff1bd70}.detail h3{font-size:30px;font-weight:600;color:var(--sage-dark);margin:5px 0 14px}.detail p{font-size:21px;line-height:1.8;margin:0;color:#272a24}
+#detalles{padding:0;background:#f4eee4}
+.venue-poster{position:relative;width:min(100%,1025px);margin:0 auto;aspect-ratio:1025/574;overflow:hidden;background:#f4eee4}
+.venue-artwork{display:block;width:100%;height:100%;object-fit:fill}
+.venue-copy-accessible{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.venue-map-button{position:absolute;top:73.4%;left:50%;display:inline-flex;align-items:center;justify-content:center;gap:9px;width:clamp(190px,23vw,230px);min-height:clamp(40px,6.7vw,68px);padding:8px 16px;transform:translateX(-50%);border:1px solid #fff9;border-radius:999px;background:linear-gradient(180deg,#ffffffa8,#cfcbbd80);backdrop-filter:blur(5px);color:#fff;text-decoration:none;text-shadow:0 1px 3px #3d392f;box-shadow:0 4px 12px #514b3e4a,inset 0 1px 2px #ffffffbd;cursor:pointer;font:700 clamp(13px,1.8vw,18px) 'DM Sans',Arial,sans-serif;letter-spacing:.02em;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.venue-map-button:hover,.venue-map-button:focus-visible{transform:translate(-50%,-3px);background:linear-gradient(180deg,#ffffffd1,#ded9cba8);box-shadow:0 7px 17px #514b3e5c,inset 0 1px 2px #fff}
+.venue-map-button:active{transform:translate(-50%,0)}
+.venue-map-button:focus-visible{outline:3px solid #b9914c;outline-offset:3px}
+.venue-map-icon{font-size:1.1em}
 .timeline{max-width:680px;margin:32px auto 0;border-left:2px solid #b9914c;padding-left:26px}.event{margin:0 0 24px;position:relative;font-size:20px;font-weight:500;line-height:1.75;color:#272a24}.event:before{content:'♥';position:absolute;left:-36px;top:0;color:#9a762f;font-size:20px}.event strong{color:#3f4b36;font-size:22px;font-weight:700}
 #itinerario{position:relative;isolation:isolate;overflow:hidden;background:var(--cream)!important}
 #itinerario:before{content:'';position:absolute;z-index:-1;inset:0;background:url('assets/sobre-floral.png') center 48%/cover no-repeat;opacity:.42;mask-image:linear-gradient(90deg,#000 0%,transparent 45%,transparent 55%,#000 100%);pointer-events:none}
@@ -92,9 +89,9 @@ footer .small{margin-top:8px;color:#fff8e8;font:600 22px/1.5 'DM Sans',Arial,san
 @keyframes smokeRise{0%{opacity:0;transform:translate3d(0,20px,0) scale(.62) rotate(-8deg)}14%{opacity:.72}48%{opacity:.58}100%{opacity:0;transform:translate3d(var(--drift),-48vh,0) scale(1.32) rotate(10deg)}}
 @keyframes heartRise{0%{opacity:0;transform:translate3d(0,18px,0) scale(.55) rotate(-12deg)}14%{opacity:.95}72%{opacity:.85}100%{opacity:0;transform:translate3d(var(--drift),-62vh,0) scale(1.12) rotate(16deg)}}
 @keyframes sparkleRise{0%{opacity:0;transform:translate3d(0,24px,0) scale(.2) rotate(0)}18%{opacity:1}75%{opacity:.9}100%{opacity:0;transform:translate3d(var(--drift),-72vh,0) scale(1.15) rotate(120deg)}}
-@media(max-width:600px){body{font-size:19px}section{padding:58px 18px}.section-title{font-size:clamp(40px,11vw,50px)}.subtitle{font-size:20px;line-height:1.65}.details{grid-template-columns:1fr}.event{font-size:18px}#itinerario .timeline{padding:24px 18px 6px 42px}}
+@media(max-width:600px){body{font-size:19px}section{padding:58px 18px}#detalles{padding:0}.section-title{font-size:clamp(40px,11vw,50px)}.subtitle{font-size:20px;line-height:1.65}.event{font-size:18px}#itinerario .timeline{padding:24px 18px 6px 42px}}
 @media(max-width:600px){.countdown-section{min-height:100svh;padding:12px 6px}.countdown-card{border-radius:10px}.calendar-card{padding:15px 9px 8px;border-radius:110px 110px 14px 14px}}
-@media(prefers-reduced-motion:reduce){.seal-button,.location-button,.music-button{transition:none}.seal-button:before{animation:none}.opening-smoke,.opening-heart,.opening-sparkle{animation:none;opacity:.9}}
+@media(prefers-reduced-motion:reduce){.seal-button,.venue-map-button,.music-button{transition:none}.seal-button:before{animation:none}.opening-smoke,.opening-heart,.opening-sparkle{animation:none;opacity:.9}}
 </style>
 </head>
 <body>
@@ -140,18 +137,17 @@ footer .small{margin-top:8px;color:#fff8e8;font:600 22px/1.5 'DM Sans',Arial,san
     </section>
 
     <section id="detalles">
-      <span class="location-flower top-left" aria-hidden="true"></span>
-      <span class="location-flower bottom-right" aria-hidden="true"></span>
-      <div class="wrap">
-        <h2 class="section-title">Celebremos juntos</h2>
-        <p class="subtitle">Tu presencia será uno de los regalos más bonitos de este día.</p>
-        <div class="details">
-          <div class="detail">
-            <h3>El lugar</h3>
-            <p><strong>Ecohotel El Paraíso Real</strong><br>Popayán, Cauca</p>
-            <a class="pill location-button" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Ecohotel+El+Paraiso+Real+Popayan+Cauca">Ver ubicación</a>
-          </div>
+      <div class="venue-poster">
+        <img class="venue-artwork" src="assets/celebrar-ubicacion-referencia.png" alt="">
+        <div class="venue-copy-accessible">
+          <h2>Celebremos juntos</h2>
+          <p>Tu presencia será uno de los regalos más bonitos de este día.</p>
+          <h3>El lugar</h3>
+          <p>Ecohotel El Paraíso Real, Popayán, Cauca.</p>
         </div>
+        <a class="venue-map-button" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Ecohotel+El+Paraiso+Real+Popayan+Cauca">
+          <span class="venue-map-icon" aria-hidden="true">⌖</span>Ver ubicación
+        </a>
       </div>
     </section>
 
