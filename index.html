@@ -30,23 +30,11 @@ section{padding:72px 22px}.wrap{max-width:940px;margin:auto}.section-title{text-
 .couple-names .name-ampersand{display:inline-block;margin:0 .08em;color:#8b6b3e;font-family:'Cormorant Garamond',Georgia,serif;font-size:.82em;font-style:italic;font-weight:700;line-height:.8;text-shadow:0 1px 0 #fff,0 2px 3px #5d45252e}
 .photo-frame{width:min(100%,590px);margin:38px auto 20px}
 .photo{display:block;width:100%;height:auto;margin:0;object-fit:contain;clip-path:inset(0 0 0 2px)}
-.countdown-section{min-height:clamp(480px,56vw,590px);display:grid;place-items:stretch center;padding:0;background:#f4eee3 url('assets/fondo-cuenta-regresiva-limpio.png') center/cover no-repeat}
-.countdown-card{width:clamp(270px,31vw,350px);min-height:inherit;padding:0;background:#f5edda;box-shadow:0 0 28px #55472d26;text-align:center}
-.countdown-card .wrap{width:min(90%,320px);padding-top:clamp(18px,3vw,28px)}
-.countdown-card .section-title{margin:0 0 8px;color:#92733c;font:600 clamp(28px,7vw,36px)/1.05 'Cormorant Garamond',Georgia,serif;letter-spacing:0}
-.countdown-card .subtitle{max-width:300px;margin:0 auto 16px;color:#786743;font:400 clamp(13px,3.5vw,15px)/1.25 'Montserrat',Arial,sans-serif}
-.countdown{display:flex;justify-content:center;gap:clamp(3px,1vw,6px);width:100%;margin:0 auto clamp(12px,2vw,18px)}
-.countdown .unit{flex:1 1 0;min-width:0;padding:clamp(8px,1.2vw,12px) 2px clamp(7px,1vw,10px);background:#f8f1df;color:#a38143;border:1px solid #b8975870;border-radius:9px;box-shadow:0 3px 8px #0000000a}
-.countdown .unit strong{display:block;font:600 clamp(25px,7vw,32px)/1.05 'Cormorant Garamond',Georgia,serif}
-.countdown .unit span{display:block;margin-top:3px;color:#806a45;font:500 clamp(8px,2.5vw,10px) 'Montserrat',Arial,sans-serif;letter-spacing:.02em;text-transform:uppercase}
-.calendar-card{width:100%;max-width:none;margin:0 auto;padding:16px 18px 14px;background:#eadbb8;color:#806641;border:0;text-align:center;border-radius:45% 45% 3px 3px / 6% 6% 3px 3px}
-.calendar-card h3{margin:0 0 8px;color:#806641;font:600 clamp(20px,5vw,25px) 'Cormorant Garamond',Georgia,serif;letter-spacing:0}
-.week,.days{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
-.week span{padding:0 0 5px;color:#806641;font:italic 600 clamp(10px,2.7vw,12px) 'Cormorant Garamond',Georgia,serif}
-.days span{position:relative;display:grid;place-items:center;min-height:27px;color:#806641;font:500 clamp(11px,3vw,13px) 'Montserrat',Arial,sans-serif}
-.days .wedding{isolation:isolate;color:#fff;font-weight:700}
-.days .wedding:before{content:'♥';position:absolute;z-index:-1;color:#a77955;font-size:35px;line-height:1}
-.time{margin:8px 0 0;color:#806641;font:700 clamp(19px,4.5vw,23px) 'Montserrat',Arial,sans-serif;letter-spacing:.02em}
+.countdown-section{position:relative;display:block;overflow:hidden;padding:0;background:#f4eee3}
+.countdown-art{display:block;width:100%;height:auto}
+.countdown-live{position:absolute;top:31.5%;left:38.2%;display:grid;width:23.8%;height:10%;grid-template-columns:repeat(4,minmax(0,1fr));align-items:center;justify-items:center;color:#a38143;font:600 clamp(15px,2.2vw,22px)/1 'Cormorant Garamond',Georgia,serif;font-variant-numeric:tabular-nums}
+.countdown-live span{display:grid;place-items:center;width:82%;height:88%;border-radius:3px;background:#f7efdf}
+.countdown-live .countdown-finished{position:absolute;inset:0;z-index:2;width:100%;height:100%;padding:0 4px;background:#f7efdf;color:#806641;text-align:center;font:600 clamp(10px,1.7vw,16px)/1.1 'Cormorant Garamond',Georgia,serif}
 .pill{display:inline-block;background:var(--sage);color:#fff8e8;text-decoration:none;padding:15px 24px;border-radius:30px;margin:8px 4px;font:700 18px 'DM Sans',Arial,sans-serif;letter-spacing:.02em}.pill.outline{background:transparent;color:var(--sage-dark);border:1px solid var(--sage)}
 #detalles{padding:0;background:#f4eee4}
 .venue-poster{position:relative;width:min(100%,1025px);margin:0 auto;aspect-ratio:1025/574;overflow:hidden;background:#f4eee4}
@@ -90,8 +78,8 @@ footer .small{margin-top:8px;color:#715b43;font:italic 600 24px/1.5 'Cormorant G
 .opening-effects{position:fixed;z-index:20;inset:0;overflow:hidden;pointer-events:none}
 .opening-sparkle{position:absolute;left:var(--x);top:var(--y);color:#b47b12;font-size:var(--size);line-height:1;text-shadow:0 0 8px #fff5c7,0 0 18px #e4bd62,0 2px 3px #5d401b99;animation:sparkleRise var(--duration) ease-out var(--delay) both}
 @keyframes sparkleRise{0%{opacity:0;transform:translate3d(0,24px,0) scale(.2) rotate(0)}18%{opacity:1}75%{opacity:.9}100%{opacity:0;transform:translate3d(var(--drift),-72vh,0) scale(1.15) rotate(120deg)}}
-@media(max-width:800px){.countdown-section{min-height:520px;background-size:auto 100%;background-position:center}.countdown-card{width:clamp(280px,46vw,350px)}.countdown-card .wrap{width:90%}.calendar-card{padding:14px 12px 12px}}
-@media(max-width:600px){.countdown-section{min-height:100svh;background-size:auto 100%;background-position:center}.countdown-card{width:min(88vw,350px);min-height:100svh}.countdown-card .wrap{padding-top:clamp(22px,5svh,42px)}body{font-size:19px}section{padding:58px 18px}#detalles{padding:0}.section-title{font-size:clamp(40px,11vw,50px)}.subtitle{font-size:20px;line-height:1.65}.event{font-size:18px}#itinerario .timeline{padding:24px 18px 6px 42px}.countdown-section{padding:0 10px}.countdown-card{width:min(100%,350px)}.countdown-card .wrap{width:90%}.calendar-card{padding:15px 12px 12px}}
+@media(max-width:900px){.countdown-section{height:clamp(390px,65vw,520px);container-type:size}.countdown-art{position:absolute;top:0;left:50%;width:auto;height:100%;max-width:none;transform:translateX(-50%)}.countdown-live{top:31.5%;left:calc(50% - 31.7cqh);width:64cqh;font-size:clamp(18px,3vw,24px)}}
+@media(max-width:600px){.countdown-section{height:clamp(460px,100svh,650px)}.countdown-live{font-size:clamp(20px,6vw,28px)}body{font-size:19px}section{padding:58px 18px}#detalles{padding:0}.section-title{font-size:clamp(40px,11vw,50px)}.subtitle{font-size:20px;line-height:1.65}.event{font-size:18px}#itinerario .timeline{padding:24px 18px 6px 42px}}
 @media(max-width:700px){.parents-grid{grid-template-columns:1fr;gap:14px}.parent-card{padding:24px 18px}.parents-intro,.envelopes-copy{margin-bottom:22px}.envelopes-card{padding:28px 20px}}
 @media(prefers-reduced-motion:reduce){.seal-button,.venue-map-button,.music-button{transition:none}.seal-button:before{animation:none}.opening-sparkle{animation:none;opacity:.9}}
 </style>
@@ -116,24 +104,13 @@ footer .small{margin-top:8px;color:#715b43;font:italic 600 24px/1.5 'Cormorant G
       </div>
     </section>
 
-    <section class="countdown-section" id="cuenta-regresiva" aria-labelledby="countdownTitle">
-      <div class="countdown-card">
-        <div class="wrap">
-          <h2 class="section-title" id="countdownTitle">La cuenta<br>regresiva</h2>
-          <p class="subtitle">Cada segundo nos acerca al<br>comienzo de nuestra historia por<br>toda la eternidad.</p>
-          <div class="countdown" aria-label="Cuenta regresiva">
-            <div class="unit"><strong id="days">--</strong><span>Días</span></div>
-            <div class="unit"><strong id="hours">--</strong><span>Horas</span></div>
-            <div class="unit"><strong id="minutes">--</strong><span>Minutos</span></div>
-            <div class="unit"><strong id="seconds">--</strong><span>Segundos</span></div>
-          </div>
-          <div class="calendar-card" aria-label="Calendario de diciembre de 2026">
-            <h3 id="calendarMonth">Diciembre 2026</h3>
-            <div class="week"><span>Dom</span><span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span></div>
-            <div class="days" id="calendarDays"></div>
-            <div class="time">5:00 PM</div>
-          </div>
-        </div>
+    <section class="countdown-section" id="cuenta-regresiva" aria-label="Cuenta regresiva para nuestra boda">
+      <img class="countdown-art" src="assets/cuenta-regresiva-diseno.png" alt="Diseño floral de cuenta regresiva, calendario de diciembre de 2026 y ceremonia a las 5:00 PM">
+      <div class="countdown-live" role="timer" aria-label="Cuenta regresiva hasta el 4 de diciembre de 2026 a las 5:00 PM" aria-live="off">
+        <span id="days" aria-label="Días restantes">--</span>
+        <span id="hours" aria-label="Horas restantes">--</span>
+        <span id="minutes" aria-label="Minutos restantes">--</span>
+        <span id="seconds" aria-label="Segundos restantes">--</span>
       </div>
     </section>
 
@@ -211,7 +188,7 @@ footer .small{margin-top:8px;color:#715b43;font:italic 600 24px/1.5 'Cormorant G
 const weddingDate = new Date('2026-12-04T17:00:00-05:00');
 function updateCountdown(){
   let diff = weddingDate.getTime() - Date.now();
-  if(diff <= 0){ document.querySelector('.countdown').innerHTML='<p style="grid-column:1/-1;text-align:center">¡Hoy celebramos el amor! ♡</p>'; return; }
+  if(diff <= 0){ document.querySelector('.countdown-live').innerHTML='<span class="countdown-finished">¡Hoy celebramos el amor! ♡</span>'; return; }
   const d=Math.floor(diff/86400000); diff%=86400000;
   const h=Math.floor(diff/3600000); diff%=3600000;
   const m=Math.floor(diff/60000); const s=Math.floor((diff%60000)/1000);
@@ -219,14 +196,6 @@ function updateCountdown(){
   document.getElementById('hours').textContent=String(h).padStart(2,'0');
   document.getElementById('minutes').textContent=String(m).padStart(2,'0');
   document.getElementById('seconds').textContent=String(s).padStart(2,'0');
-}
-function makeCalendar(){
- const target=document.getElementById('calendarDays');
- const year=2026, month=11, weddingDay=4;
- const offset=new Date(year,month,1).getDay();
- const count=new Date(year,month+1,0).getDate();
- for(let i=0;i<offset;i++){let e=document.createElement('span');e.innerHTML='&nbsp;';target.appendChild(e);}
- for(let d=1;d<=count;d++){let e=document.createElement('span');e.textContent=d;if(d===weddingDay)e.className='wedding';target.appendChild(e);}
 }
 const cover=document.getElementById('cover'), invite=document.getElementById('invite');
 const musicToggle=document.getElementById('musicToggle');
@@ -308,7 +277,7 @@ document.getElementById('openSeal').addEventListener('click',()=>{
  cover.style.display='none'; invite.classList.add('show'); window.scrollTo({top:0,behavior:'smooth'});
  playWeddingMusic();
 });
-makeCalendar();updateCountdown();setInterval(updateCountdown,1000);
+updateCountdown();setInterval(updateCountdown,1000);
 </script>
 <script src="https://www.youtube.com/iframe_api" async></script>
 </body></html>
