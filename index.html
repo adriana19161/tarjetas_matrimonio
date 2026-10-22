@@ -60,8 +60,9 @@ section{padding:72px 22px}.wrap{max-width:940px;margin:auto}.section-title{text-
 #itinerario .section-title{font:400 clamp(46px,8vw,64px)/1.05 'Great Vibes','Brush Script MT',cursive;color:#8a6849}
 #itinerario .event strong{color:var(--sage-dark)}
 #itinerario .timeline{background:#fff;padding:28px 26px 8px 50px;border:1px solid #e4ded3;border-radius:14px;box-shadow:0 10px 28px #51452b12}
-.adults-note-section{display:flex;justify-content:center;padding:clamp(20px,4vw,40px) 16px;background:#f4eee4}
-.adults-note-image{display:block;width:min(100%,1200px);height:auto;object-fit:contain}
+.adults-note-section{display:flex;justify-content:center;padding:clamp(24px,4vw,40px) 0;background:#f4eee4;overflow:hidden}
+.adults-note-image{display:block;width:min(100%,1440px);height:auto;object-fit:contain}
+@media(max-width:600px){.adults-note-section{padding:clamp(16px,4vw,24px) 0}.adults-note-image{width:100%;max-width:none;aspect-ratio:4.1/1;object-fit:cover;object-position:center}}
 .parents-section{background:#f4eee4}
 .parents-section .wrap,.envelopes-section .wrap{width:min(100%,940px)}
 .parents-section .section-title,.envelopes-section .section-title{margin-bottom:10px;color:#806641;font:600 clamp(38px,6vw,54px)/1.1 'Cormorant Garamond',Georgia,serif}
