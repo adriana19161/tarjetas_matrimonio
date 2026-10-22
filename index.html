@@ -43,10 +43,24 @@ section{padding:72px 22px}.wrap{max-width:940px;margin:auto}.section-title{text-
 .countdown-live .countdown-finished{position:absolute;inset:0;z-index:2;width:100%;height:100%;padding:0 4px;background:transparent;color:#806641;text-align:center;font:600 clamp(13px,1.9vw,19px)/1.1 'Cinzel','Cormorant Garamond',Georgia,serif}
 .pill{display:inline-block;background:var(--sage);color:#fff8e8;text-decoration:none;padding:15px 24px;border-radius:30px;margin:8px 4px;font:700 18px 'DM Sans',Arial,sans-serif;letter-spacing:.02em}.pill.outline{background:transparent;color:var(--sage-dark);border:1px solid var(--sage)}
 .rsvp-section{display:flex;justify-content:center;padding:clamp(22px,4vw,34px) 18px;background:#f4eee4}
-.rsvp-button{display:inline-flex;align-items:center;justify-content:center;width:min(100%,360px);min-height:56px;padding:14px 24px;border:1px solid #667251;border-radius:999px;background:linear-gradient(135deg,#7c8667,#5f6b50);box-shadow:0 6px 16px #514b3e26;color:#fffaf0;text-align:center;text-decoration:none;font:600 clamp(17px,2.2vw,20px)/1.2 'DM Sans',Arial,sans-serif;letter-spacing:.015em;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
-.rsvp-button:hover,.rsvp-button:focus-visible{transform:translateY(-2px);background:linear-gradient(135deg,#879171,#667354);box-shadow:0 9px 20px #514b3e36}
+.rsvp-button{display:inline-flex;align-items:center;justify-content:center;width:min(100%,360px);min-height:56px;padding:14px 24px;border:1px solid #d6aeb6;border-radius:999px;background:linear-gradient(120deg,#f4dfe3 0%,#e9c8ce 34%,#fff9f8 52%,#dfb5be 76%,#f8e9eb 100%);box-shadow:0 6px 16px #76515a25,inset 0 1px 0 #fff;color:#684b25;text-align:center;text-decoration:none;font:600 clamp(17px,2.2vw,20px)/1.2 'DM Sans',Arial,sans-serif;letter-spacing:.015em;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.rsvp-button:hover,.rsvp-button:focus-visible{transform:translateY(-2px);background:linear-gradient(120deg,#f8e9eb 0%,#edd1d6 34%,#fff 52%,#e6c1c8 76%,#fbf0f1 100%);box-shadow:0 9px 20px #76515a36,inset 0 1px 0 #fff}
 .rsvp-button:focus-visible{outline:3px solid #b9914c;outline-offset:3px}
 .rsvp-button:active{transform:translateY(0)}
+.dress-code-section{display:flex;justify-content:center;padding:clamp(28px,5vw,48px) 18px;background:#f4eee4}
+.dress-code-card{width:min(100%,940px);padding:clamp(26px,5vw,42px) clamp(18px,4vw,36px);border:1px solid #d6c39a;border-radius:18px;background:linear-gradient(145deg,#fffdf8,#f4eadb);box-shadow:0 10px 26px #5b4d3515;text-align:center}
+.dress-code-title{margin:0 0 8px;color:#806641;font:600 clamp(34px,5.6vw,48px)/1.1 'Cormorant Garamond',Georgia,serif}
+.dress-code-style{margin:0 0 12px;color:#684b25;font:600 clamp(22px,3.4vw,28px)/1.25 'Cormorant Garamond',Georgia,serif}
+.dress-code-note{max-width:680px;margin:0 auto 24px;color:#5d594f;font:400 clamp(16px,2vw,19px)/1.55 'DM Sans',Arial,sans-serif}
+.dress-code-palette{display:flex;justify-content:center;flex-wrap:wrap;gap:clamp(14px,3vw,28px);margin:0;padding:0;list-style:none}
+.dress-code-color{display:flex;min-width:68px;flex-direction:column;align-items:center;gap:8px;color:#684b25;font:500 15px/1.2 'DM Sans',Arial,sans-serif}
+.dress-code-swatch{position:relative;display:block;width:clamp(42px,7vw,56px);aspect-ratio:1;border:1px solid #c9b99d;border-radius:50%;box-shadow:0 3px 8px #514b3e1c}
+.dress-code-swatch::after{position:absolute;top:50%;left:50%;width:2px;height:125%;transform:translate(-50%,-50%) rotate(45deg);background:#aa666b;content:'';box-shadow:0 0 1px #fff}
+.dress-code-swatch-white{background:#fff}
+.dress-code-swatch-beige{background:#d8c3a2}
+.dress-code-swatch-blue{background:#527395}
+.dress-code-swatch-red{background:#ae4548}
+.dress-code-swatch-black{background:#292725}
 #detalles{padding:0;background:#f4eee4}
 .venue-poster{position:relative;width:min(100%,1025px);margin:0 auto;aspect-ratio:1025/574;overflow:hidden;background:#f4eee4}
 .venue-artwork{display:block;width:100%;height:100%;object-fit:fill}
@@ -179,6 +193,21 @@ body,body *:not(svg):not(path),body *::before,body *::after{font-family:'Lobster
         <a class="venue-map-button" aria-label="Ver ubicación en Google Maps" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Ecohotel+El+Paraiso+Real+Popayan+Cauca">
           <span class="venue-map-icon" aria-hidden="true">⌖</span><span class="venue-map-label">Ver ubicación</span>
         </a>
+      </div>
+    </section>
+
+    <section class="dress-code-section" aria-labelledby="dressCodeTitle">
+      <div class="dress-code-card">
+        <h2 class="dress-code-title" id="dressCodeTitle">Vestimenta</h2>
+        <p class="dress-code-style">Elegante formal</p>
+        <p class="dress-code-note">Agradecemos evitar estos colores y las tonalidades relacionadas con ellos.</p>
+        <ul class="dress-code-palette" aria-label="Colores que agradecemos evitar">
+          <li class="dress-code-color"><span class="dress-code-swatch dress-code-swatch-white" aria-hidden="true"></span>Blanco</li>
+          <li class="dress-code-color"><span class="dress-code-swatch dress-code-swatch-beige" aria-hidden="true"></span>Beige</li>
+          <li class="dress-code-color"><span class="dress-code-swatch dress-code-swatch-blue" aria-hidden="true"></span>Azul</li>
+          <li class="dress-code-color"><span class="dress-code-swatch dress-code-swatch-red" aria-hidden="true"></span>Rojo</li>
+          <li class="dress-code-color"><span class="dress-code-swatch dress-code-swatch-black" aria-hidden="true"></span>Negro</li>
+        </ul>
       </div>
     </section>
 
