@@ -69,8 +69,9 @@ section{width:100%;max-width:100%;padding:72px 22px}.wrap{max-width:940px;margin
 .ceremony-event h3{margin:0 0 10px;color:#806641;font:600 clamp(19px,2.8vw,24px)/1.2 'Cormorant Garamond',Georgia,serif}
 .ceremony-event p{margin:0;color:#5d594f;font:500 clamp(17px,2.3vw,20px)/1.5 'DM Sans',Arial,sans-serif}
 .ceremony-event .ceremony-time{margin-top:8px;color:#684b25;font-weight:700}
-.wedding-date-section{padding:clamp(16px,3vw,30px) 18px;background:#f4eee4}
-.wedding-date-artwork{display:block;width:min(100%,600px);height:auto;margin:0 auto;background:#faf9f7}
+.wedding-date-section{display:flex;justify-content:center;padding:16px 22px;background:#f4eee4;overflow:hidden}
+.wedding-date-artwork{display:block;width:min(100%,1440px);max-height:130px;margin:0 auto;object-fit:contain;background:#faf9f7}
+@media(max-width:600px){.wedding-date-section{padding:14px 18px}.wedding-date-artwork{max-height:clamp(70px,22vw,110px)}}
 #weddingDateArtwork .date-script{font-family:'Great Vibes',cursive!important}
 #weddingDateArtwork .date-number{font-family:'Alex Brush','Great Vibes',cursive!important}
 #weddingDateArtwork .date-serif{font-family:'Cinzel','Cormorant Garamond',Georgia,serif!important}
@@ -92,9 +93,9 @@ section{width:100%;max-width:100%;padding:72px 22px}.wrap{max-width:940px;margin
 #itinerario .event strong{color:var(--sage-dark)}
 #itinerario .timeline{background:#fff;padding:28px 26px 8px 50px;border:1px solid #e4ded3;border-radius:14px;box-shadow:0 10px 28px #51452b12}
 .adults-note-section{display:flex;justify-content:center;padding:28px 22px;background:var(--cream);overflow:hidden}
-.adults-note-banner{width:min(100%,1440px);height:220px;margin:0 auto;line-height:0;overflow:hidden}
-.adults-note-image{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
-@media(max-width:600px){.adults-note-section{padding:22px 18px}.adults-note-banner{width:100%;height:clamp(105px,30vw,155px)}.adults-note-image{width:100%;height:100%;object-fit:cover;object-position:center}}
+.adults-note-banner{width:min(100%,1440px);margin:0 auto;line-height:0}
+.adults-note-image{display:block;width:100%;height:auto;object-fit:contain}
+@media(max-width:600px){.adults-note-section{padding:22px 18px}.adults-note-banner{width:100%}.adults-note-image{width:100%;height:auto}}
 .parents-section{background:#f4eee4}
 .parents-section .wrap,.envelopes-section .wrap{width:min(100%,940px)}
 .parents-section .section-title{margin-bottom:10px;color:#806641;font:600 clamp(30px,4.7vw,42px)/1.1 'Cormorant Garamond',Georgia,serif}
@@ -195,19 +196,7 @@ body,body *:not(svg):not(path),body *::before,body *::after{font-family:'Lobster
     </section>
 
     <section class="wedding-date-section" aria-label="Fecha de nuestra boda: viernes 4 de diciembre de 2026">
-      <svg id="weddingDateArtwork" class="wedding-date-artwork" viewBox="0 0 734 586" role="img" aria-labelledby="weddingDateTitle weddingDateDescription">
-        <title id="weddingDateTitle">Diciembre, viernes 4 de 2026</title>
-        <desc id="weddingDateDescription">Faltan pocos días para celebrar nuestra boda.</desc>
-        <rect width="734" height="586" fill="#faf9f7"/>
-        <text class="date-script" x="367" y="155" text-anchor="middle" font-size="110" fill="#321b11">Diciembre</text>
-        <g fill="none" stroke="#321b11" stroke-width="3">
-          <path d="M30 296H243M30 348H243M514 296H725M514 348H725"/>
-        </g>
-        <text class="date-serif" x="136" y="337" text-anchor="middle" font-size="33" letter-spacing="1" fill="#321b11">VIERNES</text>
-        <text class="date-serif" x="620" y="337" text-anchor="middle" font-size="33" letter-spacing="8" fill="#321b11">2026</text>
-        <text class="date-number" x="367" y="397" text-anchor="middle" font-size="194" fill="#4b2512">4</text>
-        <text class="date-serif" x="367" y="555" text-anchor="middle" font-size="44" font-weight="600" letter-spacing="1" fill="#321b11">FALTAN</text>
-      </svg>
+      <img class="wedding-date-artwork" src="assets/fecha-boda.jpg" alt="Diciembre, viernes 4 de 2026">
     </section>
 
     <section class="countdown-section" id="cuenta-regresiva" aria-label="Calendario y cuenta regresiva para nuestra boda">
