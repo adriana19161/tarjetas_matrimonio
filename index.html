@@ -42,15 +42,13 @@ section{width:100%;max-width:100%;padding:72px 22px}.wrap{max-width:940px;margin
 .countdown-live span:nth-child(4)::after{content:'Segundos'}
 .countdown-live .countdown-finished{position:absolute;inset:0;z-index:2;width:100%;height:100%;padding:0 4px;background:transparent;color:#806641;text-align:center;font:600 clamp(13px,1.9vw,19px)/1.1 'Cinzel','Cormorant Garamond',Georgia,serif}
 .pill{display:inline-block;background:var(--sage);color:#fff8e8;text-decoration:none;padding:15px 24px;border-radius:30px;margin:8px 4px;font:700 18px 'DM Sans',Arial,sans-serif;letter-spacing:.02em}.pill.outline{background:transparent;color:var(--sage-dark);border:1px solid var(--sage)}
-.rsvp-section,.share-section{display:flex;justify-content:center;padding:clamp(22px,4vw,34px) 18px;background:#f4eee4}
-.rsvp-button,.share-button{display:inline-flex;align-items:center;justify-content:center;width:min(100%,360px);min-height:56px;padding:14px 24px;border-radius:999px;text-align:center;text-decoration:none;font:600 clamp(16px,2vw,18px)/1.2 'DM Sans',Arial,sans-serif;letter-spacing:.015em;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.rsvp-section{display:flex;justify-content:center;padding:clamp(22px,4vw,34px) 18px;background:#f4eee4}
+.rsvp-button{display:inline-flex;align-items:center;justify-content:center;width:min(100%,360px);min-height:56px;padding:14px 24px;border-radius:999px;text-align:center;text-decoration:none;font:600 clamp(16px,2vw,18px)/1.2 'DM Sans',Arial,sans-serif;letter-spacing:.015em;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
 .rsvp-button{border:1px solid #d6aeb6;background:linear-gradient(120deg,#f4dfe3 0%,#e9c8ce 34%,#fff9f8 52%,#dfb5be 76%,#f8e9eb 100%);box-shadow:0 6px 16px #76515a25,inset 0 1px 0 #fff;color:#684b25}
-.rsvp-button:hover,.rsvp-button:focus-visible,.share-button:hover,.share-button:focus-visible{transform:translateY(-2px);box-shadow:0 9px 20px #76515a36,inset 0 1px 0 #fff}
+.rsvp-button:hover,.rsvp-button:focus-visible{transform:translateY(-2px);box-shadow:0 9px 20px #76515a36,inset 0 1px 0 #fff}
 .rsvp-button:hover,.rsvp-button:focus-visible{background:linear-gradient(120deg,#f8e9eb 0%,#edd1d6 34%,#fff 52%,#e6c1c8 76%,#fbf0f1 100%)}
-.rsvp-button:focus-visible,.share-button:focus-visible{outline:3px solid #b9914c;outline-offset:3px}
-.rsvp-button:active,.share-button:active{transform:translateY(0)}
-.share-button{border:1px solid #c8b074;background:linear-gradient(120deg,#faf1df 0%,#f5e6c1 35%,#fffdf8 52%,#eedcb8 76%,#f6ebd6 100%);box-shadow:0 6px 16px #6f5f3d24,inset 0 1px 0 #fff;color:#715b2c;cursor:pointer}
-.share-button:hover,.share-button:focus-visible{background:linear-gradient(120deg,#fffdf8 0%,#f7eedc 35%,#fff 52%,#efddbc 76%,#faf2e3 100%)}
+.rsvp-button:focus-visible{outline:3px solid #b9914c;outline-offset:3px}
+.rsvp-button:active{transform:translateY(0)}
 .dress-code-section{display:flex;justify-content:center;padding:clamp(28px,5vw,48px) 18px;background:#f4eee4}
 .dress-code-card{width:100%;max-width:none;padding:clamp(26px,5vw,42px) clamp(18px,4vw,36px);border:1px solid #d6c39a;border-radius:18px;background:linear-gradient(145deg,#fffdf8,#f4eadb);box-shadow:0 10px 26px #5b4d3515;text-align:center}
 .dress-code-title{margin:0 0 8px;color:#806641;font:600 clamp(34px,5.6vw,48px)/1.1 'Cormorant Garamond',Georgia,serif}
@@ -129,7 +127,7 @@ footer .small{margin-top:8px;color:#715b43;font:italic 600 24px/1.5 'Cormorant G
 @media(max-width:900px){.countdown-live span{font-size:clamp(18px,4.1vw,30px)}.countdown-live span::after{font-size:clamp(7px,1.1vw,9px)}}
 @media(max-width:600px){.countdown-live{height:13%}.countdown-live span{font-size:clamp(14px,4.2vw,22px);gap:1px}.countdown-live span::after{font-size:clamp(6px,1.8vw,8px);letter-spacing:.045em}body{font-size:19px}section{padding:58px 18px}.section-title{font-size:clamp(40px,11vw,50px)}.subtitle{font-size:20px;line-height:1.65}.event{font-size:18px}#itinerario .timeline{padding:24px 18px 6px 42px}}
 @media(max-width:700px){.parents-section{width:100%;max-width:100%}.parents-grid,.ceremony-events{grid-template-columns:1fr;gap:14px}.parent-card{padding:24px 18px}.parents-intro{margin-bottom:22px}.envelopes-card{padding:28px 20px}}
-@media(prefers-reduced-motion:reduce){.seal-button,.music-button,.share-button{transition:none}.seal-button:before{animation:none}}
+@media(prefers-reduced-motion:reduce){.seal-button,.music-button{transition:none}.seal-button:before{animation:none}}
 body,body *:not(svg):not(path),body *::before,body *::after{font-family:'Lobster',cursive!important;color:#684b25!important}
 </style>
 </head>
@@ -274,10 +272,6 @@ body,body *:not(svg):not(path),body *::before,body *::after{font-family:'Lobster
       <a class="rsvp-button" href="https://wa.link/y01jgq" target="_blank" rel="noopener noreferrer">Confirma tu asistencia</a>
     </section>
 
-    <section class="share-section" aria-label="Compartir invitación">
-      <button class="share-button" id="shareButton" type="button">Compartir invitación</button>
-    </section>
-
     <section class="music-control-section" aria-label="Música de la invitación">
       <button class="music-button" id="musicToggle" type="button" aria-pressed="false">
         <span aria-hidden="true">♫</span><span id="musicButtonLabel">Escuchar música</span>
@@ -307,41 +301,12 @@ function updateCountdown(){
 const cover=document.getElementById('cover'), invite=document.getElementById('invite');
 const musicToggle=document.getElementById('musicToggle');
 const musicButtonLabel=document.getElementById('musicButtonLabel');
-const shareButton=document.getElementById('shareButton');
 let weddingMusicPlayer=null;
 let youtubeApiReady=false;
 let musicRequested=false;
 function setMusicState(playing,label){
  musicToggle.setAttribute('aria-pressed',String(playing));
  musicButtonLabel.textContent=label;
-}
-async function shareInvitation(){
- const shareData={
-  title:'Nuestra boda | A & J',
-  text:'Te invitamos a celebrar este momento tan especial con nosotros.',
-  url:window.location.href
- };
-
- if(navigator.share){
-  try{
-   await navigator.share(shareData);
-   shareButton.textContent='Invitación compartida';
-   window.setTimeout(()=>shareButton.textContent='Compartir invitación',1800);
-   return;
-  }catch(error){
-   if(error.name==='AbortError')return;
-   console.warn('No se pudo compartir la invitación:',error);
-  }
- }
-
- try{
-  await navigator.clipboard.writeText(window.location.href);
-  shareButton.textContent='Enlace copiado';
- }catch(error){
-  console.warn('No se pudo copiar el enlace:',error);
-  window.prompt('Copia el enlace de la invitación:',window.location.href);
- }
- window.setTimeout(()=>shareButton.textContent='Compartir invitación',2200);
 }
 function playWeddingMusic(){
  musicRequested=true;
@@ -388,7 +353,6 @@ musicToggle.addEventListener('click',()=>{
   playWeddingMusic();
  }
 });
-shareButton.addEventListener('click',shareInvitation);
 document.getElementById('openSeal').addEventListener('click',()=>{
  cover.style.display='none'; invite.classList.add('show'); window.scrollTo({top:0,behavior:'smooth'});
  playWeddingMusic();
