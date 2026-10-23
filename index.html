@@ -75,8 +75,8 @@ section{width:100%;max-width:100%;padding:72px 22px}.wrap{max-width:940px;margin
 #weddingDateArtwork .date-script{font-family:'Great Vibes',cursive!important}
 #weddingDateArtwork .date-number{font-family:'Alex Brush','Great Vibes',cursive!important}
 #weddingDateArtwork .date-serif{font-family:'Cinzel','Cormorant Garamond',Georgia,serif!important}
-.venue-poster{position:relative;width:min(100%,1025px);margin:28px auto 0;aspect-ratio:1025/574;overflow:hidden;background:#f4eee4}
-.venue-artwork{display:block;width:100%;height:100%;object-fit:fill}
+.venue-poster{position:relative;width:100%;margin:28px auto 0;overflow:hidden;background:#f4eee4}
+.venue-artwork{display:block;width:100%;height:auto;object-fit:contain}
 .venue-copy-accessible{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .venue-map-button{position:absolute;z-index:1;top:71%;left:50%;display:flex;width:min(40%,380px);height:18%;align-items:center;justify-content:center;gap:clamp(6px,1vw,12px);padding:0 10px;transform:translateX(-50%);border:1px solid #eee9df;border-radius:999px;background:linear-gradient(145deg,#fffefa,#e7e3dc 55%,#f8f6f1);color:#684b25;text-decoration:none;text-shadow:none;box-shadow:0 4px 14px #51452b30,inset 0 1px 0 #fff;backdrop-filter:blur(2px);cursor:pointer;font-size:clamp(15px,1.8vw,22px);line-height:1.1}
 .venue-map-button:hover{background:linear-gradient(145deg,#fff,#ddd8d0 55%,#f6f3ed);box-shadow:0 6px 17px #51452b38,inset 0 1px 0 #fff}
@@ -181,16 +181,16 @@ body,body *:not(svg):not(path),body *::before,body *::after{font-family:'Lobster
             <p class="ceremony-time">Hora: 7:00 p. m.</p>
           </article>
         </div>
-        <div class="venue-poster">
-          <img class="venue-artwork" src="assets/ubicacion-boda.jpg" alt="">
-          <div class="venue-copy-accessible">
-            <h3>Ubicación</h3>
-            <p>Ecohotel El Paraíso Real, Popayán, Cauca.</p>
-          </div>
-          <a class="venue-map-button" aria-label="Ver ubicación en Google Maps" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Ecohotel+El+Paraiso+Real+Popayan+Cauca">
-            <span class="venue-map-icon" aria-hidden="true">⌖</span><span class="venue-map-label">Ver ubicación</span>
-          </a>
+      </div>
+      <div class="venue-poster">
+        <img class="venue-artwork" src="assets/ubicacion-boda.jpg" alt="">
+        <div class="venue-copy-accessible">
+          <h3>Ubicación</h3>
+          <p>Ecohotel El Paraíso Real, Popayán, Cauca.</p>
         </div>
+        <a class="venue-map-button" aria-label="Ver ubicación en Google Maps" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Ecohotel+El+Paraiso+Real+Popayan+Cauca">
+          <span class="venue-map-icon" aria-hidden="true">⌖</span><span class="venue-map-label">Ver ubicación</span>
+        </a>
       </div>
     </section>
 
