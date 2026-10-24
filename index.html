@@ -82,7 +82,14 @@ section{width:100%;max-width:100%;padding:72px 22px}.wrap{max-width:940px;margin
 .ceremony-event p{margin:0;color:#5d594f;font:500 clamp(17px,2.3vw,20px)/1.5 'DM Sans',Arial,sans-serif}
 .ceremony-event .ceremony-time{margin-top:8px;color:#684b25;font-weight:700}
 .wedding-date-section{padding:clamp(22px,4vw,40px) 18px;background:var(--cream)}
-.wedding-date-artwork{display:block;width:min(100%,700px);height:auto;margin:0 auto;background:var(--cream)}
+.wedding-date-card{width:min(100%,700px);margin:0 auto;padding:clamp(10px,2vw,16px) clamp(14px,3vw,24px);border:1px solid #d6c39a;background:var(--cream);color:#684b25;text-align:center}
+.wedding-date-month{display:block;margin:0 0 2px;font:400 clamp(32px,6vw,48px)/.95 'Great Vibes','Lobster',cursive}
+.wedding-date-details{display:grid;grid-template-columns:minmax(68px,1fr) auto minmax(68px,1fr);align-items:center;gap:clamp(14px,4vw,34px)}
+.wedding-date-side{display:flex;align-items:center;gap:6px;color:#684b25;font:600 clamp(12px,2vw,17px)/1 'Cormorant Garamond',Georgia,serif;letter-spacing:.14em;text-transform:uppercase}
+.wedding-date-side::before,.wedding-date-side::after{height:1px;flex:1;background:#b9a17d;content:''}
+.wedding-date-day{color:#4e2815;font:700 clamp(54px,9vw,76px)/.85 'Cormorant Garamond',Georgia,serif}
+.wedding-date-side:last-child{justify-content:center}
+.wedding-date-side:last-child::before,.wedding-date-side:last-child::after{max-width:100%}
 .venue-poster{position:relative;width:min(100%,1025px);margin:28px auto 0;aspect-ratio:1025/574;overflow:hidden;background:var(--cream)}
 .venue-artwork{display:block;width:100%;height:100%;object-fit:fill}
 .venue-copy-accessible{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
@@ -207,8 +214,15 @@ body,body *:not(svg):not(path),body *::before,body *::after{font-family:'Lobster
       </div>
     </section>
 
-    <section class="wedding-date-section" aria-label="Fecha de nuestra boda: viernes 4 de diciembre de 2026">
-      <img class="wedding-date-artwork" src="assets/fecha-boda-elegida.jpeg" alt="Diciembre, viernes 4 de 2026. Faltan pocos días para nuestra boda.">
+    <section class="wedding-date-section" aria-label="Fecha de nuestra boda">
+      <div class="wedding-date-card">
+        <span class="wedding-date-month">Diciembre</span>
+        <div class="wedding-date-details">
+          <span class="wedding-date-side">Viernes</span>
+          <time class="wedding-date-day" datetime="2026-12-04">4</time>
+          <span class="wedding-date-side">2026</span>
+        </div>
+      </div>
     </section>
 
     <section class="countdown-section" id="cuenta-regresiva" aria-label="Calendario y cuenta regresiva para nuestra boda">
