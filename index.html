@@ -125,8 +125,8 @@ section{width:100%;max-width:100%;padding:72px 22px}.wrap{max-width:940px;margin
 .parent-card p{margin:0;color:#514b3f;font:500 clamp(18px,2.5vw,22px)/1.5 'Cormorant Garamond',Georgia,serif}
 .envelopes-section{background:var(--cream)}
 .envelopes-card{position:relative;isolation:isolate;overflow:hidden;max-width:780px;margin:0 auto;padding:clamp(26px,5vw,46px);border:1px solid #d6c39a;border-radius:18px;background:var(--cream);box-shadow:0 12px 30px #5b4d3518;text-align:center}
-.envelopes-card::after{position:absolute;z-index:0;top:-4px;right:-4px;width:clamp(90px,9vw,120px);aspect-ratio:171/107;transform:scale(-1,-1);background:url('assets/rosas-blancas-esquineras.png') center/contain no-repeat;content:'';filter:drop-shadow(0 2px 3px #684b2525);pointer-events:none}
-.envelopes-icon,.envelopes-section .section-title{position:relative;z-index:1}
+.envelopes-icon,.envelopes-section .section-title,.envelopes-floral{position:relative;z-index:1}
+.envelopes-floral{display:block;width:clamp(150px,34vw,210px);max-width:70%;height:auto;margin:-6px auto -14px;pointer-events:none}
 .envelopes-icon{display:grid;place-items:center;width:78px;height:62px;margin:0 auto 16px;border:1px solid #d2bb88;border-radius:12px;background:var(--cream);box-shadow:0 5px 14px #6a573020,inset 0 1px 0 #fff}
 .envelopes-icon svg{display:block;width:66px;height:50px;filter:drop-shadow(0 2px 2px #6a573026)}
 .envelopes-section .section-title{margin-bottom:12px;font-size:clamp(28px,4.5vw,38px)}
@@ -145,7 +145,7 @@ footer .small{margin-top:8px;color:#715b43;font:italic 600 24px/1.5 'Cormorant G
 @media(max-width:780px){.couple-names{width:100%;max-width:100%;padding:0 4px;font-size:clamp(29px,9.5vw,42px);line-height:1}.couple-name{max-width:100%;font-size:clamp(25px,8.5vw,34px);white-space:nowrap;line-height:1.04}.couple-names .name-ampersand{margin:0;font-size:.82em}}
 @media(max-width:900px){.countdown-live span{font-size:clamp(25px,5.5vw,40px)}.countdown-live span::after{font-size:clamp(8px,1.7vw,11px)}}
 @media(max-width:600px){.countdown-live{height:11%}.countdown-live span{font-size:clamp(20px,6.7vw,29px);gap:1px}.countdown-live span::after{font-size:clamp(7px,2vw,9px);letter-spacing:.055em}body{font-size:19px}section{padding:58px 18px}.section-title{font-size:clamp(36px,9.8vw,46px)}.subtitle{font-size:20px;line-height:1.65}.event{font-size:18px}#itinerario .timeline{padding:24px 18px 6px 42px}#itinerario .timeline-floral{width:clamp(94px,29vw,116px)}#itinerario .timeline-floral-bottom{right:6px;bottom:6px}}
-@media(max-width:700px){.story-section{min-height:0;align-items:start;padding-bottom:10px}.parents-section{width:100%;max-width:100%;padding-top:24px}.parents-grid,.ceremony-events{grid-template-columns:1fr;gap:14px}.parent-card{padding:24px 18px}.parents-grid .parent-card:first-child::before,.parents-grid .parent-card:last-child::after,.ceremony-events .ceremony-event:nth-child(2)::before{width:108px}.parents-intro{margin-bottom:22px}.envelopes-card{padding:28px 20px}.envelopes-card::after{width:108px}}
+@media(max-width:700px){.story-section{min-height:0;align-items:start;padding-bottom:10px}.parents-section{width:100%;max-width:100%;padding-top:24px}.parents-grid,.ceremony-events{grid-template-columns:1fr;gap:14px}.parent-card{padding:24px 18px}.parents-grid .parent-card:first-child::before,.parents-grid .parent-card:last-child::after,.ceremony-events .ceremony-event:nth-child(2)::before{width:108px}.parents-intro{margin-bottom:22px}.envelopes-card{padding:28px 20px}}
 @media(prefers-reduced-motion:reduce){.seal-button,.music-button{transition:none}.seal-button:before{animation:none}}
 body,body *:not(svg):not(path),body *::before,body *::after{font-family:'Lobster',cursive!important;color:#684b25!important}
 </style>
@@ -278,6 +278,7 @@ body,body *:not(svg):not(path),body *::before,body *::after{font-family:'Lobster
             </svg>
           </div>
           <h2 class="section-title" id="envelopesTitle">Lluvia de sobres</h2>
+          <img class="envelopes-floral" src="assets/rosas-blancas-esquineras.png" alt="" aria-hidden="true" loading="lazy">
         </div>
       </div>
     </section>
