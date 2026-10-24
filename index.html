@@ -91,11 +91,9 @@ section{width:100%;max-width:100%;padding:72px 22px}.wrap{max-width:940px;margin
 #itinerario .event strong{color:var(--sage-dark)}
 #itinerario .timeline{background:#fff;padding:28px 26px 8px 50px;border:1px solid #e4ded3;border-radius:14px;box-shadow:0 10px 28px #51452b12}
 .adults-note-section{display:flex;justify-content:center;padding:clamp(24px,4vw,40px) 0;background:#f4eee4;overflow:hidden}
-.adults-note-banner{position:relative;width:min(100%,1440px);line-height:0}
-.adults-note-image{display:block;width:100%;height:auto;object-fit:contain}
-.adults-title-mask{position:absolute;top:4%;left:17%;width:66%;height:25%;border-radius:18px;background:#f5f1e8}
-.adults-note-title{position:absolute;top:4%;left:17%;display:grid;width:66%;height:25%;place-items:center;margin:0;color:#684b25;font:600 clamp(16px,3.6vw,40px)/1.05 'Cormorant Garamond',Georgia,serif;text-align:center}
-@media(max-width:600px){.adults-note-section{padding:clamp(16px,4vw,24px) 0}.adults-note-banner{aspect-ratio:4.1/1;overflow:hidden}.adults-note-image{width:100%;height:100%;object-fit:cover;object-position:center}.adults-title-mask,.adults-note-title{top:3%;left:16%;width:68%;height:28%}.adults-note-title{font-size:clamp(15px,4.9vw,21px)}}
+.adults-note-banner{width:min(100%,1440px);line-height:0}
+.adults-note-image{display:block;width:100%;height:auto}
+@media(max-width:600px){.adults-note-section{padding:clamp(16px,4vw,24px) 0}}
 .parents-section{background:#f4eee4}
 .parents-section .wrap,.envelopes-section .wrap{width:min(100%,940px)}
 .parents-section .section-title,.envelopes-section .section-title{margin-bottom:10px;color:#806641;font:600 clamp(34px,5.4vw,49px)/1.1 'Cormorant Garamond',Georgia,serif}
@@ -258,11 +256,9 @@ body,body *:not(svg):not(path),body *::before,body *::after{font-family:'Lobster
       </div>
     </section>
 
-    <section class="adults-note-section" aria-labelledby="adultsNoteTitle">
+    <section class="adults-note-section" aria-label="Celebración exclusiva para adultos">
       <div class="adults-note-banner">
-        <img class="adults-note-image" src="assets/momento-solo-adultos.jpeg" alt="Aunque adoramos a los niños, hemos decidido celebrar este día en un ambiente exclusivamente para adultos. Agradecemos su comprensión.">
-        <span class="adults-title-mask" aria-hidden="true"></span>
-        <h2 class="adults-note-title" id="adultsNoteTitle">Disfrutemos este momento</h2>
+        <img class="adults-note-image" src="assets/aviso-solo-adultos.jpeg" alt="Evento sin niños. Este evento está diseñado para adultos.">
       </div>
     </section>
 
