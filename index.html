@@ -28,9 +28,9 @@ section{width:100%;max-width:100%;padding:72px 22px}.wrap{max-width:940px;margin
 .story-section .wrap{width:100%}
 .couple-names{display:flex;flex-direction:column;align-items:center;gap:4px;margin:0 auto 18px;text-align:center;color:#98712c;font-family:'Great Vibes','Brush Script MT',cursive;font-size:clamp(44px,8.2vw,74px);font-weight:400;line-height:1.15;text-shadow:0 1px 0 #fff8e6,0 3px 12px #6f54252b}
 .couple-name{display:inline-block;white-space:nowrap}
-.couple-names .name-ampersand{display:inline-block;margin:0 .08em;color:#684b25!important;font-family:Arial,sans-serif!important;font-size:.82em;font-style:normal!important;font-weight:700!important;line-height:.8;-webkit-text-stroke:.2px #b9914c;text-shadow:0 1px 0 #f4dfaa,0 2px 3px #6f542552!important}
+.couple-names .name-ampersand{display:inline-block;margin:0 .08em;color:#684b25!important;font-family:Arial,sans-serif!important;font-size:.82em;font-style:normal!important;font-weight:700!important;line-height:.8;-webkit-text-stroke:0 transparent;text-shadow:0 1px 0 #fff8e6,0 3px 12px #6f54252b!important}
 .photo-frame{width:min(100%,590px);margin:38px auto 20px}
-.photo{display:block;width:100%;height:auto;margin:0;object-fit:contain;clip-path:inset(0 0 0 2px)}
+.photo{display:block;width:100%;height:auto;margin:0;object-fit:contain}
 .countdown-section{position:relative;display:block;overflow:hidden;padding:0;background:var(--cream);line-height:0}
 .countdown-art{display:block;width:100%;height:auto}
 .countdown-live{position:absolute;top:34.2%;left:27%;display:grid;width:46%;height:12%;grid-template-columns:repeat(4,minmax(0,1fr));align-items:center;justify-items:center;color:#987747;font-family:'Cormorant Garamond',Georgia,serif;font-variant-numeric:tabular-nums;letter-spacing:.025em;text-align:center;text-shadow:0 1px 0 #fff9e9a6}
@@ -43,14 +43,15 @@ section{width:100%;max-width:100%;padding:72px 22px}.wrap{max-width:940px;margin
 .countdown-live .countdown-finished{position:absolute;inset:0;z-index:2;width:100%;height:100%;padding:0 4px;background:transparent;color:#806641;text-align:center;font:600 clamp(13px,1.9vw,19px)/1.1 'Cinzel','Cormorant Garamond',Georgia,serif}
 .pill{display:inline-block;background:var(--sage);color:#fff8e8;text-decoration:none;padding:15px 24px;border-radius:30px;margin:8px 4px;font:700 18px 'DM Sans',Arial,sans-serif;letter-spacing:.02em}.pill.outline{background:transparent;color:var(--sage-dark);border:1px solid var(--sage)}
 .rsvp-section{display:flex;justify-content:center;padding:clamp(22px,4vw,34px) 18px;background:var(--cream)}
-.rsvp-button{display:inline-flex;align-items:center;justify-content:center;width:min(100%,360px);min-height:56px;padding:14px 24px;border:1px solid #d6aeb6;border-radius:999px;background:linear-gradient(120deg,#f4dfe3 0%,#e9c8ce 34%,#fff9f8 52%,#dfb5be 76%,#f8e9eb 100%);box-shadow:0 6px 16px #76515a25,inset 0 1px 0 #fff;color:#684b25;text-align:center;text-decoration:none;font:600 clamp(17px,2.2vw,20px)/1.2 'DM Sans',Arial,sans-serif;letter-spacing:.015em;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
-.rsvp-button:hover,.rsvp-button:focus-visible{transform:translateY(-2px);background:linear-gradient(120deg,#f8e9eb 0%,#edd1d6 34%,#fff 52%,#e6c1c8 76%,#fbf0f1 100%);box-shadow:0 9px 20px #76515a36,inset 0 1px 0 #fff}
+.rsvp-button{display:inline-flex;align-items:center;justify-content:center;width:min(100%,360px);min-height:56px;padding:14px 24px;border:1px solid #d7bc7b;border-radius:999px;background:linear-gradient(120deg,#fff5d8 0%,#d8b965 42%,#fff1c2 64%,#b58a3b 100%);box-shadow:0 5px 16px #3d2c1755,inset 0 2px 3px #fff8dc,inset 0 -2px 4px #98712e;color:#684b25;text-align:center;text-decoration:none;font:600 clamp(17px,2.2vw,20px)/1.2 'DM Sans',Arial,sans-serif;letter-spacing:.015em;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.rsvp-button:hover,.rsvp-button:focus-visible{transform:translateY(-2px);background:linear-gradient(120deg,#fff9e6 0%,#e6cc82 42%,#fff6d5 64%,#c49a4b 100%);box-shadow:0 9px 20px #3d2c1766,inset 0 2px 3px #fff8dc,inset 0 -2px 4px #98712e}
 .rsvp-button:focus-visible{outline:3px solid #b9914c;outline-offset:3px}
 .rsvp-button:active{transform:translateY(0)}
 .dress-code-section{display:flex;justify-content:center;padding:clamp(28px,5vw,48px) 18px;background:var(--cream)}
 .dress-code-card{position:relative;isolation:isolate;width:min(100%,940px);padding:clamp(26px,5vw,42px) clamp(18px,4vw,36px);border:1px solid #d6c39a;border-radius:18px;background:var(--cream);box-shadow:0 10px 26px #5b4d3515;text-align:center}
-.dress-code-floral{position:absolute;z-index:0;width:clamp(78px,7.5vw,100px);height:auto;transform:scaleY(-1);pointer-events:none;user-select:none}
-.dress-code-floral-top{top:-4px;left:-4px}
+.dress-code-floral{position:absolute;z-index:0;width:clamp(78px,7.5vw,100px);height:auto;pointer-events:none;user-select:none}
+.dress-code-floral-top{top:-4px;left:-4px;transform:scaleY(-1)}
+.dress-code-floral-top-right{top:-4px;right:-4px;transform:scale(-1,-1)}
 .dress-code-illustration,.dress-code-title,.dress-code-details,.dress-code-palette{position:relative;z-index:1}
 .dress-code-illustration{display:block;width:min(100%,160px);height:auto;margin:0 auto 8px;mix-blend-mode:multiply}
 .dress-code-title{margin:0 0 8px;color:#806641;font:600 clamp(31px,5vw,43px)/1.1 'Cormorant Garamond',Georgia,serif}
@@ -150,7 +151,8 @@ footer .small{margin-top:8px;color:#715b43;font:italic 600 24px/1.5 'Cormorant G
 @media(max-width:700px){.story-section{min-height:0;align-items:start;padding-bottom:10px}.parents-section{width:100%;max-width:100%;padding-top:24px}.parents-grid,.ceremony-events{grid-template-columns:1fr;gap:14px}.parent-card{padding:24px 18px}.parents-grid .parent-card:first-child::before,.parents-grid .parent-card:last-child::after,.ceremony-events .ceremony-event:first-child::before,.ceremony-events .ceremony-event:nth-child(2)::after{width:108px}.parents-intro{margin-bottom:22px}.envelopes-card{padding:28px 20px}}
 @media(prefers-reduced-motion:reduce){.seal-button,.music-button{transition:none}.seal-button:before{animation:none}}
 body,body *:not(svg):not(path),body *::before,body *::after{font-family:'Lobster',cursive!important;color:#684b25!important}
-h1:not(.couple-names),h2,h3,h4,h5,h6{font-weight:400!important}
+h1:not(.couple-names),h2,h3,h4,h5,h6{font-size:.92em!important;font-weight:400!important}
+.dress-code-style{font-size:.92em!important;font-weight:400!important}
 </style>
 </head>
 <body>
@@ -168,7 +170,7 @@ h1:not(.couple-names),h2,h3,h4,h5,h6{font-weight:400!important}
         <h1 class="couple-names"><span class="couple-name">Adriana Quina Sandoval</span> <span class="name-ampersand" aria-label="y">&amp;</span> <span class="couple-name">Jhon Espinosa Garcia</span></h1>
         <p class="subtitle">Bienvenidos a celebrar el comienzo de nuestro para siempre y amor eterno.</p>
         <div class="photo-frame">
-          <img class="photo" src="assets/portada-primer-bloque.png" alt="Fotografía de Adriana y Jhon enmarcada con flores">
+          <img class="photo" src="assets/portada-fotografia-nueva.png" alt="Fotografía de Adriana y Jhon enmarcada con flores">
         </div>
       </div>
     </section>
@@ -242,6 +244,7 @@ h1:not(.couple-names),h2,h3,h4,h5,h6{font-weight:400!important}
     <section class="dress-code-section" aria-labelledby="dressCodeTitle">
       <div class="dress-code-card">
         <img class="dress-code-floral dress-code-floral-top" src="assets/rosas-blancas-esquineras.png" alt="" aria-hidden="true" loading="lazy">
+        <img class="dress-code-floral dress-code-floral-top-right" src="assets/rosas-blancas-esquineras.png" alt="" aria-hidden="true" loading="lazy">
         <img class="dress-code-illustration" src="assets/codigo-vestimenta-ilustracion.png" alt="Ilustración de un vestido formal y un traje con corbata">
         <h2 class="dress-code-title" id="dressCodeTitle">Código vestimenta</h2>
         <div class="dress-code-details">
