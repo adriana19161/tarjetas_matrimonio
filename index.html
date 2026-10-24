@@ -118,8 +118,8 @@ section{width:100%;max-width:100%;padding:72px 22px}.wrap{max-width:940px;margin
 .parents-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:800px;margin:0 auto}
 .parent-card{position:relative;isolation:isolate;overflow:hidden;padding:28px 24px;background:var(--cream);border:1px solid #d6c39a;border-radius:14px;box-shadow:0 8px 22px #5b4d3512;text-align:center}
 .parents-grid .parent-card:first-child::before,.parents-grid .parent-card:last-child::after,.ceremony-events .ceremony-event:nth-child(2)::before{position:absolute;z-index:0;width:clamp(78px,7.5vw,100px);aspect-ratio:171/107;background:url('assets/rosas-blancas-esquineras.png') center/contain no-repeat;content:'';filter:drop-shadow(0 2px 3px #684b2525);pointer-events:none}
-.parents-grid .parent-card:first-child::before,.ceremony-events .ceremony-event:nth-child(2)::before{top:-4px;left:-4px}
-.parents-grid .parent-card:last-child::after{right:0;bottom:0;transform:rotate(180deg)}
+.parents-grid .parent-card:first-child::before,.ceremony-events .ceremony-event:nth-child(2)::before{top:-4px;left:-4px;transform:scaleY(-1)}
+.parents-grid .parent-card:last-child::after{right:-4px;bottom:-4px;transform:scaleX(-1)}
 .parents-grid .parent-card>*,.ceremony-events .ceremony-event>*{position:relative;z-index:1}
 .parent-card h3{margin:0 0 12px;color:#737d5e;font:600 clamp(18px,2.7vw,23px)/1.2 'Cormorant Garamond',Georgia,serif}
 .parent-card p{margin:0;color:#514b3f;font:500 clamp(18px,2.5vw,22px)/1.5 'Cormorant Garamond',Georgia,serif}
