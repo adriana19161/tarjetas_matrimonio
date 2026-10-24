@@ -111,9 +111,12 @@ section{width:100%;max-width:100%;padding:72px 22px}.wrap{max-width:940px;margin
 .envelopes-icon{display:grid;place-items:center;width:78px;height:62px;margin:0 auto 16px;border:1px solid #d2bb88;border-radius:12px;background:linear-gradient(145deg,#fffaf0,#eee0c3);box-shadow:0 5px 14px #6a573020,inset 0 1px 0 #fff}
 .envelopes-icon svg{display:block;width:66px;height:50px;filter:drop-shadow(0 2px 2px #6a573026)}
 .envelopes-section .section-title{margin-bottom:12px;font-size:clamp(28px,4.5vw,38px)}
-.music-control-section{text-align:center;padding-top:28px;padding-bottom:28px;background:var(--cream)}
-.music-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-width:250px;padding:18px 32px;border:1px solid #d7bc7b;border-radius:999px;background:linear-gradient(135deg,#f2e7d2,#e5d1aa);color:#4e5944;box-shadow:0 8px 20px #58462224,inset 0 1px 0 #fff1db;cursor:pointer;font:700 19px 'DM Sans',Arial,sans-serif;transition:transform .2s ease,box-shadow .2s ease}
-.music-button:hover,.music-button:focus-visible{transform:translateY(-3px);box-shadow:0 12px 24px #58462238,inset 0 1px 0 #fff}
+.music-control-section{position:fixed;z-index:20;right:clamp(16px,3vw,28px);bottom:calc(18px + env(safe-area-inset-bottom));display:none;width:auto;max-width:none;padding:0;background:transparent;pointer-events:none}
+.music-control-section.show{display:block}
+.music-button{display:inline-flex;align-items:center;justify-content:center;width:58px;height:58px;padding:0;border:1px solid #d7bc7b;border-radius:50%;background:linear-gradient(135deg,#fff5d8 0%,#d8b965 42%,#fff1c2 64%,#b58a3b 100%);color:#4e5944;box-shadow:0 5px 16px #3d2c1755,inset 0 2px 3px #fff8dc,inset 0 -2px 4px #98712e;cursor:pointer;pointer-events:auto;font:700 27px/1 'DM Sans',Arial,sans-serif;transition:transform .2s ease,box-shadow .2s ease}
+.music-button:hover,.music-button:focus-visible{transform:translateY(-3px);box-shadow:0 9px 21px #3d2c1766,inset 0 2px 3px #fff8dc,inset 0 -2px 4px #98712e}
+.music-button:focus-visible{outline:3px solid #806641;outline-offset:3px}
+.music-button-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .youtube-song-player{position:fixed;left:-220px;top:-220px;width:200px;height:200px;opacity:0;pointer-events:none;overflow:hidden}
 footer{text-align:center;padding:45px 20px;background:#f4ecdf;color:#715b43}footer p{max-width:900px;margin:0 auto 18px;font:italic 38px/1.3 'Cormorant Garamond',Georgia,serif;color:#715b43}footer p strong{display:block;margin-top:10px;color:#9a7543;font-size:.72em;font-style:italic;letter-spacing:.04em}
 @media(max-width:600px){footer{padding:38px 22px}footer p{font-size:clamp(29px,8vw,36px)}}
@@ -277,17 +280,16 @@ body,body *:not(svg):not(path),body *::before,body *::after{font-family:'Lobster
       <a class="rsvp-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdAcO7S1dqKSju38QWOKQ1jYZgigWPeAWgiugwAKf1Y4LvfmA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Confirma tu asistencia</a>
     </section>
 
-    <section class="music-control-section" aria-label="Música de la invitación">
-      <button class="music-button" id="musicToggle" type="button" aria-pressed="false">
-        <span aria-hidden="true">♫</span><span id="musicButtonLabel">Escuchar música</span>
-      </button>
-    </section>
-
     <footer>
       <p><em>“Teniendo entrelazados sus corazones con la unidad y el amor el uno hacia el otro”.</em> — <strong>Mosíah 18:21</strong></p>
       <div class="small">4 de diciembre de 2026 · Popayán, Cauca</div>
     </footer>
   </div>
+  <section class="music-control-section" id="musicControl" aria-label="Música de la invitación">
+    <button class="music-button" id="musicToggle" type="button" aria-label="Escuchar música" aria-pressed="false">
+      <span aria-hidden="true">♫</span><span class="music-button-label" id="musicButtonLabel">Escuchar música</span>
+    </button>
+  </section>
   <div class="youtube-song-player" aria-hidden="true"><div id="youtubeSongPlayer"></div></div>
 </main>
 <script>
@@ -304,6 +306,7 @@ function updateCountdown(){
   document.getElementById('seconds').textContent=String(s).padStart(2,'0');
 }
 const cover=document.getElementById('cover'), invite=document.getElementById('invite');
+const musicControl=document.getElementById('musicControl');
 const musicToggle=document.getElementById('musicToggle');
 const musicButtonLabel=document.getElementById('musicButtonLabel');
 let weddingMusicPlayer=null;
@@ -311,6 +314,7 @@ let youtubeApiReady=false;
 let musicRequested=false;
 function setMusicState(playing,label){
  musicToggle.setAttribute('aria-pressed',String(playing));
+ musicToggle.setAttribute('aria-label',label);
  musicButtonLabel.textContent=label;
 }
 function playWeddingMusic(){
@@ -359,7 +363,7 @@ musicToggle.addEventListener('click',()=>{
  }
 });
 document.getElementById('openSeal').addEventListener('click',()=>{
- cover.style.display='none'; invite.classList.add('show'); window.scrollTo({top:0,behavior:'smooth'});
+ cover.style.display='none'; invite.classList.add('show'); musicControl.classList.add('show'); window.scrollTo({top:0,behavior:'smooth'});
  playWeddingMusic();
 });
 updateCountdown();setInterval(updateCountdown,1000);
