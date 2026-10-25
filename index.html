@@ -159,6 +159,7 @@ body .invite .event strong{font-weight:400!important}
 body .invite p,body footer p{font-weight:400!important;color:#6b665b!important}
 body h1,body h2,body h3,body h4,body h5,body h6,body p{font-family:'Lobster',cursive!important}
 body #itinerario .event,body #itinerario .event strong{font-family:'Lobster',cursive!important}
+body .invite :is(h1,h2,h3,h4,h5,h6,p),body footer :is(h1,h2,h3,h4,h5,h6,p),body .invite p *,body footer p *,body #itinerario .event,body #itinerario .event strong,body .dress-code-color,body .countdown-live,body .countdown-live span::after{color:#684b25!important}
 </style>
 </head>
 <body>
@@ -350,24 +351,21 @@ const musicControl=document.getElementById('musicControl');
 const musicToggle=document.getElementById('musicToggle');
 const musicButtonLabel=document.getElementById('musicButtonLabel');
 let weddingMusicPlayer=null;
-let youtubeApiReady=false;
-let musicRequested=false;
+let weddingMusicPlayerReady=false;
 function setMusicState(playing,label){
  musicToggle.setAttribute('aria-pressed',String(playing));
  musicToggle.setAttribute('aria-label',label);
  musicButtonLabel.textContent=label;
 }
 function playWeddingMusic(){
- musicRequested=true;
- setMusicState(false,'Iniciando música…');
- if(weddingMusicPlayer){
-  weddingMusicPlayer.playVideo();
- }else if(youtubeApiReady){
-  createWeddingMusicPlayer();
+ if(!weddingMusicPlayerReady){
+  setMusicState(false,'Toca para escuchar');
+  return;
  }
+ weddingMusicPlayer.playVideo();
 }
 function createWeddingMusicPlayer(){
- const playerVars={autoplay:1,controls:0,disablekb:1,playsinline:1,rel:0};
+ const playerVars={autoplay:0,controls:0,disablekb:1,playsinline:1,rel:0};
  if(location.protocol==='http:'||location.protocol==='https:')playerVars.origin=location.origin;
  weddingMusicPlayer=new YT.Player('youtubeSongPlayer',{
   width:'200',
@@ -377,9 +375,8 @@ function createWeddingMusicPlayer(){
   events:{
    onReady:(event)=>{
     event.target.setVolume(100);
-    window.setTimeout(()=>{
-     if(musicRequested&&event.target.getPlayerState()!==YT.PlayerState.PLAYING)setMusicState(false,'Toca para escuchar');
-    },1800);
+    weddingMusicPlayerReady=true;
+    setMusicState(false,'Escuchar música');
    },
    onStateChange:(event)=>{
     if(event.data===YT.PlayerState.PLAYING)setMusicState(true,'Pausar música');
@@ -391,8 +388,7 @@ function createWeddingMusicPlayer(){
  });
 }
 window.onYouTubeIframeAPIReady=()=>{
- youtubeApiReady=true;
- if(musicRequested&&!weddingMusicPlayer)createWeddingMusicPlayer();
+ createWeddingMusicPlayer();
 };
 musicToggle.addEventListener('click',()=>{
  if(weddingMusicPlayer&&musicToggle.getAttribute('aria-pressed')==='true'){
