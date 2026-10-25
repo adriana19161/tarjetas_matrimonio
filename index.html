@@ -159,7 +159,7 @@ body .invite .event strong{font-weight:400!important}
 body .invite p,body footer p{font-weight:400!important;color:#6b665b!important}
 body h1,body h2,body h3,body h4,body h5,body h6,body p{font-family:'Lobster',cursive!important}
 body #itinerario .event,body #itinerario .event strong{font-family:'Lobster',cursive!important}
-body .invite :is(h1,h2,h3,h4,h5,h6,p),body footer :is(h1,h2,h3,h4,h5,h6,p),body .invite p *,body footer p *,body #itinerario .event,body #itinerario .event strong,body .dress-code-color,body .countdown-live,body .countdown-live span::after{color:#684b25!important}
+body .invite :is(h1,h2,h3,h4,h5,h6,p),body footer :is(h1,h2,h3,h4,h5,h6,p),body .invite p *,body footer p *,body #itinerario .event,body #itinerario .event strong,body .dress-code-color,body .countdown-live,body .countdown-live span::after{color:#8a7356!important}
 </style>
 </head>
 <body>
@@ -352,14 +352,16 @@ const musicToggle=document.getElementById('musicToggle');
 const musicButtonLabel=document.getElementById('musicButtonLabel');
 let weddingMusicPlayer=null;
 let weddingMusicPlayerReady=false;
+let musicRequested=false;
 function setMusicState(playing,label){
  musicToggle.setAttribute('aria-pressed',String(playing));
  musicToggle.setAttribute('aria-label',label);
  musicButtonLabel.textContent=label;
 }
 function playWeddingMusic(){
+ musicRequested=true;
  if(!weddingMusicPlayerReady){
-  setMusicState(false,'Toca para escuchar');
+  setMusicState(false,'Preparando música…');
   return;
  }
  weddingMusicPlayer.playVideo();
@@ -376,7 +378,8 @@ function createWeddingMusicPlayer(){
    onReady:(event)=>{
     event.target.setVolume(100);
     weddingMusicPlayerReady=true;
-    setMusicState(false,'Escuchar música');
+     if(musicRequested)event.target.playVideo();
+     else setMusicState(false,'Escuchar música');
    },
    onStateChange:(event)=>{
     if(event.data===YT.PlayerState.PLAYING)setMusicState(true,'Pausar música');
