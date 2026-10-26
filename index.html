@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--sage:#737d5e;--sage-dark:#4e5944;--cream:#fffdf8;--gold:#b9914c;--ink:#272a24;--coffee:#a48666}
+:root{--sage:#737d5e;--sage-dark:#4e5944;--cream:#fffdf8;--gold:#b9914c;--ink:#272a24;--coffee:#92704f}
 *{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:clip}body{width:100vw;max-width:100vw;margin:0;overflow-x:clip;background:var(--cream);color:var(--ink);font-family:'DM Sans',Arial,sans-serif;font-size:21px;font-weight:500}
 h1,h2,h3,footer h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700}
 button,a{font:inherit}.cover{min-height:100svh;display:grid;place-items:center;overflow:hidden;padding:0;background:var(--cream)}
@@ -145,7 +145,7 @@ footer{text-align:center;padding:45px 20px;background:var(--cream);color:#715b43
 .small{font:18px 'DM Sans',Arial,sans-serif;line-height:1.7;opacity:1;color:#34352f}
 footer .small{margin-top:8px;color:#715b43;font:italic 600 24px/1.5 'Cormorant Garamond',Georgia,serif;letter-spacing:.025em}
 @media(max-width:600px){footer .small{font-size:clamp(20px,5.5vw,24px)}}
-@media(max-width:780px){.couple-names{width:100%;max-width:100%;padding:0 4px;font-size:clamp(29px,9.5vw,42px);line-height:1}.couple-name{max-width:100%;font-size:clamp(25px,8.5vw,34px);white-space:nowrap;line-height:1.04}.couple-names .name-ampersand{margin:0;font-size:.82em}}
+@media(max-width:780px){.couple-names{width:100%;max-width:100%;padding:0 4px;font-size:clamp(29px,9.5vw,42px);line-height:1}.couple-name{max-width:100%;font-size:clamp(27px,calc(8.5vw + 2px),36px);white-space:nowrap;line-height:1.04}.couple-names .name-ampersand{margin:0;font-size:.82em}}
 @media(max-width:900px){.countdown-live span{font-size:clamp(25px,5.5vw,40px)}.countdown-live span::after{font-size:clamp(8px,1.7vw,11px)}}
 @media(max-width:600px){.countdown-live{height:11%}.countdown-live span{font-size:clamp(20px,6.7vw,29px);gap:1px}.countdown-live span::after{font-size:clamp(7px,2vw,9px);letter-spacing:.055em}body{font-size:19px}section{padding:58px 18px}.section-title{font-size:clamp(36px,9.8vw,46px)}.subtitle{font-size:20px;line-height:1.65}.event{font-size:18px}#itinerario .timeline{padding:24px 18px 6px 42px}#itinerario .timeline-floral{width:116px}}
 @media(max-width:780px){.story-section{min-height:0;align-items:start;padding-bottom:10px}.parents-section{padding-top:24px;padding-bottom:18px}.ceremony-section{padding-top:18px}}
@@ -157,10 +157,14 @@ body footer p,
 body footer p *,
 body #itinerario .event,
 body #itinerario .event *,
-body .dress-code-color{color:var(--coffee)!important;font-family:'Lobster',cursive!important;font-style:normal!important;font-weight:400!important;-webkit-text-stroke:0}
+body .dress-code-color{color:var(--coffee)!important;font-family:'Alex Brush',cursive!important;font-style:normal!important;font-weight:400!important;-webkit-text-stroke:0}
+body .invite :is(h1,h2,h3,h4,h5,h6,p),
+body footer p,
+body #itinerario .event,
+body .dress-code-color{font-size:calc(1em + 2px)!important}
 body .invite .couple-names,
-body .invite .couple-names .couple-name{color:var(--coffee)!important;font-family:'Lobster',cursive!important;font-style:normal!important;font-weight:400!important}
-body .invite .couple-names .name-ampersand{color:var(--coffee)!important;font-family:'Lobster',cursive!important;font-style:normal!important;font-weight:400!important;text-shadow:none!important}
+body .invite .couple-names .couple-name{color:var(--coffee)!important;font-family:'Alex Brush',cursive!important;font-style:normal!important;font-weight:400!important}
+body .invite .couple-names .name-ampersand{color:var(--coffee)!important;font-family:'Cormorant Garamond',Georgia,serif!important;font-style:normal!important;font-weight:600!important;text-shadow:none!important}
 </style>
 </head>
 <body>
