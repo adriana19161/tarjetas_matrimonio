@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--sage:#737d5e;--sage-dark:#4e5944;--cream:#fffdf8;--gold:#b9914c;--ink:#272a24;--coffee:#92704f}
+:root{--sage:#737d5e;--sage-dark:#4e5944;--cream:#fffdf8;--gold:#b9914c;--ink:#272a24;--coffee:#765538}
 *{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:clip}body{width:100vw;max-width:100vw;margin:0;overflow-x:clip;background:var(--cream);color:var(--ink);font-family:'DM Sans',Arial,sans-serif;font-size:22px;font-weight:500}
 h1,h2,h3,footer h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700}
 button,a{font:inherit}.cover{min-height:100svh;display:grid;place-items:center;overflow:hidden;padding:0;background:var(--cream)}
@@ -157,7 +157,23 @@ body footer p,
 body footer p *,
 body #itinerario .event,
 body #itinerario .event *,
-body .dress-code-color{color:var(--coffee)!important;font-family:'Alex Brush',cursive!important;font-style:normal!important;font-weight:400!important;-webkit-text-stroke:0}
+body .dress-code-color,
+body .wedding-date-card,
+body .wedding-date-card *,
+body .countdown-live,
+body .countdown-live span::after,
+body .countdown-live .countdown-finished{color:var(--coffee)!important;font-family:'Alex Brush',cursive!important;font-style:normal!important;font-weight:400!important;-webkit-text-stroke:0}
+body .dress-code-color{font-size:18px!important}
+body .invite p{font-size:clamp(24px,calc(1em + 4px),27px)!important}
+body footer p{font-size:36px!important}
+@media(max-width:600px){
+body .invite p{font-size:26px!important}
+body .invite .dress-code-note{font-size:18px!important}
+body .dress-code-color{font-size:16px!important}
+body footer p{font-size:32px!important}
+body .invite .dress-code-details{grid-template-columns:1fr}
+body .invite .dress-code-column+.dress-code-column{padding:16px 0 0;border-left:0;border-top:1px solid #d6c39a}
+}
 body .invite .couple-names,
 body .invite .couple-names .couple-name{color:var(--coffee)!important;font-family:'Alex Brush',cursive!important;font-style:normal!important;font-weight:400!important}
 body .invite .couple-names .name-ampersand{color:var(--coffee)!important;font-family:'Cormorant Garamond',Georgia,serif!important;font-style:normal!important;font-weight:600!important;text-shadow:none!important}
