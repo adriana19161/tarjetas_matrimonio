@@ -33,7 +33,7 @@ section{width:100%;max-width:100%;padding:72px 22px}.wrap{max-width:940px;margin
 .photo{display:block;width:100%;height:auto;margin:0;object-fit:contain}
 .countdown-section{position:relative;display:block;overflow:hidden;padding:0;background:var(--cream);line-height:0}
 .countdown-art{display:block;width:100%;height:auto}
-.countdown-live{position:absolute;top:34.2%;left:27%;display:grid;width:46%;height:12%;grid-template-columns:repeat(4,minmax(0,1fr));align-items:center;justify-items:center;color:#987747;font-family:'Cormorant Garamond',Georgia,serif;font-variant-numeric:tabular-nums;letter-spacing:.025em;text-align:center;text-shadow:0 1px 0 #fff9e9a6}
+.countdown-live{position:absolute;top:40%;left:27%;display:grid;width:46%;height:8%;grid-template-columns:repeat(4,minmax(0,1fr));align-items:center;justify-items:center;color:#987747;font-family:'Cormorant Garamond',Georgia,serif;font-variant-numeric:tabular-nums;letter-spacing:.025em;text-align:center;text-shadow:0 1px 0 #fff9e9a6}
 .countdown-live span{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:100%;height:100%;background:transparent;font-size:clamp(28px,4.2vw,48px);font-weight:600;line-height:.9}
 .countdown-live span::after{color:#8c7655;font:500 clamp(8px,1.05vw,12px)/1 'DM Sans',Arial,sans-serif;letter-spacing:.09em;text-transform:uppercase}
 .countdown-live span:nth-child(1)::after{content:'Días'}
@@ -147,7 +147,7 @@ footer .small{margin-top:8px;color:#715b43;font:italic 600 26px/1.5 'Cormorant G
 @media(max-width:600px){footer .small{font-size:clamp(22px,calc(5.5vw + 2px),26px)}}
 @media(max-width:780px){.couple-names{width:100%;max-width:100%;padding:0 4px;font-size:clamp(31px,calc(9.5vw + 2px),44px);line-height:1}.couple-name{max-width:100%;font-size:clamp(28px,calc(8.5vw + 3px),37px);white-space:nowrap;line-height:1.04}.couple-names .name-ampersand{margin:0;font-size:.82em}}
 @media(max-width:900px){.countdown-live span{font-size:clamp(25px,5.5vw,40px)}.countdown-live span::after{font-size:clamp(8px,1.7vw,11px)}}
-@media(max-width:600px){.countdown-live{height:11%}.countdown-live span{font-size:clamp(20px,6.7vw,29px);gap:1px}.countdown-live span::after{font-size:clamp(7px,2vw,9px);letter-spacing:.055em}body{font-size:22px}section{padding:58px 18px}.section-title{font-size:clamp(38px,calc(9.8vw + 2px),48px)}.subtitle{font-size:22px;line-height:1.65}.event{font-size:20px}#itinerario .timeline{padding:24px 18px 6px 42px}#itinerario .timeline-floral{width:116px}}
+@media(max-width:600px){.countdown-live{top:41%;left:8%;width:84%;height:10%}.countdown-live span{font-size:clamp(16px,5.5vw,23px);gap:1px}.countdown-live span::after{font-size:clamp(8px,2.4vw,10px);letter-spacing:.04em}body{font-size:22px}section{padding:58px 18px}.section-title{font-size:clamp(38px,calc(9.8vw + 2px),48px)}.subtitle{font-size:22px;line-height:1.65}.event{font-size:20px}#itinerario .timeline{padding:24px 18px 6px 42px}#itinerario .timeline-floral{width:116px}}
 @media(max-width:780px){.story-section{min-height:0;align-items:start;padding-bottom:10px}.parents-section{padding-top:24px;padding-bottom:18px}.ceremony-section{padding-top:18px}}
 @media(max-width:700px){.parents-section{width:100%;max-width:100%}.parents-grid,.ceremony-events{grid-template-columns:1fr;gap:14px}.parent-card{padding:24px 18px}.parents-grid .parent-card:first-child::before,.parents-grid .parent-card:last-child::after,.ceremony-events .ceremony-event:first-child::before,.ceremony-events .ceremony-event:nth-child(2)::after{width:108px}.parents-intro{margin-bottom:22px}.envelopes-card{padding:28px 20px}}
 @media(prefers-reduced-motion:reduce){.seal-button,.music-button{transition:none}.seal-button:before{animation:none}}
@@ -179,6 +179,7 @@ body .invite .couple-names .couple-name{color:var(--coffee)!important;font-famil
 body .invite .couple-names .name-ampersand{color:var(--coffee)!important;font-family:'Cormorant Garamond',Georgia,serif!important;font-style:normal!important;font-weight:600!important;text-shadow:none!important}
 body .invite :is(.pill,.rsvp-button,.venue-map-button),
 body .invite :is(.rsvp-button,.venue-map-button) *{font-family:'Alex Brush',cursive!important;font-style:normal!important;font-weight:400!important}
+body .countdown-live span::after{font-family:'DM Sans',Arial,sans-serif!important;font-style:normal!important;font-weight:500!important}
 body .invite .rsvp-button>span:first-child{font-size:clamp(24px,6vw,30px)!important;line-height:1.1}
 body .invite .section-title{font-size:clamp(42px,calc(5.4vw + 8px),57px)!important}
 body .invite .dress-code-title{font-size:clamp(36px,calc(5vw + 12px),48px)!important}
@@ -264,7 +265,7 @@ body .invite .ceremony-event h3{font-size:clamp(28px,calc(3.2vw + 8px),35px)!imp
     </section>
 
     <section class="countdown-section" id="cuenta-regresiva" aria-label="Calendario y cuenta regresiva para nuestra boda">
-      <img class="countdown-art" src="assets/cuenta-regresiva-nueva.jpeg" alt="Ilustración floral con calendario de diciembre de 2026, el día 4 señalado con un corazón y ceremonia a las 5:00 PM">
+      <img class="countdown-art" src="assets/cuenta-regresiva-calendario.png" alt="Ilustración floral con calendario de diciembre de 2026, el día 4 señalado con un corazón y ceremonia a las 5:00 PM">
       <div class="countdown-live" role="timer" aria-label="Cuenta regresiva hasta el 4 de diciembre de 2026 a las 5:00 PM" aria-live="off">
         <span id="days" aria-label="Días restantes">--</span>
         <span id="hours" aria-label="Horas restantes">--</span>
