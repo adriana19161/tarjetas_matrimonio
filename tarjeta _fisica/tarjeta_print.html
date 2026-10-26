@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lobster&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #d8d3cc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 50px;
+    font-family: 'Lobster', cursive;
+  }
+
+  .card {
+    position: relative;
+    width: 880px;
+    height: 580px;
+    background: #FFFDF5;
+    border: 1.5px solid #B9914C;
+    outline: 5px solid #FFFDF5;
+    outline-offset: -7px;
+    box-shadow: 0 0 0 7px #B9914C, 0 10px 40px rgba(0,0,0,0.2);
+    display: flex;
+    overflow: visible;
+  }
+
+  /* FLORES REALES */
+  .flor {
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+    width: 140px;
+  }
+  .flor-tl { top: -16px; left: -16px; }
+  .flor-tr { top: -16px; right: -16px; transform: scaleX(-1); }
+  .flor-bl { bottom: -16px; left: -16px; transform: scaleY(-1); }
+  .flor-br { bottom: -16px; right: -16px; transform: scale(-1,-1); }
+
+  /* DIVISOR */
+  .divider {
+    position: absolute;
+    left: 50%;
+    top: 30px; bottom: 30px;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, #B9914C 10%, #B9914C 90%, transparent);
+    z-index: 5;
+  }
+
+  /* BLOQUES */
+  .block {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 32px 32px;
+    position: relative;
+    z-index: 2;
+  }
+  .block-right {
+    justify-content: flex-start;
+    padding-top: 55px;
+  }
+
+  /* SEPARADOR */
+  .sep {
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #C9A227, transparent);
+    margin: 8px auto;
+    flex-shrink: 0;
+  }
+
+  /* TEXTOS */
+  .t { font-family: 'Lobster', cursive; color: #8a6840; line-height: 1.6; }
+  .t-xs  { font-size: 12.5px; }
+  .t-sm  { font-size: 13.5px; }
+  .t-md  { font-size: 15px; }
+  .t-lg  { font-size: 38px; line-height: 1.15; }
+  .t-amp { font-size: 22px; display: block; margin: 0px 0; }
+  .t-italic { font-style: italic; }
+</style>
+</head>
+<body>
+<div class="card">
+
+  <!-- FLORES -->
+  <img class="flor flor-tl" src="../assets/rosas-blancas-esquineras.png" alt="">
+  <img class="flor flor-tr" src="../assets/rosas-blancas-esquineras.png" alt="">
+  <img class="flor flor-bl" src="../assets/rosas-blancas-esquineras.png" alt="">
+  <img class="flor flor-br" src="../assets/rosas-blancas-esquineras.png" alt="">
+
+  <div class="divider"></div>
+
+  <!-- BLOQUE IZQUIERDO -->
+  <div class="block">
+    <p class="t t-xs t-italic">Nos complace invitarle a la<br>celebración de nuestra boda</p>
+    <div class="sep"></div>
+    <p class="t t-xs">Jorge Quina &amp; Eneida Sandoval<br>Emerson Espinosa &amp; Ligia Garcia</p>
+    <div class="sep"></div>
+    <p class="t t-lg">Adriana Quina Sandoval</p>
+    <span class="t t-amp">&amp;</span>
+    <p class="t t-lg">Jhon Espinosa Garcia</p>
+    <div class="sep"></div>
+    <p class="t t-xs">Viernes · 4 de Diciembre · 2026</p>
+    <div class="sep"></div>
+    <p class="t t-sm">Ceremonia Civil<br>Ecohotel El Paraiso Real<br>5:00 p.m.</p>
+  </div>
+
+  <!-- BLOQUE DERECHO -->
+  <div class="block block-right">
+    <p class="t t-md">Recepcion</p>
+    <p class="t t-sm">Ecohotel El Paraiso Real<br>7:00 p.m.</p>
+    <div class="sep"></div>
+    <p class="t t-sm">Codigo de Vestimenta · Formal</p>
+    <p class="t t-xs" style="margin-top:4px">El blanco, beige y tonos similares<br>se reservan para la novia.<br>Se ruega no usar negro, rojo ni azul.</p>
+    <div class="sep"></div>
+    <p class="t t-xs t-italic">Confirmar asistencia hasta el<br>
+      <span style="font-style:normal; font-size:13.5px">miercoles 18 de noviembre</span>
+    </p>
+    <div class="sep"></div>
+    <p class="t t-xs">No. de Invitados&nbsp;&nbsp;(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+  </div>
+
+</div>
+</body>
+</html>
