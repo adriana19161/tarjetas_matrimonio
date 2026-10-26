@@ -87,16 +87,16 @@ section{width:100%;max-width:100%;padding:72px 22px}.wrap{max-width:940px;margin
 .wedding-date-day{color:#4e2815;font:700 clamp(54px,9vw,76px)/.85 'Cormorant Garamond',Georgia,serif}
 .wedding-date-side:last-child{justify-content:center}
 .wedding-date-side:last-child::before,.wedding-date-side:last-child::after{max-width:100%}
-.venue-poster{position:relative;width:min(100%,1025px);margin:28px auto 0;aspect-ratio:1025/574;overflow:hidden;background:var(--cream)}
-.venue-artwork{display:block;width:100%;height:100%;object-fit:fill}
+.venue-poster{position:relative;width:min(100%,1025px);margin:28px auto 0;border-radius:18px;overflow:hidden;background:var(--cream);box-shadow:0 12px 40px #5b4d3522}
+.venue-artwork{display:block;width:100%;height:auto;object-fit:cover}
 .venue-copy-accessible{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.venue-map-button{position:absolute;z-index:1;top:71.5%;left:50%;display:inline-flex;width:26%;height:15%;align-items:center;justify-content:center;gap:8px;padding:8px 14px;transform:translateX(-50%);border:2px solid #fff4cf;border-radius:999px;background:linear-gradient(115deg,#fff4c7 0%,#d4ad53 20%,#fff8dc 43%,#b78c37 66%,#f8e8af 84%,#c49a43 100%);box-shadow:0 5px 13px #51391555,inset 0 2px 3px #fff9df,inset 0 -3px 5px #98702c;color:#684b25;text-decoration:none;text-shadow:0 1px 0 #fff3c6;cursor:pointer;font:600 clamp(12px,1.8vw,19px)/1.1 'Cormorant Garamond',Georgia,serif;letter-spacing:.02em;white-space:nowrap;transition:transform .2s ease,box-shadow .2s ease,filter .2s ease}
-.venue-map-button:hover,.venue-map-button:focus-visible{transform:translate(-50%,-2px);filter:brightness(1.05);box-shadow:0 8px 17px #51391566,inset 0 2px 3px #fff9df,inset 0 -3px 5px #98702c}
-.venue-map-button:focus-visible{outline:3px solid #806641;outline-offset:3px}
-.venue-map-button:active{transform:translate(-50%,0)}
-.venue-map-icon{width:1em;height:1em;flex:none;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8}
-.venue-map-label{font-size:inherit;color:inherit;text-shadow:inherit}
-@media(max-width:600px){.venue-map-button{top:69%;width:clamp(112px,31%,180px);height:20%;min-height:40px;gap:6px;padding:6px 10px;font-size:clamp(12px,3.1vw,16px)}}
+.venue-map-button{position:absolute;left:50%;bottom:10%;transform:translateX(-50%);display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:clamp(11px,1.6vw,15px) clamp(26px,4vw,48px);border:1.5px solid #e2c97e;border-radius:999px;background:linear-gradient(115deg,#fff9e8 0%,#e8c96a 25%,#fff5d0 50%,#c49a40 75%,#f8e6a0 100%);box-shadow:0 6px 22px rgba(100,70,20,0.28),inset 0 2px 4px rgba(255,252,220,0.9),inset 0 -2px 5px rgba(138,98,30,0.35);color:#5a3d10;text-decoration:none;text-shadow:0 1px 2px rgba(255,248,210,0.8);font:600 clamp(13px,1.8vw,19px)/1.2 'Cormorant Garamond',Georgia,serif;letter-spacing:.06em;white-space:nowrap;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,filter .25s ease}
+.venue-map-button:hover,.venue-map-button:focus-visible{transform:translateX(-50%) translateY(-3px);filter:brightness(1.07);box-shadow:0 12px 30px rgba(100,70,20,0.35),inset 0 2px 4px rgba(255,252,220,0.9),inset 0 -2px 5px rgba(138,98,30,0.35)}
+.venue-map-button:focus-visible{outline:3px solid #b9914c;outline-offset:4px}
+.venue-map-button:active{transform:translateX(-50%) translateY(0)}
+.venue-map-icon{width:1.1em;height:1.1em;flex:none;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:2}
+.venue-map-label{font-size:inherit;color:inherit}
+@media(max-width:600px){.venue-map-button{font-size:clamp(12px,3.2vw,15px);padding:10px 22px;bottom:8%}}
 .timeline{max-width:680px;margin:32px auto 0;border-left:2px solid #b9914c;padding-left:26px}.event{margin:0 0 24px;position:relative;font-size:20px;font-weight:500;line-height:1.75;color:#272a24}.event:before{content:'♥';position:absolute;left:-36px;top:0;color:#9a762f;font-size:20px}.event strong{color:#3f4b36;font-size:22px;font-weight:700}
 #itinerario{position:relative;isolation:isolate;overflow:hidden;background:var(--cream)!important}
 #itinerario:before{content:'';position:absolute;z-index:-1;inset:0;background:url('assets/sobre-floral.png') center 48%/cover no-repeat;opacity:.14;mask-image:linear-gradient(90deg,#000 0%,transparent 45%,transparent 55%,#000 100%);pointer-events:none}
@@ -217,13 +217,14 @@ body footer p,body footer p *{font-weight:400!important;-webkit-text-stroke:.3px
           </article>
         </div>
         <div class="venue-poster">
-          <img class="venue-artwork" src="assets/ubicacion-boda.jpg" alt="">
+          <img class="venue-artwork" src="assets/invitacion-rosas-encaje.png" alt="Ecohotel El Paraíso Real, Popayán, Cauca - con flores y encaje">
           <div class="venue-copy-accessible">
             <h3>Ubicación</h3>
             <p>Ecohotel El Paraíso Real, Popayán, Cauca.</p>
           </div>
-          <a class="venue-map-button" aria-label="Ver ubicación en Google Maps" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Ecohotel+El+Paraiso+Real+Popayan+Cauca">
-            <svg class="venue-map-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span class="venue-map-label">Ver ubicación</span>
+          <a class="venue-map-button" id="venueMapBtn" aria-label="Ver ubicación en Google Maps" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Ecohotel+El+Paraiso+Real+Popayan+Cauca">
+            <svg class="venue-map-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span class="venue-map-label">✦ Ver ubicación</span>
           </a>
         </div>
       </div>
