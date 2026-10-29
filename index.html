@@ -33,14 +33,15 @@ section{width:100%;max-width:100%;padding:72px 22px}.wrap{max-width:940px;margin
 .photo{display:block;width:100%;height:auto;margin:0;object-fit:contain}
 .countdown-section{position:relative;display:block;overflow:hidden;padding:0;background:var(--cream);line-height:0}
 .countdown-art{display:block;width:100%;height:auto}
-.countdown-live{position:absolute;top:30%;left:27%;display:grid;width:46%;height:8%;grid-template-columns:repeat(4,minmax(0,1fr));align-items:center;justify-items:center;color:#987747;font-family:'Cormorant Garamond',Georgia,serif;font-variant-numeric:tabular-nums;letter-spacing:.025em;text-align:center;text-shadow:0 1px 0 #fff9e9a6}
-.countdown-live span{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:100%;height:100%;background:transparent;font-size:clamp(28px,4.2vw,48px);font-weight:600;line-height:.9}
+.countdown-live{position:absolute;top:28%;left:27%;display:grid;width:46%;height:12%;grid-template-columns:repeat(4,minmax(0,1fr));align-items:center;justify-items:center;color:#987747;font-family:'Cormorant Garamond',Georgia,serif;font-variant-numeric:tabular-nums;letter-spacing:.025em;text-align:center;text-shadow:0 1px 0 #fff9e9a6}
+.countdown-live span{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:100%;height:100%;background:transparent;font-size:clamp(22px,4.2vw,40px);font-weight:600;line-height:.9}
 .countdown-live span::after{color:#8c7655;font:500 clamp(8px,1.05vw,12px)/1 'DM Sans',Arial,sans-serif;letter-spacing:.09em;text-transform:uppercase}
 .countdown-live span:nth-child(1)::after{content:'Días'}
 .countdown-live span:nth-child(2)::after{content:'Horas'}
 .countdown-live span:nth-child(3)::after{content:'Minutos'}
 .countdown-live span:nth-child(4)::after{content:'Segundos'}
 .countdown-live .countdown-finished{position:absolute;inset:0;z-index:2;width:100%;height:100%;padding:0 4px;background:transparent;color:#806641;text-align:center;font:600 clamp(13px,1.9vw,19px)/1.1 'Cinzel','Cormorant Garamond',Georgia,serif}
+.countdown-live .countdown-finished::after{display:none}
 .pill{display:inline-block;background:var(--sage);color:#fff8e8;text-decoration:none;padding:15px 24px;border-radius:30px;margin:8px 4px;font:700 18px 'DM Sans',Arial,sans-serif;letter-spacing:.02em}.pill.outline{background:transparent;color:var(--sage-dark);border:1px solid var(--sage)}
 .rsvp-section{display:flex;justify-content:center;padding:clamp(22px,4vw,34px) 18px;background:var(--cream)}
 .rsvp-button{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:min(88vw,400px);min-height:60px;padding:14px 24px;border:1px solid #d7bc7b;border-radius:999px;background:linear-gradient(120deg,#fff5d8 0%,#d8b965 42%,#fff1c2 64%,#b58a3b 100%);box-shadow:0 5px 16px #3d2c1755,inset 0 2px 3px #fff8dc,inset 0 -2px 4px #98712e;color:#684b25;text-align:center;text-decoration:none;font:600 clamp(15px,4vw,19px)/1.2 'DM Sans',Arial,sans-serif;letter-spacing:.015em;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
@@ -148,8 +149,8 @@ footer{text-align:center;padding:45px 20px;background:var(--cream);color:#715b43
 footer .small{margin-top:8px;color:#715b43;font:italic 600 26px/1.5 'Cormorant Garamond',Georgia,serif;letter-spacing:.025em}
 @media(max-width:600px){footer .small{font-size:clamp(22px,calc(5.5vw + 2px),26px)}}
 @media(max-width:780px){.couple-names{width:100%;max-width:100%;padding:0 4px;font-size:clamp(31px,calc(9.5vw + 2px),44px);line-height:1}.couple-name{max-width:100%;font-size:clamp(28px,calc(8.5vw + 3px),37px);white-space:nowrap;line-height:1.04}.couple-names .name-ampersand{margin:0;font-size:.82em}}
-@media(max-width:900px){.countdown-live span{font-size:clamp(25px,5.5vw,40px)}.countdown-live span::after{font-size:clamp(8px,1.7vw,11px)}}
-@media(max-width:600px){.countdown-live{top:30%;left:14%;width:72%;height:9%}.countdown-live span{font-size:clamp(15px,5vw,20px);gap:1px}.countdown-live span::after{font-size:clamp(8px,2.2vw,9px);letter-spacing:.03em}body{font-size:22px}section{padding:58px 18px}.section-title{font-size:clamp(38px,calc(9.8vw + 2px),48px)}.subtitle{font-size:22px;line-height:1.65}.event{font-size:20px}#itinerario .timeline{padding:24px 18px 6px 42px}#itinerario .timeline-floral{width:116px}}
+@media(max-width:900px){.countdown-live span{font-size:clamp(18px,4.5vw,36px)}.countdown-live span::after{font-size:clamp(8px,1.7vw,11px)}}
+@media(max-width:600px){.countdown-live{top:28%;left:14%;width:72%;height:16%}.countdown-live span{font-size:clamp(15px,5vw,20px);gap:1px}.countdown-live span::after{font-size:clamp(8px,2.2vw,9px);letter-spacing:.03em}body{font-size:22px}section{padding:58px 18px}.section-title{font-size:clamp(38px,calc(9.8vw + 2px),48px)}.subtitle{font-size:22px;line-height:1.65}.event{font-size:20px}#itinerario .timeline{padding:24px 18px 6px 42px}#itinerario .timeline-floral{width:116px}}
 @media(max-width:780px){.story-section{min-height:0;align-items:start;padding-bottom:10px}.parents-section{padding-top:10px;padding-bottom:18px}.ceremony-section{padding-top:18px;padding-bottom:10px}.wedding-date-section{padding-top:10px}}
 @media(max-width:700px){.parents-section{width:100%;max-width:100%}.parents-grid,.ceremony-events{grid-template-columns:1fr;gap:14px}.parent-card{padding:24px 18px}.parents-grid .parent-card:first-child::before,.parents-grid .parent-card:last-child::after,.ceremony-events .ceremony-event:first-child::before,.ceremony-events .ceremony-event:nth-child(2)::after{width:108px}.parents-intro{margin-bottom:22px}.envelopes-card{padding:28px 20px}}
 @media(prefers-reduced-motion:reduce){.seal-button,.music-button{transition:none}.seal-button:before{animation:none}}
@@ -274,7 +275,7 @@ body .invite .ceremony-event h3{font-size:clamp(28px,calc(3.2vw + 8px),35px)!imp
     </section>
 
     <section class="countdown-section" id="cuenta-regresiva" aria-label="Calendario y cuenta regresiva para nuestra boda">
-      <img class="countdown-art" src="Gemini_Generated_Image_lr305ilr305ilr30.jpeg" alt="Calendario floral de diciembre de 2026, con el día 4 señalado con un corazón y ceremonia a las 5:00 PM">
+      <img class="countdown-art" src="Gemini_Generated_Image_fmk15bfmk15bfmk1.jpeg" alt="Calendario floral de diciembre de 2026, con el día 4 señalado con un corazón y ceremonia a las 5:00 PM">
       <div class="countdown-live" role="timer" aria-label="Cuenta regresiva hasta el 4 de diciembre de 2026 a las 5:00 PM" aria-live="off">
         <span id="days" aria-label="Días restantes">--</span>
         <span id="hours" aria-label="Horas restantes">--</span>
