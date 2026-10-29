@@ -71,7 +71,7 @@ section{width:100%;max-width:100%;padding:72px 22px}.wrap{max-width:940px;margin
 .dress-code-swatch-red{background:#ae4548}
 .dress-code-swatch-black{background:#292725}
 .dress-code-swatch-green{background:#737d5e}
-@media(max-width:600px){.dress-code-floral{width:116px}.dress-code-illustration{width:min(100%,112px)}.dress-code-title{font-size:clamp(29px,calc(7.5vw + 2px),36px)}.dress-code-details{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;max-width:100%;margin-bottom:20px}.dress-code-column+.dress-code-column{padding-left:8px;border-left:1px solid #d6c39a}.dress-code-style{font-size:clamp(19px,calc(4.8vw + 2px),23px)}.dress-code-column .dress-code-note{font-size:clamp(14px,calc(3.2vw + 2px),16px);line-height:1.45}.dress-code-palette{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));justify-content:center;width:100%;max-width:280px;margin-inline:auto;gap:2px}.dress-code-color{min-width:0;gap:6px;font-size:clamp(12px,calc(2.8vw + 2px),14px)}.dress-code-swatch{width:clamp(32px,9vw,42px)}}
+@media(max-width:600px){.dress-code-floral{width:116px}.dress-code-illustration{width:min(100%,112px)}.dress-code-title{font-size:clamp(29px,calc(7.5vw + 2px),36px)}.dress-code-details{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;max-width:100%;margin-bottom:20px}.dress-code-column+.dress-code-column{padding-left:8px;border-left:1px solid #d6c39a}.dress-code-style{font-size:clamp(19px,calc(4.8vw + 2px),23px)}.dress-code-column .dress-code-note{font-size:clamp(14px,calc(3.2vw + 2px),16px);line-height:1.45}.dress-code-palette{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));justify-content:center;width:100%;max-width:360px;margin-inline:auto;gap:2px}.dress-code-color{min-width:0;gap:6px;font-size:clamp(12px,calc(2.8vw + 2px),14px)}.dress-code-swatch{width:clamp(32px,9vw,42px)}}
 .ceremony-section{padding:clamp(38px,6vw,64px) 20px;background:var(--cream)}
 .ceremony-section .wrap{max-width:940px}
 .ceremony-section .section-title{margin-bottom:10px;color:#806641;font:600 clamp(36px,calc(5.4vw + 2px),51px)/1.1 'Cormorant Garamond',Georgia,serif}
@@ -174,7 +174,7 @@ body .invite .dress-code-note{font-size:22px!important;line-height:1.4}
 body .dress-code-color{font-size:16px!important}
 body footer p{font-size:32px!important}
 body .invite .dress-code-details{grid-template-columns:1fr}
-body .invite .dress-code-column+.dress-code-column{padding:16px 0 0;border-left:0;border-top:0}
+body .invite .dress-code-column+.dress-code-column{padding:4px 0 0;border-left:0;border-top:0}
 }
 body .invite .couple-names,
 body .invite .couple-names .couple-name{color:var(--coffee)!important;font-family:'Alex Brush',cursive!important;font-style:normal!important;font-weight:700!important;text-shadow:0 0 .4px currentColor,0 0 .4px currentColor}
@@ -299,7 +299,9 @@ body .invite .ceremony-event h3{font-size:clamp(28px,calc(3.2vw + 8px),35px)!imp
             <p class="dress-code-note">El blanco, el beige y los tonos similares quedan reservados para la novia. Agradecemos no usar vestidos en color negro, rojo y cualquier tonalidad de azul.</p>
           </div>
         </div>
-        <ul class="dress-code-palette" aria-label="Colores que agradecemos evitar">
+        <ul class="dress-code-palette" aria-label="Colores mencionados en el código de vestimenta">
+          <li class="dress-code-color"><span class="dress-code-swatch dress-code-swatch-white" aria-hidden="true"></span>Blanco</li>
+          <li class="dress-code-color"><span class="dress-code-swatch dress-code-swatch-beige" aria-hidden="true"></span>Beige</li>
           <li class="dress-code-color"><span class="dress-code-swatch dress-code-swatch-black" aria-hidden="true"></span>Negro</li>
           <li class="dress-code-color"><span class="dress-code-swatch dress-code-swatch-red" aria-hidden="true"></span>Rojo</li>
           <li class="dress-code-color"><span class="dress-code-swatch dress-code-swatch-blue" aria-hidden="true"></span>Azul</li>
