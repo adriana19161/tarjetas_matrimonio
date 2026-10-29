@@ -60,6 +60,7 @@ section{width:100%;max-width:100%;padding:72px 22px}.wrap{max-width:940px;margin
 .dress-code-style{margin:0 0 12px;color:#684b25;font:600 clamp(24px,calc(3.4vw + 2px),30px)/1.25 'Cormorant Garamond',Georgia,serif}
 .dress-code-note{max-width:680px;margin:0 auto 24px;color:#5d594f;font:400 clamp(18px,calc(2vw + 2px),21px)/1.55 'DM Sans',Arial,sans-serif}
 .dress-code-column .dress-code-note{margin-bottom:0}
+.dress-code-column .dress-code-note+.dress-code-note{margin-top:12px;padding-top:12px;border-top:1px solid #d6c39a}
 .dress-code-palette{display:flex;justify-content:center;flex-wrap:wrap;gap:clamp(14px,3vw,28px);margin:0;padding:0;list-style:none}
 .dress-code-color{display:flex;min-width:68px;flex-direction:column;align-items:center;gap:8px;color:#684b25;font:500 15px/1.2 'DM Sans',Arial,sans-serif}
 .dress-code-swatch{position:relative;display:block;width:clamp(42px,7vw,56px);aspect-ratio:1;border:1px solid #c9b99d;border-radius:50%;box-shadow:0 3px 8px #514b3e1c}
@@ -173,7 +174,7 @@ body .invite .dress-code-note{font-size:22px!important;line-height:1.4}
 body .dress-code-color{font-size:16px!important}
 body footer p{font-size:32px!important}
 body .invite .dress-code-details{grid-template-columns:1fr}
-body .invite .dress-code-column+.dress-code-column{padding:16px 0 0;border-left:0;border-top:1px solid #d6c39a}
+body .invite .dress-code-column+.dress-code-column{padding:16px 0 0;border-left:0;border-top:0}
 }
 body .invite .couple-names,
 body .invite .couple-names .couple-name{color:var(--coffee)!important;font-family:'Alex Brush',cursive!important;font-style:normal!important;font-weight:700!important;text-shadow:0 0 .4px currentColor,0 0 .4px currentColor}
@@ -291,7 +292,8 @@ body .invite .ceremony-event h3{font-size:clamp(28px,calc(3.2vw + 8px),35px)!imp
         <div class="dress-code-details">
           <div class="dress-code-column">
             <p class="dress-code-style">Formal</p>
-            <p class="dress-code-note"><strong>Hombres</strong>: traje con corbata.<br><strong>Mujeres</strong>: vestido largo o midi elegante.</p>
+            <p class="dress-code-note"><strong>Hombres</strong>: traje con corbata.</p>
+            <p class="dress-code-note"><strong>Mujeres</strong>: vestido largo o midi elegante.</p>
           </div>
           <div class="dress-code-column">
             <p class="dress-code-note">Agradecemos no usar vestidos en color negro, rojo y cualquier tonalidad de azul.</p>
