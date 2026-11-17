@@ -1,0 +1,18 @@
+INVITACIÓN AUTÓNOMA A & J
+=========================
+
+Abre index.html en un navegador para ver la invitación. Para compartirla,
+envía únicamente este archivo HTML: incluye las imágenes y la canción.
+
+MÚSICA
+- La canción está incrustada en el HTML y se reproduce con el botón flotante
+  o al abrir el sobre. El botón permite pausar y reanudar la música.
+- Las imágenes y la canción se reproducen desde el HTML sin conexión. Los
+  navegadores pueden bloquear la reproducción automática; si ocurre, toca
+  el botón de música.
+
+OTRAS FUNCIONES
+- Los botones de ubicación y confirmación abren Google Maps y el formulario,
+  por lo que esos enlaces sí necesitan conexión a internet.
+- Esta copia está separada de la invitación original. Puedes mover o publicar
+  la carpeta completa sin modificar aquella.
